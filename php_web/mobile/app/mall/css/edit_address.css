@@ -1,0 +1,20 @@
+.content>.block{margin-bottom:7px;background-color:white;}
+.content>.block>.list{margin:0 11px;}
+.content>.block>.list>.item{height:50px;border-bottom:1px solid #e5e5e5;display:flex;align-items:center;}
+.content>.block>.list>.item:last-child{border-bottom:0px;}
+.content>.block>.list>.item>.info{margin-right:17px;font-size:15px;flex-shrink:0;}
+.content>.block>.list>.item>.textbox{flex-grow:1;border:0px;}
+.content>.block>.list>.item>.textbox:disabled{background:white;}
+.content>.block>.list>.item>.textspan{flex-grow:1;color:#a9a9a9;height:100%;display:flex;align-items:center;}
+.content>.block>.list>.item>.textspan.value{color:black;}
+.content>.save{height:40px;line-height:40px;background-color:#f05050;color:white;letter-spacing:3px;font-size:19px;margin:17px 11px 0 11px;border-radius:5px;text-align:center;}
+.content>.save.disabled{background-color:#cccccc;}
+
+.content>#areamenu_dummy{display:none;}
+.android-ics .dwhl{padding:1px 3px;}
+.android-ics .dwwc{padding:0 0;}
+.android-ics .dww{width:95px;}
+.android-ics .dww .dw-li.dw-sel{color:#f05050;}
+.android-ics .dw .dwwol{border-top:0px;border-bottom:0px;}
+.android-ics .dw .dwwol{border-top-color:#f05050;border-bottom-color:#f05050;}
+.android-ics .dw .dwb-a{background:#f05050;}

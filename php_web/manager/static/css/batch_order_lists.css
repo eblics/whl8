@@ -1,0 +1,6 @@
+.tooltip{border:1px solid #ccc;display:none;}
+.tooltip .showtitle{color:#666;padding:4px 0}
+.tooltip .showcontent{padding:2px 0}
+#detail .condiv {height:240px}
+#detail .box{ height:360px}
+.info>.box>dd>.condiv .value{word-break:break-all;}

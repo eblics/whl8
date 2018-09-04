@@ -1,0 +1,19 @@
+.content>.item{padding:0 11px;margin-bottom:7px;background-color:white;}
+.content>.item:last-child{margin-bottom:0px;}
+.content>.item>.address{border-bottom:1px dashed #e5e5e5;display:flex;align-items:center;}
+.content>.item>.address>.info{min-height:46px;margin:11px 0;color:#333333;flex-grow:1;display:flex;flex-direction:column;}
+.content>.item>.address>.info>.basic{}
+.content>.item>.address>.info>.basic>.name{margin-right:17px;font-size:16px;font-weight:bold;}
+.content>.item>.address>.info>.basic>.telephone{}
+.content>.item>.address>.info>.text{margin-top:5px;}
+.content>.item>.address>.edit{flex-shrink:0;height:17px;width:17px;background-image:url(/app/mall/images/bianji.png);background-size:cover;margin-right:15px;margin-left:6px;}
+.content>.item>.address>.delete{flex-shrink:0;height:17px;width:17px;background-image:url(/app/mall/images/shanchu.png);background-size:cover;margin-right:6px;}
+.content>.item>.default{height:34px;display:flex;align-items:center;}
+.content>.item>.default>.icon{margin:0 9px;height:12px;width:12px;background-size:cover;background-image:url(/app/mall/images/goukuang.png);}
+.content>.item>.default.checked>.icon{background-image:url(/app/mall/images/gouxuan.png);}
+.content>.item>.default>.info{color:#666666;}
+.content>.item>.default.checked>.info{color:#f05050;}
+.add{border-top:1px solid #e5e5e5;height:48px;background-color:white;position:fixed;bottom:0; left:0; width:100%;display:flex;justify-content:center;align-items:center;}
+.add:active{background-color:#e1e1e1;}
+.add>.icon{height:18px;width:18px;background-image:url(/app/mall/images/tianjia.png);background-size:cover;}
+.add>.info{font-size:16px;margin-left:7px;color:#333333}

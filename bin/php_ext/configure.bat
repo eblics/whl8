@@ -1,0 +1,1 @@
+configure --disable-all --enable-snapshot-build --enable-cgi --enable-qrcode=shared 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>兰州黄河嘉酿啤酒</title>
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            font-family: FangSong, "microsoft yahei";
+        }
+
+        .scene {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            -webkit-transform-style: preserve-3d;
+            overflow: hidden;
+            background: url(images/xuanchuan_bg.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .scene .content {
+            position: absolute;
+            bottom: 50px;
+            left:56px;
+        }
+
+        /*.scene .content img{*/
+            /*position: absolute;*/
+            /*left:0px;*/
+            /*top:0px;*/
+        /*}*/
+
+        .scene .content .text {
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .scene .content .text1 {
+            font-size: 19px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .scene .content p {
+            display: inline-block;
+            color: #dc0005;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript"  src="http://cdn.m.lsa0.cn/static/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript"  src="http://cdn.m.lsa0.cn/static/js/common.js"></script>
+    <script type="text/javascript"  src="http://cdn.m.lsa0.cn/static/js/hlsjs.js"></script>
+
+    <!--临时-->
+    <!--<script type="text/javascript"  src="../../static/js/jquery-2.1.1.min.js"></script>-->
+
+    <script src="./js/app2.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="scene">
+    <div class="content">
+        <!--<img src="./images/xuanchuan_bg.jpg">-->
+        <div class="text"><strong>您已喝掉<p id="user_drink"></p>黄河啤酒</strong></div>
+        <div class="text"><strong>为贫困母亲筹到了<P id="user_gold"></P>公益金</strong></div>
+        <div class="text text1">截止到今天，黄河啤酒已为贫困母亲筹集到<p id="total"></p>元公益金！</div>
+    </div>
+</div>
+</body>
+</html>

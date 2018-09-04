@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><?=PRODUCT_NAME. ' - '.SYSTEM_NAME?></title>
+    <link type="text/css" rel="stylesheet" href="/static/css/common.css" />
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/validator.js"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+    <script type="text/javascript" src="/static/js/accumstrategy_edit.js"></script>
+</head>
+<body>
+    <?php include 'header.php';?>
+    <div class="main">
+        <?php include 'lefter.php';?>
+        <div class="rightmain">
+            <div class="path">
+                <span class="title fleft"><?=$view->title?>累计策略</span>
+            </div>
+            <div class="h20"></div>
+            <form>
+                <input type="hidden" name="id" value="<?=$data->id?>" />
+                <table class="table-form">
+                    <tr>
+                        <td class="name" width="100">名称：</td>
+                        <td class="value" width="350">
+                            <input class="input" id="name" name="name" value="<?=$data->name?>" valType="PRONAME" msg="<font color=red>*</font>请正确输入『名称』"/>
+                        </td>
+                        <td class="tip">4-32个字符</td>
+                    </tr>
+                    <tr style="background:#eee;">
+                        <td class="name">子策略类型</td>
+                        <td class="value center">
+                            <b style="color:#333">子策略名称</b>
+                        </td>
+                        <td class="tip center"><b style="color:#333">扫码次数范围匹配（扫码次数：针对具体活动进行累计）</b></td>
+                        <td></td>
+                    </tr>
+                    <?php
+                    foreach ($data->sonlist as $k => $v) {
+                        echo '
+                        <tr class="trlist" style="background:#f5f5f5;">
+                            <td class="name">
+                                <select id="strategyType_'.$k.'" class="select" name="strategyType" edit-value="'.$v->strategyType.'">
+                                    <option value="0">红包</option>
+                                    <option value="2">乐券</option>
+                                    <option value="3">积分</option>
+                                </select>
+                            </td>
+                            <td class="value">
+                                <select id="strategyId_'.$k.'" class="select" name="strategyId" edit-value="'.$v->strategyId.'"></select>
+                            </td>
+                            <td class="tip">
+                            <input class="input center ckval" style="width:50px;" id="start_'.$k.'" name="start" value="'.$v->start.'" maxlength="8" valType="NUMBER" msg="<font color=red>*</font>请填写大于0的整数" title="请填写大于0的整数"/> ~ 
+                            <input class="input center ckval" style="width:50px;" id="end_'.$k.'" name="end" value="'.$v->end.'" maxlength="8" valType="NUMBER" msg="<font color=red>*</font>请填写大于0的整数" title="请填写大于0的整数"/> 次</td>
+                            <td class="op"><span class="btn btn-gray noselect del"> 删除 </span></td>
+                        </tr>
+                        ';
+                    } 
+                    ?>
+                    <tr class="addnew">
+                        <td></td>
+                        <td><span id="btnAdd" class="btn btn-gray noselect"> + 增加一条策略</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span id="btnSave" class="btn btn-blue noselect">保存</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <?php include 'footer.php';?>
+</body>
+
+</html>
+

@@ -1,0 +1,76 @@
+{
+  "ALL":{
+    "code":{
+      "char32set":["A","B","C","D","E","F","G","H","0","1","2","3","4","5","6","7","8","9","J","K","L","M","N","P","R","T","U","V","W","X","Y","Z"],
+      "length":9,
+      "pri_length":8,
+      "auto_pri_length":true
+    }
+  },
+  "development": {
+    "database":{
+      "read":{
+        "host" : "localhost",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_dev"
+      },
+      "write":{
+        "host" : "localhost",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_dev"
+      }
+    },
+    "port":3100,
+    "cors_domain":"http://dev.www.lsa0.cn",
+    "is_print_stacktrace":true,
+    "code_prefix":"http://dev.lsa0.cn/c/",
+    "test_api":true
+  },
+  "testing": {
+    "database":{
+      "read":{
+        "host" : "10.30.147.58",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_test"
+      },
+      "write":{
+        "host" : "10.30.147.58",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_test"
+      }
+    },
+    "port":3100,
+    "cors_domain":"http://test.www.lsa0.cn",
+    "code_prefix":"http://test.lsa0.cn/c/",
+    "test_api":true
+  },
+  "production": {
+    "database":{
+      "read":{
+        "host" : "10.45.238.131",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_prod"
+      },
+      "write":{
+        "host" : "10.45.238.131",
+        "port" : "3306",
+        "user" : "root",
+        "password" : "1acctrue1",
+        "database" : "hls_prod"
+      }
+    },
+    "port":3100,
+    "cors_domain":"http://www.lsa0.cn",
+    "code_prefix":"http://lsa0.cn/c/"
+  }
+}

@@ -1,0 +1,142 @@
+/*module*/
+.frame{
+	width:500px;
+	height:auto;
+	min-height: 200px;
+	border:1px solid red;
+	border-radius:3px;
+	clear:both;
+}
+.frame-block{
+	width:110px;
+	height:60px;
+	line-height:60px;
+	font-size:15px;
+	font-weight:bold;
+	float:left;
+	text-align:center;
+	margin-left:20px;
+	margin-top:20px;
+	border:1px solid #E3E3E3;
+	border-radius:3px;
+	transition:All 0.2s ease-in-out;    
+	-webkit-transition:All 0.2s ease-in-out;    
+	-moz-transition:All 0.2s ease-in-out;    
+	-o-transition:All 0.2s ease-in-out;
+}
+.frame-block:hover{
+	background:#EDEDED;
+	cursor:pointer;
+	transform:scale(1.02);    
+	-webkit-transform:scale(1.02);    
+	-moz-transform:scale(1.02);    
+	-o-transform:scale(1.02);    
+	-ms-transform:scale(1.02);
+}
+.frameChose{
+	background:#EDEDED;
+}
+.frame-main{
+	margin-top:10px;
+	border:1px solid #D3D3D3;
+	border-radius:3px;
+	min-width:400px;
+}
+.content .tbtitle{
+	width:100%;
+	height:30px;
+	background:#D6D6D6;
+}
+.tbtitle .tbt1{
+	height:30px;
+	width:150px;
+	line-height:30px;
+	float:left;
+	margin-left:150px;
+	font-size:15px;
+}
+.tbtitle .tbt2{
+	height:30px;
+	width:150px;
+	line-height:30px;
+	float:left;
+	margin-left:270px;
+	font-size:15px;
+}
+.tborder{
+	width:700px;
+	height:auto;
+	min-height:300px;
+	padding-left:80px;
+	padding-top:50px;
+	/*border:1px solid red;*/
+}
+.content .tb1{
+	width:250px;
+	height:200px;
+	float:left;
+	border:2px solid #CBCBCB;
+	border-radius:2px;
+
+}
+.tb1 .filling{
+	width:200px;
+	height:30px;
+}
+.content .tb2{
+	margin-left:50px;
+	width:100px;
+	height:200px;
+	float:left;
+}
+.content .tb2 .tb2img{
+	width:50px;
+	height:50px;
+	margin-top:80px;
+	background-image: url('/static/images/direct_right.png');
+	background-size:100%;
+}
+.content .tb3{
+	width:250px;
+	height:200px;
+	float:left;
+}
+.tborder input{
+	margin-left:20px;
+	width:200px;
+	height:35px;
+	border:none;
+	border-radius:2px;
+	border:1px #ADADAF solid;
+	line-height:35px;
+	font-size:15px;
+	padding-left:10px;
+	color:#5A5A5A;
+}
+.tborder #btnAdd{
+	margin-left:150px;
+	margin-top:50px;
+}
+.tb3border{
+	margin:-5px 5px 5px 5px;
+	width:200px;
+	min-height:33px;
+	max-height:350px;
+	overflow-y:auto;
+	border:2px solid #CBCBCB;
+	border-radius:2px;
+}
+.littbar{
+	width:200px;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	font-size:15px;
+	border-bottom:1px solid #E3E3E5;
+	color:#5A5A5A;
+}
+.littbar:hover{
+	cursor:pointer;
+	background:#4871B4;
+	color:white;
+}

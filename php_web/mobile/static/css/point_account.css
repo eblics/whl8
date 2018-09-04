@@ -1,0 +1,215 @@
+@CHARSET "UTF-8";
+
+html {
+	font-size: 12px;
+}
+
+.hr {
+	background-color: #f5f5f5;
+	height: 10px;
+}
+
+section {
+	background-color: white;
+}
+
+.up {
+	text-align: center;
+}
+
+.up .header {
+	padding: 15px 35px;
+	padding-bottom: 45px;
+	padding-left: 0;
+}
+
+.header button {
+	padding: 5px 10px;
+    border: none;
+    background-color: #ff9933;
+    position: relative;
+    left: 30px;
+    color: white;
+}
+
+.hls-photo {
+	width: 77px;
+	border-radius: 50%;
+	border: 1px solid;
+	border-color: #d3d3d3;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+.nickname {
+	margin: 10px 0;
+	margin-bottom: 15px;
+	display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 6rem;
+}
+
+.nickname .name-str {
+	font-size: 18px;
+}
+
+.nickname .type-cards-num {
+	padding-top: 5px;
+    display: inline-block;
+	color: #999;
+}
+
+.nickname .type-cards-num i {
+	font-style: normal;
+}
+
+.type-cards {
+	padding: 15px;
+	background-color: #fafafa;
+	overflow: auto;
+    white-space: nowrap;
+}
+
+.type-cards div {
+	display: inline-block;
+	padding: 8px 15px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.type-cards div.selected {
+	flex-grow: 1;
+	color: #f05050;
+	border-radius: 20px;
+    border: 1px solid #ebebeb;
+	background-color: white;
+}
+
+.type-cards div p {
+	padding: 7px 0;
+	font-size: 16px;
+	color: black;
+}
+
+.type-cards div.selected p {
+	color: #e0353c;
+	border-bottom: 2px solid #e0353c;
+}
+
+.current-select {
+	padding: 10px 10%;
+	padding-bottom: 0;
+	text-align: left;
+	color: #999;
+}
+
+.transfer .hls-btn {
+	width: 60%;
+	padding: 8px 0;
+	font-size: 18px;
+}
+
+.transfer .amount {
+	margin: 10px 0;
+}
+
+.transfer .amount span:first-child {
+	font-size: 24px;
+}
+
+.down {
+	padding: 5px 20px;
+	background-color: white;
+}
+
+.trans-title {
+	padding: 5px 0;
+	padding-top: 10px;
+	color: #999;
+	border-bottom: 1px solid #eee;
+}
+
+.trans-list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.trans-list li>em{display: block;color: #ccc;font-size: 12px;}
+.trans-list li>em.text-red{color: #f05050;}
+
+.trans-list li.btn-more {
+	text-align: center;
+	border-bottom: none;
+}
+
+.trans-list li.btn-more > a {
+	color: #666;
+}
+
+.trans-list li p {
+	display: box;
+	display: -webkit-box;
+	display: flex;
+	display: -webkit-flex;
+	font-size: .9em;
+}
+
+.trans-list li p span {
+	display: block;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	box-flex:1;
+	-webkit-box-flex: 1;
+	text-align: center;
+}
+
+.text-red {
+	color: #f05050;
+}
+
+.trans-list li p span:first-child {
+	text-align: left;
+	color: #333;
+}
+
+.trans-list li p span.card-type-title {
+	color: #666;
+}
+
+.trans-list li p span:last-child {
+	text-align: right;
+	
+}
+
+.trans-list li small {
+	color: #999;
+	font-size: .8em;
+}
+
+.text-gold {
+	color: #ff9933;
+}
+
+.tips {
+	position: absolute;
+    top: 90px;
+    color: #ccc;
+    font-size: 0.6rem;
+}
+
+.trans-list li .errcode, .trans-list li .errcode_done {
+	display: inline-block;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    margin-left: 8px;
+    text-align: center;
+    border: 1px solid #900;
+    color: #900;
+    font-size: 11px;
+    border-radius: 50%;
+}

@@ -1,0 +1,8 @@
+// $ Id: $
+// vim:ft=javascript
+
+ARG_ENABLE('hls' , 'hls', 'no');
+if (PHP_HLS == "yes") {
+  EXTENSION("hls", "php_hls.c codec.c rsCodec.c",true);
+  AC_DEFINE("HAVE_HLS", 1, "hls support");
+}

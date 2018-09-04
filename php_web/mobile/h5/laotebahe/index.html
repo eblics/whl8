@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>劳特巴赫精酿啤酒——开盖扫码，赢盖世红包。</title>
+        <meta name="viewport" content="target-densitydpi=320,width=640, user-scalable=0"/>
+        <meta name="format-detection" content="telephone=no" />
+        <link type="text/css" rel="stylesheet" href="/min/?f=h5/laotebahe/style/pace-theme-center-atom.css,h5/laotebahe/style/index.css&v=2"/>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript" src="/min/?f=h5/laotebahe/script/jquery-2.1.1.min.js,static/js/common.js,static/js/hlsjs.js,h5/laotebahe/script/pace-1.0.0.min.js,h5/laotebahe/script/jquery.eraser-0.5.1.min.js,h5/laotebahe/script/app.js&v=2"></script>
+    </head>
+    <body>
+        <div class="scene hidden">
+            <div class="index">
+                <div class="bg_logo"></div>
+                <div class="hat"></div>
+                <div class="h1title"></div>
+                <div class="tt x-c">
+                    <img src="images/bottle.png" width="100%">
+                </div>
+                <div class="works x-c">
+                    <img class="works_img" src="images/works.png">
+                </div>
+                <div class="b_cont">
+                    <div class="b_move">
+                        <div class="sc_cont x-c">
+                            <img src="images/g_bg.png">
+                            <div id="errmsg" class="true_text x-c"></div>
+                        </div>
+                        <div class="de_cont x-c">
+                            <img src="images/g_bg.png">
+                            <div class="false_text x-c">再接再厉，下一个就是你</div>
+                        </div>
+                        <div class="sc_msk x-c">
+                            <img id="mskImg" src="images/g_msk.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="rule_btn">活动规则</div>
+                <div class="shouzhi shakeBig"></div>
+            </div>
+            <!-- 规则蒙层 -->
+            <div class="ruleMsk">
+                <div class="content c-c">
+                    <img src="images/rule_msk.png">
+                    <div class="closeBtn"></div>
+                </div>
+            </div>
+            <!-- 中奖二维码蒙层 -->
+            <div class="codeMsk">
+                <div class="content">
+                    <div class="closeBtn" style="z-index:1004;"></div>
+                    <img src="images/s_msk1.png">
+                </div>
+            </div>
+            <!-- error蒙层 -->
+            <div class="codeMsk_err">
+                <div class="content">
+                    <div class="closeBtn" style="z-index:1004;"></div>
+                    <div class="error"></div>
+                    <img src="images/err.png">
+                </div>
+            </div>	
+            <!-- 开心一刻蒙层 -->
+            <div class="defMsk">
+                <div class="content">
+                    <div id="alttext" class="msktext"></div>
+                    <div class="closeBtn" style="z-index:1004;"></div>
+                    <div class="qrcode" style="z-index:1003;"><img src="images/qrcode.png"/></div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

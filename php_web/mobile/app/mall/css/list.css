@@ -1,0 +1,23 @@
+.head{z-index:1;position:fixed;top:0;left:0;width:100%;background-color:white;}
+.head>.title{line-height:50px;height:50px;border-bottom:1px solid #e5e5e5;display:flex;align-items:center;}
+.head>.title>.menu{flex-grow:1;color:#333333;display:flex;justify-content:center;align-items:center;}
+.head>.title>.menu>.icon{margin-left:5px;height:4px;width:7px;background-size:cover;background-image:url(/app/mall/images/xiala.png);}
+.head>.title>.line{border-left:1px solid #e5e5e5;height:25px;}
+.head>.menulist{text-align:center;overflow:auto;-webkit-overflow-scrolling:touch;}
+.head>.menulist>.menuitem{line-height:40px;border-bottom: 1px solid #e5e5e5;color:#333333;}
+.head>.menulist>.menuitem.selected{color:#f05050;}
+.masklayer{position:fixed;top:0;right:0;left:0;bottom:0;background-color:#cccccc;opacity:0.5;}
+.content>.list{background-color:white;}
+.content>.list>.item{height:112px;display:flex;align-items:center;border-bottom:1px dashed #e5e5e5;margin:0 11px;}
+.content>.list>.item:last-child{border-bottom:0px}
+.content>.list>.item>.icon{background-image:url(/app/mall/images/noimage.png);flex-shrink:0;background-size:contain;background-repeat:no-repeat;background-position:center;width:90px;height:90px;border-radius:1px;/*border:1px solid #e5e5e5;*/}
+.content>.list>.item>.info{flex-grow:1;height:60px;margin-left:17px;display:flex;flex-direction:column;justify-content:center;}
+.content>.list>.item>.info>span{margin:6px 0;}
+.content>.list>.item>.info>.name{font-size:15px;color:#333333;}
+.content>.list>.item>.info>.point{color:#f05050;font-size:14px;}
+.content>.list>.item>.buttons{margin-left:2px;flex-shrink:0;width:79px;display:flex;flex-direction:column;justify-content:center;}
+.content>.list>.item>.buttons>span{text-align:center;font-size:12px;line-height:22px;height:22px;width:72px;margin:6px 0;border:1px solid #f05050;border-radius:13px}
+.content>.list>.item>.buttons>.hollow{color:#f05050}
+.content>.list>.item>.buttons>.hollow:active{background-color:#f05050;color:white;}
+.content>.list>.item>.buttons>.solid{background-color:#f05050;color:white;}
+.content>.list>.item>.buttons>.solid:active{background-color:white;color:#f05050;}

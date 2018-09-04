@@ -1,0 +1,15 @@
+.trans-list {font-size: 15px;}
+.trans-list .list-title {padding: 5px 15px;color: #333;background-color: #eeeff3;}
+.trans-list ul {border-top: 1px solid #e0e0e0;border-bottom: 1px solid #e0e0e0;
+padding: 0 10px;background-color: #fff;padding-right: 0;}
+.trans-list li {padding: 12px 0;white-space: nowrap;}
+.trans-list ul li {border-top: 1px solid #e0e0e0;clear: both;overflow: hidden;}
+.trans-list ul li:first-child {border:none;}
+.trans-list li div, .trans-list li p, .trans-list li span {display: inline-block;vertical-align: middle;}
+.trans-list li span {color: #999;font-size: 13px;}
+.trans-list li span.faild {color: #e0353c;}
+.trans-list li span.success {color: #3dbc6f;}
+.trans-list li div {color: #999;font-size: 13px;text-align: center;
+border-right: 1px solid #ccc;padding-right: 5px;}
+.trans-list li p {color: #666;margin: 0 15px;white-space: normal;width: 65%;}
+.trans-list li div span {display: block;font-size: 12px}

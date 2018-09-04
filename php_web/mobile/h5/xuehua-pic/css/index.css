@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Arial, "microsoft yahei"
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 1200px;
+    perspective: 1200px
+}
+
+.w-c,
+.x-c {
+    left: 50%;
+    -webkit-transform: translateX(-50%)
+}
+
+.h-c,
+.y-c {
+    top: 50%;
+    -webkit-transform: translateY(-50%)
+}
+
+.c-c {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%)
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.leftIn {
+    animation: leftIn 1.5s ease-in-out .5s forwards;
+    -webkit-animation: leftIn 1.5s ease-in-out .5s forwards
+}
+
+@-webkit-keyframes leftIn {
+    0% {
+        right: 190px;
+        opacity: .2
+    }
+    100% {
+        right: 150px;
+        opacity: 1
+    }
+}
+
+.rightIn {
+    animation: rightIn 1.5s ease-in-out .5s forwards;
+    -webkit-animation: rightIn 1.5s ease-in-out .5s forwards
+}
+
+@-webkit-keyframes rightIn {
+    0% {
+        right: -30px;
+        opacity: .2
+    }
+    100% {
+        right: 10px;
+        opacity: 1
+    }
+}
+
+.shake {
+    animation: shake 2s ease-in-out infinite normal;
+    -webkit-animation: shake 2s ease-in-out infinite normal
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100%,
+    50%,
+    65% {
+        -webkit-transform: translateX(0)
+    }
+    52.5%,
+    57.5%,
+    62.5% {
+        -webkit-transform: translateX(-5px)
+    }
+    55%,
+    60% {
+        -webkit-transform: translateX(5px)
+    }
+}
+
+.hx1 {
+    animation: hx1 2s ease-in-out infinite normal;
+    -webkit-animation: hx1 2s ease-in-out infinite normal
+}
+
+@-webkit-keyframes hx1 {
+    0% {
+        -webkit-transform: scale(1)
+    }
+    30% {
+        -webkit-transform: scale(1.04)
+    }
+    100%,
+    60% {
+        -webkit-transform: scale(1)
+    }
+}
+
+.hx2 {
+    animation: hx2 2s ease-in-out infinite normal;
+    -webkit-animation: hx2 2s ease-in-out infinite normal
+}
+
+@-webkit-keyframes hx2 {
+    0%,
+    40% {
+        -webkit-transform: scale(1)
+    }
+    70% {
+        -webkit-transform: scale(1.02)
+    }
+    100% {
+        -webkit-transform: scale(1)
+    }
+}
+
+.hx {
+    animation: hx 1s ease-in-out infinite alternate;
+    -webkit-animation: hx 1s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes hx {
+    0% {
+        opacity: .3
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.hxm {
+    animation: hxm 1s ease-in-out infinite alternate;
+    -webkit-animation: hxm 1s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes hxm {
+    0% {
+        -webkit-transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.04)
+    }
+}
+
+.xh1 {
+    animation: xh1 10s linear infinite normal;
+    -webkit-animation: xh1 10s linear infinite normal
+}
+
+@-webkit-keyframes xh1 {
+    0% {
+        top: -650px
+    }
+    100%,
+    60% {
+        top: 300px
+    }
+}
+
+.xh2 {
+    animation: xh2 10s linear infinite normal;
+    -webkit-animation: xh2 10s linear infinite normal
+}
+
+@-webkit-keyframes xh2 {
+    0%,
+    40% {
+        top: -650px
+    }
+    100% {
+        top: 300px
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%
+}
+
+.index {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    overflow: hidden;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: none
+}
+
+.index .xuehua1 {
+    position: absolute;
+    top: 0
+}
+
+.index .xuehua2 {
+    position: absolute;
+    top: -643px
+}
+
+.index .title {
+    position: absolute;
+    top: 100px
+}
+
+.index .title_m {
+    position: absolute;
+    top: 100px
+}
+
+.index .title img,
+.index .title_m img {
+    width: 450px
+}
+
+.index .text {
+    position: absolute;
+    top: 320px;
+    width: 500px
+}
+
+.index .text .text1 {
+    position: absolute;
+    right: 20px;
+    top: 0
+}
+
+.index .text .text2 {
+    position: absolute;
+    top: 47px;
+    right: 40px
+}
+
+.index .text .text3 {
+    position: absolute;
+    top: 122px;
+    left: 80px
+}
+
+.index .ruleBtn {
+    position: absolute;
+    left: 0;
+    top: 650px
+}
+
+.index .works {
+    position: absolute;
+    top: 450px;
+    width: 500px;
+    height: 20px
+}
+
+.index .works .jiubei {
+    position: absolute;
+    right: 150px;
+    top: 140px;
+    opacity: 0
+}
+
+.index .works .pijiu {
+    position: absolute;
+    right: 10px;
+    opacity: 0
+}
+
+.index .game {
+    position: absolute;
+    bottom: 60px;
+    height: 200px;
+    width: 500px
+}
+
+.index .game .gameTitle {
+    position: absolute;
+    top: 0
+}
+
+.index .game .gameSc {
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    top: 35px
+}
+
+.index .game .gameSc .sc_msk {
+    position: absolute;
+    top: 10px;
+    display: block
+}
+
+.index .game .gameSc .sc_cont {
+    position: absolute;
+    top: 10px
+}
+
+.index .game .gameSc .sc_cont .false_text {
+    position: absolute;
+    color: #ffe958;
+    top: 50px;
+    font-size: 34px;
+    font-weight: 700;
+    display: block
+}
+
+.index .game .gameSc .sc_cont .true_text {
+    position: absolute;
+    color: #ffe958;
+    top: 22px;
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    display: none
+}
+
+.index .game .gameSc .sc_cont .true_text span {
+    font-size: 50px;
+    padding: 0 5px;
+    color: #ffe958
+}
+
+.index .game .text_foot {
+    position: absolute;
+    bottom: -20px
+}
+
+.index .ruleSc {
+    position: absolute;
+    bottom: 60px;
+    height: 200px;
+    width: 500px
+}
+
+.index .ruleSc .rule_text {
+    position: absolute
+}
+
+.index .ruleSc .shareBtn {
+    position: absolute
+}
+
+.ruleSc {
+    width: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    overflow: hidden;
+    background: url(../images/bg2.jpg) no-repeat;
+    height: 1200px;
+    display: none
+}
+
+.ruleSc .xuehua1 {
+    position: absolute;
+    top: 0
+}
+
+.ruleSc .xuehua2 {
+    position: absolute;
+    top: -643px
+}
+
+.ruleSc .title {
+    position: absolute;
+    top: 100px
+}
+
+.ruleSc .title_m {
+    position: absolute;
+    top: 100px
+}
+
+.ruleSc .text {
+    position: absolute;
+    top: 320px;
+    width: 500px
+}
+
+.ruleSc .text .text1 {
+    position: absolute;
+    right: 20px;
+    top: 0
+}
+
+.ruleSc .text .text2 {
+    position: absolute;
+    top: 47px;
+    right: 40px
+}
+
+.ruleSc .text .text3 {
+    position: absolute;
+    top: 122px;
+    left: 80px
+}
+
+.ruleSc .works {
+    position: absolute;
+    top: 450px;
+    width: 500px
+}
+
+.ruleSc .works .jiubei {
+    position: absolute;
+    right: 150px;
+    top: 140px;
+    opacity: 0
+}
+
+.ruleSc .works .pijiu {
+    position: absolute;
+    right: 10px;
+    opacity: 0
+}
+
+.ruleSc .rule {
+    position: absolute;
+    bottom: 60px;
+    height: 400px;
+    width: 600px
+}
+
+.ruleSc .rule .rule_text {
+    position: absolute
+}
+
+.ruleSc .rule .shareBtn {
+    position: absolute;
+    bottom: 0
+}
+
+.codeBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    z-index: 10;
+    display: none
+}
+
+.codeMsk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none
+}
+
+.codeMsk .content {
+    position: absolute;
+    width: 400px;
+    height: 381px;
+    background: url(../images/codeBg.png) no-repeat;
+    z-index: 1;
+    left: 120px;
+    top: 200px
+}
+
+.codeMsk .content .closeBtn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -50px;
+    top: -50px;
+    z-index: 1
+}
+
+.codeMsk .codeImg {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    z-index: 2;
+    display: block;
+    left: 202px;
+    top: 240px
+}
+
+.ruleMsk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 99;
+    display: none
+}
+
+.ruleMsk .content {
+    position: absolute;
+    width: 456px;
+    height: 533px
+}
+
+.ruleMsk .content .closeBtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+    z-index: 1
+}
+
+.shareMsk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 99;
+    display: none
+}
+
+.shareMsk .shareImg {
+    position: absolute;
+    right: 40px;
+    top: 20px
+}
+
+@media screen and (max-height:840px) {
+    .index .game {
+        bottom: 30px
+    }
+    .index .game .gameTitle {
+        top: 18px
+    }
+    .index .works {
+        top: 316px
+    }
+    .index .title,
+    .index .title_m {
+        top: 50px
+    }
+}

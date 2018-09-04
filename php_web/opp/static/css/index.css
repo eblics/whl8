@@ -1,0 +1,42 @@
+.main>.content{background:#fff;border:1px solid #e1e1e1;width:1200px;padding:10px 20px;margin:0px auto}
+.main .title{margin:30px 30px;}
+.main .title-text{color:#333333;font-size:20px;}
+.main .title .unit{font-size:12px;margin-left:7px;margin-right:-8px;}
+.main .title .amount{border-radius:20px;background-color:#4dc075;padding:2px 8px;font-size:14px;color:white;margin-left:13px;}
+.main .title .label-menu span{border-radius:20px;padding:5px 15px;font-size:14px;color:#5a8edd;cursor:pointer;}
+.main .title .label-menu span.selected{background-color:#5a8edd;color:white;cursor:auto;}
+.main .title .label-menu{float:right;margin-right: 20px;}
+
+/* Tast 166 Added by shizqiang */
+.main .title .label-menu input {
+	width: 120px;
+	background-position: 98% 50%;
+	border-radius: 3px;
+	padding: 5px;
+	border-color: #ccc;
+	vertical-align: middle;
+}
+
+.main .title .label-menu button {
+	border: none;color: white;
+	vertical-align: middle;
+	background-color: #5a8edd;
+	border-radius: 3px;
+	padding: 2px 7px;
+}
+.main .title .label-menu button:active {
+	background-color: blue;
+}
+/* Tast 166 end */
+.main .split{border-top:1px solid #dddddd;margin:15px;margin-top:85px;margin-bottom:45px;}
+.main .center-info{position:absolute;left:50%;margin-left:-60px;top:93px;font-size:26px;color:#666666;width:120px;text-align:center;}
+.main #rpLabel{width:280px;height:48px;margin: 0 auto;position: relative;top:12px;}
+.main #rpLabel .line{position:absolute;height:2px;background-color:#f0f0f0;left:6px;top:6px;width:100%;}
+.main .redpacket{position:absolute;z-index:1;text-decoration: none;}
+.main .redpacket:hover{cursor: pointer;}
+.main .redpacket:hover .circle{background-color:#f4a599;}
+.main .redpacket:hover .text{color:#999999;}
+.main .redpacket .circle{background-color:#f0f0f0;width:12px;height:12px;display:block;border-radius:50%;}
+.main .redpacket .text{width:100px;margin-left:-44px;text-align: center;display:block;margin-top:3px;color:transparent;}
+.main .redpacket.selected .circle{background-color:#f0715b}
+.main .redpacket.selected .text{color:#f0715b}

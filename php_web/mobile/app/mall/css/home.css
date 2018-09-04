@@ -1,0 +1,21 @@
+.top{background-color:white;padding-bottom:4px;}
+.top>.banner{width:100%;}
+.top>.info{display:flex;align-items:center;height:26px;color:#777777;font-size:12px;}
+.top>.info>.icon{margin-left:11px;height:15px;width:16px;background-image:url(/app/mall/images/sy.png);background-size:cover;}
+.top>.info>.text{margin-left:6px;}
+.top>.info>.point{}
+.content>.area{margin-top:7px;background:white;}
+.content>.area>.title{height:36px;display:flex;align-items:center;}
+.content>.area>.title>.line{margin-left:11px;border-left:2px solid #f05050;height:12px;}
+.content>.area>.title>.text{margin-left:8px;color:#333333;line-height:36px;}
+.content>.area>.list{display:flex;flex-wrap:wrap;}
+.content>.area>.list>.item{width:155px;flex-grow:1;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.content>.area>.list>.item:first-child{border-top:1px solid #e5e5e5;}
+.content>.area>.list>.item:nth-child(2){border-top:1px solid #e5e5e5;}
+.content>.area>.list>.item:nth-child(odd){border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;}
+.content>.area>.list>.item:nth-child(even){border-bottom:1px solid #e5e5e5;}
+.content>.area>.list>.item>.icon{background-image:url(/app/mall/images/noimage.png);background-size:contain;background-repeat:no-repeat;background-position:center;width:100%;}
+.content>.area>.list>.item>.name{margin:0 10px;margin-top:3px;color:#333333;}
+.content>.area>.list>.item>.point{font-size:12px;color:#ff920b;margin-top:3px;margin-bottom:5px;}
+.content>.area>.list>.item>.button{color:#f05050;margin-bottom:10px;font-size:12px;line-height:18px;height:18px;width:68px;border:1px solid #f05050;border-radius:10px;text-align:center;}
+.content>.area>.list>.item>.button:active{background-color:#f05050;color:white;}

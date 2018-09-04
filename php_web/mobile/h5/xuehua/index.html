@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>雪花 - 勇闯天涯</title>
+    <link rel="stylesheet" type="text/css" 
+        href="/min/?f=h5/xuehua/style/pace-theme-center-atom.css,h5/xuehua/style/index.css" />
+</head>
+<body>
+    <div class="scene hidden">
+        <div class="index">
+
+            <!-- 雪花背景动画图片 -->
+            <div class="xuehua1 xh1 x-c">
+                <img src="images/xuehua.png">
+            </div>
+            <div class="xuehua2 xh2 x-c">
+                <img src="images/xuehua.png">
+            </div>
+
+            <!-- 大文字图片 -->
+            <div class="title x-c">
+                <img src="images/title.png">
+            </div>
+            <div class="title_m x-c">
+                <img class="hx" src="images/title_m.png">
+            </div>
+
+            <!-- 规则按钮图片 -->
+            <div class="ruleBtn">
+				<img src="images/ruleBtn.png">
+			</div>
+
+            <!-- 酒瓶图片 -->
+            <div class="works x-c">
+                <!-- 需求二次修改去除 <img class="jiubei" src="images/jiubei.png"> -->
+                <img class="pijiu" src="images/pijiu.png">
+            </div>
+
+            <!-- 刮刮卡 -->
+            <div class="game x-c">
+                <div class="gameTitle x-c">
+                    <img class="hxm" src="images/text3.png">
+                </div>
+
+                <!-- 刮奖区域 -->
+                <div class="gameSc">
+                    <div class="sc_cont x-c">
+                        <img src="images/work_bg.png">
+                        <div id="errmsg" class="errmsg x-c">Loading...</div>
+                        <div id="pricemsg" class="pricemsg x-c"></div>
+                    </div>
+                    <div class="sc_msk x-c">
+                        <img id="mskImg" src="images/work_bg1.png">
+                    </div>
+                </div>
+
+                <div class="text_foot x-c">
+                    <img src="images/text_foot.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 二维码蒙层 -->
+    <div class="codeMsk">
+        <div class="content">
+            <div class="closeBtn" style="z-index:1004"></div>
+            <img id="qrcode_img" class="codeImg" src="images/qcode.jpg">
+        </div>
+    </div>
+
+    <!-- 规则蒙层 -->
+    <div class="ruleMsk">
+        <div class="content c-c">
+            <div class="closeBtn"></div>
+            <img src="images/rule.png">
+        </div>
+    </div>
+
+    <!-- 分享蒙层 -->
+    <div class="shareMsk">
+        <div class="shareImg">
+            <img src="images/share.png">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/min/?f=static/js/jquery-2.1.1.min.js,static/js/common.js,h5/xuehua/script/jquery.eraser-0.5.1.min.js"></script>
+    <script type="text/javascript" src="/min/?f=h5/xuehua/script/pace-1.0.0.min.js,static/js/hlsjs.js,h5/xuehua/script/app.js"></script>
+</body>
+</html>

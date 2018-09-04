@@ -1,0 +1,150 @@
+﻿/*-----------------------------全局样式-------------------------------------*/
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,span,a,input,textarea,p,blockquote,th,td,header,nav,footer,article,section,aside,time,figure{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);background-clip:padding-box}
+h1,h2,h3,h4,h5,h6{font-size:.12rem;font-weight:normal}
+ul{list-style:none}
+legend{display:none}
+fieldset,img{border:none;vertical-align:middle}
+em,cite,i{font-style:normal}
+input,button,textarea{outline:none;border:0;vertical-align:middle;border:0;font-size:.12rem;font-family:inherit;-webkit-appearance:none}
+input[type="submit"],input[type="reset"],input[type="button"],button {-webkit-appearance:none;border-radius:0}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:.12rem;font-family:inherit}
+textarea{resize:none}
+html{height:100%;font-size:100px;overflow:hidden}/*.1rem=10px*/
+body{font:.12rem/1 "Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Helvetica Neue","Helvetica","Arial","sans-serif";position:relative;color:#000;min-width:320px;height:100%;overflow:hidden}
+a{color:#000;text-decoration:none;cursor:pointer}
+a:hover,a:active,a:focus{text-decoration:none;outline:none}
+/*-----------------------------框架-------------------------------------*/
+.swiper-container{overflow:hidden;width:100%;height:100%;position:absolute;left:0;top:0;max-width:640px;right:0;margin:auto}
+.swiper-slide{width:100%;height:100%;overflow:hidden;position:relative}
+.page{width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden}
+.auto-x{position:absolute;left:0;right:0;margin:auto}
+.auto-y{position:absolute;top:0;bottom:0;margin:auto}
+.bg{width:100%;height:100%}
+img{display:block;width:100%}
+.bg img{height:100%}
+.natural img{/*max-width:100%;*/width:auto;margin:0 auto}
+.animate{opacity:0}
+.hidden{visibility:hidden}
+.none{display:none}
+/*-----------------------------首页-------------------------------------*/
+.huo{width:2.5rem;height:3.12rem;top:.53rem}
+.title{width:2.58rem;height:.9rem;overflow:hidden;top:3.88rem}
+.title img{height:1.8rem}
+.hand{width:.32rem;height:.41rem;position:absolute;left:1.32rem;top:1.3rem}
+.huo-1{width:1.68rem;height:.51rem;top:.19rem}
+.huo-2{width:1.89rem;height:.38rem;top:1.02rem;left:.1rem}
+.huo-3{width:1.87rem;height:.56rem;top:1.49rem;left:.1rem}
+.on .hand img{animation:heart 1s ease infinite;-webkit-animation:heart 1s ease infinite}
+@keyframes heart{0%{transform:none}50%{transform:scale(1.1)}100%{transform:none}}
+@-webkit-keyframes heart{0%{-webkit-transform:none}50%{-webkit-transform:scale(1.1)}100%{-webkit-transform:none}}
+.on .title img{animation:title .2s steps(1) infinite;-webkit-animation:title .2s steps(1) infinite}
+@keyframes title{0%{transform:translateY(0)}50%{transform:translateY(-.9rem)}100%{transform:translateY(-.9rem)}}
+@-webkit-keyframes title{0%{-webkit-transform:translateY(0)}50%{-webkit-transform:translateY(-.9rem)}100%{-webkit-transform:translateY(-.9rem)}}
+.fixed{transition:filter 0.5s linear;-webkit-transition:-webkit-filter 0.5s linear;filter:blur(3px);-webkit-filter:blur(3px)}
+.fixed .hand{display:none}
+.hand p{text-align:center;left:-.4rem;right:-.4rem;bottom:-.24rem;color:#fff;text-shadow:rgba(0,0,0,.5) 0 .01rem 0;background:rgba(0,0,0,.5);line-height:.2rem;border-radius:.04rem}
+.h-1{position:absolute;width:.33rem;left:1.1rem;top:.335rem}
+.h-2{position:absolute;width:.21rem;left:1.32rem;top:1.03rem}
+.h-3{position:absolute;width:.18rem;left:.65rem;top:1.58rem}
+.on .h-1{animation:huangs 2s ease infinite 0.5s;-webkit-animation:huangs 2s ease infinite 0.5s}
+.on .h-2{animation:huangs 2s ease infinite 1s;-webkit-animation:huangs 2s ease infinite 1s}
+.on .h-3{animation:huangs 2s ease infinite 1.5s;-webkit-animation:huangs 2s ease infinite 1.5s}
+@keyframes huangs{0%{transform:translateX(0)}5%{transform:translateX(2px)}10%{transform:translateX(-2px)}15%{transform:translateX(1px)}20%{transform:translateX(-1px)}30%{transform:translateX(0)}100%{transform:translateX(0)}}
+@-webkit-keyframes huangs{0%{-webkit-transform:translateX(0)}5%{-webkit-transform:translateX(2px)}10%{-webkit-transform:translateX(-2px)}15%{-webkit-transform:translateX(1px)}20%{-webkit-transform:translateX(-1px)}30%{-webkit-transform:translateX(0)}100%{-webkit-transform:translateX(0)}}
+/*-----------------------------第二页-------------------------------------*/
+.shade{background-color:rgba(0,0,0,.22)}
+.titles{width:2.47rem;top:.08rem}
+.thing-1{width:2.4rem;height:2.88rem;left:.4rem;top:1.36rem;position:absolute}
+.thing-1-1{position:absolute;width:1.86rem;height:2.34rem;right:0;bottom:0;transform-origin:.65rem bottom;-webkit-transform-origin:.65rem bottom;transform:scale(0) translateY(0);-webkit-transform:scale(0) translateY(0)}
+.hand-1{width:.32rem;height:.41rem;position:absolute;right:.5rem;bottom:.3rem}
+.thing-2{width:1.12rem;height:2.31rem;left:1.06rem;top:1.48rem;position:absolute}
+.thing-2-1{position:absolute;width:1.12rem;height:1.95rem;right:0;bottom:0;transform-origin:center bottom;-webkit-transform-origin:center bottom;transform:scale(0) translateY(0);-webkit-transform:scale(0) translateY(0)}
+.hand-2{width:.32rem;height:.41rem;position:absolute;right:0;bottom:0}
+.thing-3{width:1.58rem;height:3.58rem;left:.38rem;top:1.4rem;position:absolute}
+.thing-3-1{position:absolute;width:.73rem;height:2.99rem;right:0;top:0;transform-origin:center bottom;-webkit-transform-origin:center bottom;transform:scale(0) translateY(0);-webkit-transform:scale(0) translateY(0)}
+.hand-3{width:.32rem;height:.41rem;position:absolute;right:0;bottom:0}
+@keyframes beng{0%{transform:scale(0) translateY(.2rem)}50%{transform:scale(1) translateY(-.2rem)}100%{transform:scale(1) translateY(0)}}
+@-webkit-keyframes beng{0%{-webkit-transform:scale(0) translateY(.2rem)}50%{-webkit-transform:scale(1) translateY(-.2rem)}100%{-webkit-transform:scale(1) translateY(0)}}
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+.on .thing-1-1{animation:beng .5s ease both;-webkit-animation:beng .5s ease both}
+.on .hand-1{animation:fade-in 1s ease both 0.5s;-webkit-animation:fade-in 1s ease both 0.5s}
+.on .hand-1 img{animation:heart 1s ease infinite 0.5s;-webkit-animation:heart 1s ease infinite 0.5s}
+.on .thing-2-1{animation:beng .5s ease both;-webkit-animation:beng .5s ease both}
+.on .hand-2{animation:fade-in 1s ease both 0.5s;-webkit-animation:fade-in 1s ease both 0.5s}
+.on .hand-2 img{animation:heart 1s ease infinite 0.5s;-webkit-animation:heart 1s ease infinite 0.5s}
+.on .thing-3-1{animation:beng .5s ease both;-webkit-animation:beng .5s ease both}
+.on .hand-3{animation:fade-in 1s ease both 0.5s;-webkit-animation:fade-in 1s ease both 0.5s}
+.on .hand-3 img{animation:heart 1s ease infinite 0.5s;-webkit-animation:heart 1s ease infinite 0.5s}
+.on .titles{animation:huang 2s ease infinite 0.5s;-webkit-animation:huang 2s ease infinite 0.5s}
+@keyframes huang{0%{transform:translateX(0)}5%{transform:translateX(10px)}10%{transform:translateX(-10px)}15%{transform:translateX(5px)}20%{transform:translateX(-5px)}30%{transform:translateX(0)}100%{transform:translateX(0)}}
+@-webkit-keyframes huang{0%{-webkit-transform:translateX(0)}5%{-webkit-transform:translateX(10px)}10%{-webkit-transform:translateX(-10px)}15%{-webkit-transform:translateX(5px)}20%{-webkit-transform:translateX(-5px)}30%{-webkit-transform:translateX(0)}100%{-webkit-transform:translateX(0)}}
+.on .thing-1-1>img{animation:huang 2s ease 1 both 1s;-webkit-animation:huang 2s ease 1 both 1s}
+.on .thing-2-1>img{animation:huang 2s ease 1 both 1s;-webkit-animation:huang 2s ease 1 both 1s}
+.on .thing-3-1>img{animation:huang 2s ease 1 both 1s;-webkit-animation:huang 2s ease 1 both 1s}
+/*-----------------------------第三页-------------------------------------*/
+.third-title{width:2.29rem;top:.35rem}
+.q{text-align:center;top:1.06rem;transform-origin:center bottom;-webkit-transform-origin:center bottom;transform:scale(0) translateY(0);-webkit-transform:scale(0) translateY(0)}
+img.q-1{display:inline-block;vertical-align:top;width:.83rem;height:.19rem}
+img.q-2{display:inline-block;vertical-align:top;width:.16rem;height:.16rem}
+.q span{font-weight:bold;color:#ff0000;font-size:.3rem;text-shadow:rgba(0,0,0,.5) -.01rem .01rem 0;vertical-align:top;position:relative;top:-.1rem}
+.shouji{width:1.12rem;height:2.1rem;left:1.82rem;top:2.78rem;position:absolute;transform:translateX(2.1rem);-webkit-transform:translateX(2.1rem)}
+.third-1{position:absolute;width:2.4rem;height:2.95rem;left:.38rem;top:1.36rem}
+.third-1-code{width:.61rem;position:absolute;left:1.05rem;top:.13rem; z-index: 900;}
+.third-2{position:absolute;width:2.32rem;height:2.18rem;left:.48rem;top:1.45rem}
+.third-2-code{width:.68rem;position:absolute;left:.82rem;top:.08rem; z-index: 900;}
+.third-3{position:absolute;width:1.88rem;height:1.85rem;left:.66rem;top:1.33rem}
+.third-3-code{width:.81rem;position:absolute;left:.5rem;top:.47rem; z-index: 900;}
+.on .q{animation:fade-in-big .5s cubic-bezier(.44,1.5,.55,.87) both 1.5s;-webkit-animation:fade-in-big .5s cubic-bezier(.44,1.5,.55,.87) both 1.5s}
+@keyframes fade-in-big{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+@-webkit-keyframes fade-in-big{0%{-webkit-transform:scale(0);opacity:0}100%{-webkit-transform:scale(1);opacity:1}}
+.on .third-title{animation:huang 2s ease infinite 0.5s;-webkit-animation:huang 2s ease infinite 0.5s}
+.on .third-1{animation:huang 2s ease 1 both 2s;-webkit-animation:huang 2s ease 1 both 2s}
+.on .third-2{animation:huang 2s ease 1 both 2s;-webkit-animation:huang 2s ease 1 both 2s}
+.on .third-3{animation:huang 2s ease 1 both 2s;-webkit-animation:huang 2s ease 1 both 2s}
+.on .shouji{animation:shouji 0.3s ease both .2s;-webkit-animation:shouji 0.3s ease both .2s}
+@keyframes shouji{0%{transform:translateX(2.1rem)}100%{transform:translateX(0)}}
+@-webkit-keyframes shouji{0%{-webkit-transform:translateX(2.1rem)}100%{-webkit-transform:translateX(0)}}
+.on .shouji img{animation:shoujis 1s linear 1 both 1s;-webkit-animation:shoujis 1s linear 1 both 1s}
+@keyframes shoujis{0%{transform:translateX(0)}33%{transform:translateX(-1rem)}66%{transform:translateX(.5rem)}100%{transform:translateX(0)}}
+@-webkit-keyframes shoujis{0%{-webkit-transform:translateX(0)}33%{-webkit-transform:translateX(-1rem)}66%{-webkit-transform:translateX(.5rem)}100%{-webkit-transform:translateX(0)}}
+/*-----------------------------屏幕适配-------------------------------------*/
+/*for huawei weixin*/
+@media screen and (width:384px) and (height:567px){
+.no-full-top img{position:relative;height:auto;top:0}
+.no-full-center img{position:absolute;height:auto;top:-2rem;bottom:-2rem;margin:auto}
+.no-full-bottom img{position:absolute;height:auto;bottom:0;left:0}
+.scale{transform-origin:center top;-webkit-transform-origin:center top;transform:scale(0.92);-webkit-transform:scale(0.92);height:122%;overflow:visible}
+}
+/*for huawei weixin*/
+@media screen and (width:360px) and (height:519px){
+.no-full-top img{position:relative;height:auto;top:0}
+.no-full-center img{position:absolute;height:auto;top:-2rem;bottom:-2rem;margin:auto}
+.no-full-bottom img{position:absolute;height:auto;bottom:0;left:0}
+.scale{transform-origin:center top;-webkit-transform-origin:center top;transform:scale(0.92);-webkit-transform:scale(0.92);height:122%;overflow:visible}
+}
+/*for android-*/
+@media screen and (max-height:500px){
+.no-full-top img{position:relative;height:auto;top:0}
+.no-full-center img{position:absolute;height:auto;top:-2rem;bottom:-2rem;margin:auto}
+.no-full-bottom img{position:absolute;height:auto;bottom:0;left:0}
+.scale{transform-origin:center top;-webkit-transform-origin:center top;transform:scale(0.89);-webkit-transform:scale(0.89);height:112%;overflow:visible}
+}
+/*for iphone4 weixin*/
+@media screen and (max-height:450px){
+.no-full-top img{position:relative;height:auto;top:0}
+.no-full-center img{position:absolute;height:auto;top:-2rem;bottom:-2rem;margin:auto}
+.no-full-bottom img{position:absolute;height:auto;bottom:0;left:0}
+.scale{transform-origin:center top;-webkit-transform-origin:center top;transform:scale(0.82);-webkit-transform:scale(0.82);height:122%;overflow:visible}
+}
+/*for meizu weixin*/
+@media screen and (width:384px) and (height:519px){
+.no-full-top img{position:relative;height:auto;top:0}
+.no-full-center img{position:absolute;height:auto;top:-2rem;bottom:-2rem;margin:auto}
+.no-full-bottom img{position:absolute;height:auto;bottom:0;left:0}
+.scale{transform-origin:center top;-webkit-transform-origin:center top;transform:scale(0.82);-webkit-transform:scale(0.82);height:122%;overflow:visible}
+}
+/*for pc or pad */
+@media screen and (min-width:640px){
+body{width:640px;margin:auto}
+}

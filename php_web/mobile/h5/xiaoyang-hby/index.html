@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>扫码不停，欢喜不停</title>
+    <link rel="stylesheet" type="text/css" href="/min/?f=h5/xiaoyang-hby/css/common/common.css,h5/xiaoyang-hby/css/index.css&v=201606211129">
+    <style type="text/css" id="moveCss"></style>
+    <style>
+        .page7 {
+            background: url(img/bg_finish.png) #1979bf no-repeat center bottom;
+            background-size: 100% auto;
+        }
+        
+        .img {
+            background: url(img/logo_finish.png) no-repeat center;
+            background-size: auto 100%;
+            position: fixed;
+            bottom: 4em;
+            height: 17em;
+            width: 100%;
+        }
+        
+        .dialog {
+            line-height: 1.5em;
+            position: absolute;
+            margin: 1em;
+            bottom: 26em;
+            left: 2em;
+            right: 2em;
+        }
+        
+        .dialog .background {
+            border-radius: .5em;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+            filter: alpha(opacity=70);
+            -moz-opacity: 0.7;
+            -khtml-opacity: 0.7;
+            opacity: 0.7;
+            z-index: 0;
+            padding: 1em;
+        }
+        
+        .dialog .text {
+            color: #333;
+            position: absolute;
+            padding: 1em;
+            z-index: 10;
+        }
+        
+        .dialog .btn_close {
+            background: url(img/btn_close.png) no-repeat center;
+            background-size: 100% 100%;
+            width: 1.2em;
+            height: 1.2em;
+            position: absolute;
+            right: .5em;
+            top: .5em;
+            z-index: 11;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="page page1">
+            <div id="leafContainer"></div>
+            <div class="hbDom"><img src="img/hb.png"> </div>
+            <div class="cloud"><img src="img/cloud.png"></div>
+            <div class="drink"><img src="img/drink.png"></div>
+        </div>
+        <div class="page page2">
+            <div class="people"><img src="img/people.png"></div>
+            <div class="cloud"><img src="img/cloud2.png"></div>
+            <div class="cloudDom">
+                <div class="cloud1"><img src="img/c1.png" /></div>
+                <div class="cloud2"><img src="img/c2.png" /></div>
+                <div class="cloud3"><img src="img/c3.png" /></div>
+            </div>
+            <div class="btnDom">
+                <div class="btn_start"><img src="img/btn_start.png"></div>
+                <div class="btn_rule"> <img src="img/btn_rule.png"></div>
+            </div>
+            <div class="ruleDom">
+                <div class="ruleBox"> <img style="margin-top:54px;" src="img/rule.png">
+                    <div class="btn_close"><img src="img/btn_close.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page page3">
+            <div class="overDom">
+                <div class="num"></div>
+            </div>
+            <div class="getScore"><span class="score"></span>
+                <!--<img style="zoom:1" src="img/jb.png" >--></div>
+            <div class="cloudDom">
+                <div class="cloud1"><img src="img/c1.png" /></div>
+                <div class="cloud2"><img src="img/c2.png" /></div>
+                <div class="cloud3"><img src="img/c3.png" /></div>
+            </div>
+            <div class="cloud"><img src="img/cloud3.png"></div>
+            <div class="moveDom">
+                <div class="moveBox" id="moveBox">
+                    <div class="man" id="man"> <img id="role" style="zoom:0.4" src="img/monkey.gif?a"> </div>
+                </div>
+            </div>
+            <div class="timeDom">
+                <div class="timeBox"> <img src="img/timeBg.png">
+                    <div class="time">00:<span id="time">15</span></div>
+                </div>
+            </div>
+            <div class="moneyDom">
+                <div class="moneyBox"> <img src="img/numBg.png">
+                    <div class="money">0000</div>
+                    <!-- <div class="gameNumDom">还剩<span class="gameNum">3</span>局</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="page page4">
+            <div class="cloudDom">
+                <div class="cloud1"><img src="img/c1.png" /></div>
+                <div class="cloud2"><img src="img/c2.png" /></div>
+                <div class="cloud3"><img src="img/c3.png" /></div>
+            </div>
+            <div class="cloud"><img src="img/cloud4.png"></div>
+            <div class="gameInfo">
+                <div class="gameNumDom">还剩<span class="gameNum">0</span>局</div>
+                <div class="yshMoneyDom">您之前总共已收获<span class="yshMoney">0</span>元</div>
+            </div>
+            <div class="font"> <img src="img/font.png" /> </div>
+            <div class="monkey"><img src="img/monkey.png"></div>
+            <div class="flower"><img src="img/flower.png"></div>
+            <div class="product"><img src="img/product.png"></div>
+            <div class="jt"><img src="img/jt.png"></div>
+            <div class="resultDom">
+                <div class="resultBox">
+                    <div class="rhb"><img src="img/r_hb.png">
+                        <div class="shMoney">收获<span class="totalMoney" id="totalMoney">0</span>元</div>
+                    </div>
+                    <div class="star"><img src="img/star.png"></div>
+                </div>
+            </div>
+            <div class="btn_pointRank"><img src="img/btn-pointRank.png" /></div>
+            <div class="btn_pointDetail"><img src="img/btn-pointDetail.png" /></div>
+        </div>
+        <!-- 积分排行 -->
+        <div class="pointRank">
+            <div class="btn_rank_close"><img src="img/btn_close.png"></div>
+            <div class="scroll_content">
+                <span class="rank_title" style="font-size: 18px;top: 12%;background:#eee;border-radius: 30px 30px 0 0; padding: 15px 0;">我当前排在第<b id="myrank" style="font-weight:700;color:#900;font"></b>名</span>
+                <span class="rank_title">积分排行</span>
+                <table class="table_title">
+                    <tr class="subtitle">
+                        <th style="width:15%">名 次</th>
+                        <th>昵 称</th>
+                        <th style="width:30%">积 分</th>
+                    </tr>
+                    <tbody class="rank_table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 积分明细 -->
+        <div class="pointDetail">
+            <div class="btn_detail_close"><img src="img/btn_close.png"></div>
+            <div class="scroll_content">
+                <span class="detail_title" style="font-size: 18px;top: 12%;background:#eee;border-radius: 30px 30px 0 0; padding: 15px 0;">我当前总得分<b id="myallscore" style="font-weight:700;color:#900;font"></b></span>
+                <span class="detail_title">积分明细</span>
+                <table class="table_title">
+                    <tr class="subtitle">
+                        <th scope="col" style="width:15%">编 号</th>
+                        <th scope="col">分 数</th>
+                        <th scope="col" style="width:60%">时 间</th>
+                    </tr>
+                    <tbody class="detail_table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="page page5">
+            <div class="cloudDom">
+                <div class="cloud1"><img src="img/c1.png" /></div>
+                <div class="cloud2"><img src="img/c2.png" /></div>
+                <div class="cloud3"><img src="img/c3.png" /></div>
+            </div>
+            <!--    <div class="shareTips"><img src="img/shareTips.png" ></div>
+-->
+            <div class="codeDom">
+                <!--      <div class="in1"><img src="img/in1.png" /></div>
+-->
+                <div class="qrcode"><img src="img/qrcode.png" /></div>
+                <div class="in2"><img src="img/in2.png" /></div>
+                <div class="btn_jd"><img src="img/btn_jd.png"></div>
+                <div class="btn_again"><img src="img/btn_again.png" /></div>
+            </div>
+            <div class="cloud"><img src="img/cloud5.png"></div>
+        </div>
+        <div class="page page6">
+            <div class="tips"><img src="img/tips.png" /></div>
+            <div class="cloudDom">
+                <div class="cloud1"><img src="img/c1.png" /></div>
+                <div class="cloud2"><img src="img/c2.png" /></div>
+                <div class="cloud3"><img src="img/c3.png" /></div>
+            </div>
+            <div class="btn_withdraw"><img src="img/btn_withdraw.png" /></div>
+        </div>
+        <div class="page page7">
+            <div class="dialog">
+                <div class="background"></div>
+                <div class="text">亲，还没玩过瘾？只要再喝一瓶小样乳酸盐，就能实现您的梦想哦~</div>
+                <div class="btn_close"></div>
+            </div>
+            <div class="img"></div>
+        </div>
+    </div>
+    <audio preload="auto" style="width:0;height:0" id="audio-d1"><source src="http://cdn.m.lsa0.cn/h5/xiaoyang-hby/sound/deng.mp3" type="audio/mpeg" /></audio>
+    <audio preload="auto" style="width:0;height:0" id="audio-d2"><source src="http://cdn.m.lsa0.cn/h5/xiaoyang-hby/sound/deng.mp3" type="audio/mpeg" /></audio>
+    <audio preload="auto" style="width:0;height:0" id="audio-b"><source src="http://cdn.m.lsa0.cn/h5/xiaoyang-hby/sound/bomb.mp3" type="audio/mpeg" /></audio>
+    <div class="music_btn"><img src="img/play.png" alt="" /></div>
+    <audio autoplay="autoplay" loop="loop" style="width:0;height:0" id="audio-m">
+        <source src="http://cdn.m.lsa0.cn/h5/xiaoyang-hby/sound/music.mp3" type="audio/mpeg">
+    </audio>
+</body>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/min/?f=/static/js/jquery-2.1.1.min.js,/static/js/common.js,/static/js/hlsjs.js,h5/xiaoyang-hby/js/commonJs/jquery.imgpreload.min.js,h5/xiaoyang-hby/js/draggabilly.pkgd.min.js,h5/xiaoyang-hby/js/commonJs/TweenMax.min.js,h5/xiaoyang-hby/js/index.js&v=201606211129"></script>
+<script>
+    function redo(code) {
+        var referrer = document.referrer;
+        var r = 0;
+        if (referrer.indexOf('m.lsa0.cn/code/scan/' + code) != -1) {
+            r = 1;
+        }
+        $(".btn_start").off();
+        //取当前游戏数据
+        $.ajax({
+            url: hlsjs.getRootUrl() + 'activity/take_data/' + code + '/jsonp?r=' + r,
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            data: {},
+            success: function(d) {
+                if (d.errorCode == 0) {
+                    var total = Number(d.data.total); //总共几局
+                    var remain = Number(d.data.remain); //剩余几局
+                    var history = Number(d.data.history_amount); //历史总金额
+                    $('.yshMoney').html(history / 100);
+                    $('.gameNum').html(remain);
+                    if (remain > 0) {
+                        $(".btn_start").off().on('touchend', function() {
+                            var gameNum = $('.gameNum').text();
+                            var remainN = Number(gameNum) - 1;
+                            $('.gameNum').html(remainN);
+                            $(".page2").fadeOut("fast", function() {
+                                $(".page3").fadeIn("fast", function() {
+                                    startTimeAnimate();
+                                });
+                            });
+                        });
+                    } else {
+                        $(".btn_start").off().on('touchend', function() {
+                            $(".page").css("display", "none");
+                            $(".page6").fadeIn("fast");
+                        });
+                    }
+                }
+            }
+        });
+
+    }
+
+    function take_ajax() {
+        var score = $('.money').text();
+        score = Number(score);
+        $.ajax({
+            url: hlsjs.getRootUrl() + 'activity/take_ajax/jsonp',
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            data: {
+                code: hlsjs.lecode,//hlsjs.getQueryString('code'),
+                score: score
+            },
+            success: function(result) {
+                if (result.errcode == 0) {
+                    var amount = Number(result.amount) / 100;
+                    $('#totalMoney').html(amount);
+                } else {
+                    $('#totalMoney').html(0);
+                    console.log(result.errmsg);
+                }
+                top_data();
+                list_data();
+            }
+        });
+    }
+
+    function top_data() {
+        $.ajax({
+            url: hlsjs.getRootUrl() + 'webapp/top_data/' + hlsjs.lecode + '/jsonp',
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            data: {},
+            success: function(result) {
+                if (result.errcode == 0) {
+                    var data = result.data;
+                    $('#myrank').html(result.myrank);
+                    var html = '';
+                    for (var i = 0; i < data.length; i++) {
+                        var n = i + 1;
+                        html += '<tr><td>' + n + '</td>';
+                        html += '<td>' + data[i].nickName + '</td>';
+                        html += '<td>' + data[i].topScore + '</td></tr>';
+                    }
+                    $('.rank_table').html(html);
+                } else {
+                    console.log(result.errmsg);
+                }
+            }
+        });
+    }
+
+    function list_data() {
+        $.ajax({
+            url: hlsjs.getRootUrl() + 'webapp/list_data/' + hlsjs.lecode + '/jsonp',
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            data: {},
+            success: function(result) {
+                if (result.errcode == 0) {
+                    var data = result.data;
+                    var html = '';
+                    var all = 0;
+                    for (var i = 0; i < data.length; i++) {
+                        all += Number(data[i].score);
+                        var n = i + 1;
+                        html += '<tr><td>' + n + '</td>';
+                        html += '<td>' + data[i].score + '</td>';
+                        html += '<td>' + data[i].createTime + '</td></tr>';
+                    }
+                    $('.detail_table').html(html);
+                    $('#myallscore').html(all);
+                } else {
+                    console.log(result.errmsg);
+                }
+            }
+        });
+    }
+    $(function() {
+        $('.gameNum').html(0);
+        // $(".btn_start").off().on('touchend', function() {
+        //     return;
+        // });
+        $(".btn_withdraw img").on('touchend', function() {
+            window.location.href = "http://m.lsa0.cn/user/account/9";
+        });
+        var code = hlsjs.lecode;
+        //判断是否登录，未登录自动跳转登录
+        $.ajax({
+            url: hlsjs.getRootUrl() + 'user/login/' + code + '/jsonp',
+            jsonp: 'callback',
+            dataType: 'jsonp',
+            data: {},
+            success: function(d) {
+                if (d.errorCode == 1) {
+                    location.href = d.data.url;
+                    return;
+                }
+                if (d.errorCode == 0) { //已登录
+                    redo(code);
+                }
+            }
+        });
+        hlsjs.ready(function(resp) {
+            hlsjs.wx();
+            wx.ready(function() {
+                music();
+                wx.hideOptionMenu();
+                wx.showMenuItems({
+                    menuList: ['menuItem:share:appMessage']
+                });
+                wx.onMenuShareAppMessage({
+                    title: '扫码不停，欢喜不停', // 分享标题
+                    desc: '不可思议！这游戏可以免费玩，还有大惊喜哦！根本停不下来！', // 分享描述
+                    imgUrl: 'http://m.lsa0.cn/h5/xiaoyang-hby/img/monkey.gif', // 分享图标
+                    success: function() {
+                        $.ajax({
+                            url: hlsjs.getRootUrl() + 'activity/share_ajax/jsonp',
+                            jsonp: 'callback',
+                            dataType: 'jsonp',
+                            data: {
+                                code: hlsjs.lecode//hlsjs.getQueryString('code')
+                            },
+                            success: function(d) {
+                                if (d.errcode == 0) {
+                                    location.reload();
+                                }
+                            }
+                        });
+                    },
+                    cancel: function() {
+                        console.log('cancel');
+                    }
+                });
+            });
+
+
+        });
+
+    });
+</script>

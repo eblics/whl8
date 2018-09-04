@@ -1,0 +1,184 @@
+.page_setting .tab{height:46px; padding:15px 20px 0 20px;background: #eee; border-bottom:1px solid #ddd;}
+.page_setting .tab li{height: 45px; line-height: 45px; text-align: center; padding: 0 20px; font-size: 15px; border:1px solid #ddd; border-radius:5px 5px 0 0 ; color: #999;display: inline-block;cursor: pointer;}
+.page_setting .tab li.current{ background: #fff; border-color: #ccc; color: #666; border-bottom-color: #fff;}
+.page_setting .tab_con .padding{ clear: both; padding:20px;}
+.page_setting .tab_con .tr{ overflow: hidden; width: 100%;}
+.page_setting .tab_con .tip{ overflow: hidden; width: 100%; line-height: 26px; padding: 0 10px; background: #ff9; color:#900;}
+.main .exists-users .exists-title{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+	line-height:18px;
+	font-size:14px;
+	color:#999999;
+	border-bottom:1px solid #DDDDDD;
+}
+.main .exists-users .exists-nav{
+	margin-top:15px;
+	width:100%;
+	height:30px;
+}
+.exists-nav .exists-n1{
+	margin-left:50px;
+	width:5%;
+	min-width:50px;
+	float:left;
+	text-align:center;
+	line-height:30px;
+	height:30px;
+	font-size:15px;
+	font-weight:bold;
+}
+.exists-nav .exists-n2{
+	width:25%;
+	min-width:250px;
+	float:left;
+	line-height:30px;
+	height:30px;
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+}
+.exists-nav .exists-n3{
+	width:30%;
+	min-width:200px;
+	float:left;
+	line-height:30px;
+	height:30px;
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+}
+.exists-nav .exists-n4{
+	width:10%;
+	min-width:100px;
+	float:left;
+	line-height:30px;
+	height:30px;
+	text-align:center;
+	font-size:15px;
+	font-weight:bold;
+}
+.main .exists-detail-son{
+	width:100%;
+	height:50px;
+	float:both;
+	font-size:18px;
+	margin-top:10px;
+}
+.search-title{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	padding-left:20px;
+	line-height:18px;
+	font-size:14px;
+	color:#999999;
+	border-bottom:1px solid #DDDDDD;
+}
+.search-other{
+	margin-top:25px;
+}
+.exists-detail-son{
+	float:both;
+}
+.exists-detail{
+	float:both;
+}
+.exists-id{
+	margin-left:50px;
+	width:5%;
+	min-width:50px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	float:left;
+	font-size:15px;
+	color:#4B4B52;
+}
+.exists-nickname{
+	width:25%;
+	min-width:250px;
+	height:50px;
+	line-height:50px;
+	float:left;
+	text-align:center;
+	font-size:15px;
+	color:#4B4B52;
+}
+.exists-avatar{
+	width:30%;
+	min-width:200px;
+	height:50px;
+	float:left;
+	text-align:center;
+}
+.exists-avatar img{
+	width:50px;
+	height:50px;
+	border-radius:25px;
+}
+.exists-edit{
+	float:left;
+	width:10%;
+	min-width:100px;
+	height:50px;
+	text-align: center;
+	line-height:50px;
+}
+.exists-edit button{
+	width:50px;
+	height:25px;
+	border:none;
+	background:#5A8EDD;
+	line-height:25px;
+	color:white;
+	margin-top:13px;
+	border-radius:2px;
+	/*margin-left:54px;*/
+	margin: auto;
+}
+.exists-edit button:hover{
+	cursor:pointer;
+	background:#5281C6;
+}
+.add-user .search-main .search-user{
+	width:90%;
+	height:30px;
+	color:#4B4B52;
+	font-size:14px;
+	margin-left:25px;
+}
+.add-user .search-main .search-user p{
+	float:left;
+	margin-top: 4px;
+	font-size:15px;
+	color:#7C7C7E;
+}
+.add-user .search-main .search-user input{
+	margin-left:30px;
+	border:none;
+	border:1px solid #AAAAAF;
+	border-radius:2px;
+	height:25px;
+	width:200px;
+	float:left;
+	padding-left:10px;
+}
+.add-user .search-main .search-user button{
+	border:none;
+	border-radius:2px;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:white;
+	background:#5A8EDD;
+	margin-left:50px;
+	float:left;
+}
+.add-user .search-main .search-user button:hover{
+	background:#5581C9;
+	cursor:pointer;
+}

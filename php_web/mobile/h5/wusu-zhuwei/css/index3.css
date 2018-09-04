@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    background-image: url("../images/logo.png");
+    width: 142px;
+    height: 71px;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+
+.slogan {
+    background-image: url("../images/slogan.png");
+    width: 167px;
+    height: 94px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.title3 {
+    background-image: url("../images/title3.png");
+    width: 526px;
+    height: 136px;
+    position: absolute;
+    left: 50%;
+    top:15%;
+    transform: translateX(-50%);
+}
+
+.title3_left {
+    background-image: url("../images/title3_left.png");
+    width: 204px;
+    height: 100px;
+    position: absolute;
+    left: 15%;
+    bottom:10%;
+    /*transform: translateX(-50%);*/
+}
+
+.title3_right {
+    background-image: url("../images/title3_right.png");
+    width: 204px;
+    height: 100px;
+    position: absolute;
+    right: 15%;
+    bottom:14%;
+    /*transform: translateX(-50%);*/
+}
+
+.user {
+    padding: 12px;
+}
+.user img {
+    vertical-align: middle;
+    width: 65px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.user p {
+    display: inline-block;
+    vertical-align: middle;
+}
+.my-badge-container {
+    position: relative;
+    top: 30%;
+    background-image: url(/static/images/huizhang.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 41% 15px;
+    padding-bottom: 50px;
+    margin: 0 18%;
+    font-size: 22px;
+    color: white;
+}
+.my-badge {
+    font-size: 26px;
+    font-family: monospace;
+    color: #e7cd85;
+    font-weight: bold;
+}

@@ -1,0 +1,7 @@
+/*subscribe*/
+#pageSubscribe{background:url(../images/bg_subscribe.jpg) no-repeat; background-size:100% 100%;}
+#pageSubscribe .qrcode{position:absolute;left:50%;bottom:25%;width:28%;margin-left:-15%;height:calc(width);border:3px solid #fc9200;}
+#pageSubscribe .qrcode img{width:100%;height:100%;display: block;}
+#pageSubscribe .qrtxt{position:absolute;left:0;right:0;bottom:18%;text-align:center;font-size:13px;color: #000;font-weight: 700;}
+#pageSubscribe .qrtip{position:absolute;left:0;right:0;bottom:50%;text-align:center;font-size:13px;color: #dc7000;}
+

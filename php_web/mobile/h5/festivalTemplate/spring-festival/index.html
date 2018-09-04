@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="../../../static/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<img src="./images/flower.png" alt="" class="flower animated fadeInLeft">
+<img src="./images/denglong.png" alt="" class="denglong animated fadeInRight">
+<img src="./images/house.png" alt="" class="house animated fadeIn">
+<img src="./images/lihua.png" alt="" class="lihua animated zoomIn">
+<img src="./images/house3.png" alt="" class="house3 animated fadeIn">
+<img src="./images/firework1.png" alt="" class="firework1">
+<img src="./images/firework2.png" alt="" class="firework2">
+<img src="./images/baozhu1.png" alt="" class="baozhu1 animated bounceIn">
+<img src="./images/baozhu2.png" alt="" class="baozhu2 animated bounceIn">
+
+<div class="text animated fadeIn">祝大家<br>春节快乐</div>
+
+<!--红包蒙层-->
+<div class="msk_redpocket">
+
+</div>
+
+<script>
+    $(function(){
+        function mskPop() {
+            var timeout=setTimeout(function () {
+               $(".yueliang").hide();
+               $(".wenzi").hide();
+               $(".yun").hide();
+               $(".xiangyun").hide();
+               $(".yueyuanrenhe").hide();
+               $(".msk_redpocket").show();
+            },5000)
+        }
+        mskPop();
+    })
+</script>
+</body>
+</html>

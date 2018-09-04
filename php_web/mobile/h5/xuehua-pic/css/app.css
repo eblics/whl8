@@ -1,0 +1,280 @@
+/*整体基础ui*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: Arial, "microsoft yahei";
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;	
+}
+.swiper-wrapper {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+.swiper-slide {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	overflow: hidden;
+}
+.stop-prev,.stop-next{
+	/*这是禁止上下滑动用到的两个类*/
+}
+/*布局辅助类*/
+.ab {
+	position: absolute;
+}
+.re {
+	position: relative;
+}
+.fi{
+	position: fixed;
+}
+.width{
+	width: 100%;
+}
+.width0{
+	width: 0;
+}
+.height{
+	height: 100%;
+}
+.height0{
+	height: 0;
+}
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.full{
+	width: 100%;
+	height: 100%;
+}
+.left{
+	left: 0;
+}
+.right{
+	right: 0;
+}
+.top{
+	top: 0;
+}
+.bottom{
+	bottom: 0;
+}
+.t-c{
+	text-align: center;
+}
+.x-c,.w-c{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+.y-c,.h-c{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+}
+.c-c{
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+}
+.hide{
+	display: none;
+}
+.hidden{
+	visibility:hidden;
+}
+.yin{
+	opacity: 0;
+}
+/*通用背景音乐开关*/
+#music {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 99;
+	width: 72px;
+	height: 72px;
+	border-radius: 36px;
+	background: rgba(80, 80, 80, 0.41);
+	background-image: url(../img/music.png);	
+	-webkit-animation: rotate 4s linear infinite;
+}
+
+#music.pause{
+	-webkit-animation: none;
+}
+/*划屏提示*/
+.moved {
+position: absolute;
+bottom: 20px;
+left: 50%;
+margin-left: -36px;
+z-index: 99;
+width: 72px;
+height: 72px;
+border-radius: 36px;
+background: rgba(39, 32, 8, 0.17);
+}
+.movei {
+position: relative;
+top: 39px;
+left: 17px;
+width: 38px;
+height: 22px;
+opacity:0.2;
+-webkit-animation:movei 3s linear 0s infinite normal;
+}
+@-webkit-keyframes movei{
+0%   {opacity:0.2;top:39px;}
+33%   {opacity:1;top:29px;}
+66% {opacity:1;top:10px;}
+100% {opacity:0.2;top:0px;}
+}
+/*预置动画*/
+/*顺时针旋转*/
+.rotate{
+	-webkit-animation: rotate 4s linear infinite;
+}
+@-webkit-keyframes rotate {
+0% {-webkit-transform: rotate(0deg)}
+100% {-webkit-transform: rotate(360deg)}
+}
+/*逆时针旋转*/
+.rotate0{
+	-webkit-animation: rotate0 4s linear infinite;
+}
+@-webkit-keyframes rotate0 {
+0% {-webkit-transform: rotate(0deg)}
+100% {-webkit-transform: rotate(-360deg)}
+}
+/*渐隐渐显循环*/
+.sh{
+	-webkit-animation: sh 0.8s linear alternate infinite;
+}
+/*渐显*/
+.s{
+	-webkit-animation: s 0.4s linear 0s 1 normal forwards;
+}
+@-webkit-keyframes sh{
+0%{opacity: 1;}
+100%{opacity: 0;}
+}
+@-webkit-keyframes s{
+0%{opacity: 0;
+visibility:visible;}
+100%{opacity: 1;
+visibility:visible;}
+}
+/*从上进入-带反弹-配合.hidden*/
+.us{
+	-webkit-animation: us 0.4s cubic-bezier(.15,.49,.39,1.51) 0s forwards;
+}
+@-webkit-keyframes us{
+0%{
+	-webkit-transform: translateY(-200px);
+	visibility:visible;
+	opacity: 0;
+}
+100%{
+	-webkit-transform: translateY(0px);
+	visibility:visible;
+	opacity: 1;
+}
+}
+/*从下进入-带反弹-配合.hidden*/
+.ds{
+	-webkit-animation: ds 0.4s cubic-bezier(.15,.49,.39,1.51) 0s forwards;
+}
+@-webkit-keyframes ds{
+0%{
+	-webkit-transform: translateY(200px);
+	visibility:visible;
+	opacity: 0;
+}
+100%{
+	-webkit-transform: translateY(0px);
+	visibility:visible;
+	opacity: 1;
+}
+}
+/*从左进入-带反弹-配合.hidden*/
+.ls{
+	-webkit-animation: ls 0.4s cubic-bezier(.15,.49,.39,1.51) 0s forwards;
+}
+@-webkit-keyframes ls{
+0%{
+	-webkit-transform: translateX(-200px);
+	visibility:visible;
+	opacity: 0;
+}
+100%{
+	-webkit-transform: translateX(0px);
+	visibility:visible;
+	opacity: 1;
+}
+}
+/*从右进入-带反弹-配合.hidden*/
+.rs{
+	-webkit-animation: rs 0.4s cubic-bezier(.15,.49,.39,1.51) 0s forwards;
+}
+@-webkit-keyframes rs{
+0%{
+	-webkit-transform: translateX(200px);
+	visibility:visible;
+	opacity: 0;
+}
+100%{
+	-webkit-transform: translateX(0px);
+	visibility:visible;
+	opacity: 1;
+}
+}
+/* 缩小并显示-配合.hidden*/
+.ss{
+	-webkit-animation: ss 0.4s linear 0s 1 normal forwards;
+}
+@-webkit-keyframes ss {
+	0% {
+		-webkit-transform: scale(2);
+		visibility:visible;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		visibility:visible;
+	}
+}
+/*放大并显示-配合.hidden*/
+.fs{
+	-webkit-animation: fs 0.4s linear 0s 1 normal forwards;
+}
+@-webkit-keyframes fs {
+	0% {
+		-webkit-transform: scale(0.2);
+		visibility:visible;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		visibility:visible;
+	}
+}
+/*----------------------我是分割线，别在线以上编辑啊魂淡！---------------------*/
+/*page1*/
+
+
+/*page2*/
+
+
+/*page3*/
+
+
+/*page4*/
+
+
+
+
+
+
+

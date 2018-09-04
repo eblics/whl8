@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+#open_scan {
+	background-color: gray;
+}
+#open_scan.ready {
+	background-color: #e0353c;
+}
+#open_scan.ready:active {
+	background-color: red;
+}
+
+#lecode_input {
+	padding: 10px 15px;
+	width: 100%;
+	margin-top: 45px;
+	border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button.hls-btn {
+	margin-top: 15px;
+	border: none;
+}

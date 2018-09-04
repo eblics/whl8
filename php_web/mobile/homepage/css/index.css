@@ -1,0 +1,345 @@
+html, body {
+    /*width: 100%;*/
+    position: relative;
+    height: 100%;
+}
+
+body {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    z-index: 9999;
+    width: 50%;
+    height: 100%;
+    background-color: #282828;
+}
+
+.popup_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    display: inline-block;
+    display: none;
+}
+
+.popup a {
+    font-size: 24px;
+    display: block;
+    padding: 10%;
+    color: #fff;
+    background-color: #222222;
+}
+
+.img_width_full {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 999;
+}
+
+.header .logo {
+    height: 80%;
+    margin-top: 1.5%;
+    float: left;
+    padding-left: 3%;
+}
+
+.header .home {
+    height: 45%;
+    float: right;
+    margin-top: 4%;
+    padding-right: 6%;
+}
+
+.header .list {
+     height: 45%;
+     float: right;
+     margin-top: 4.5%;
+     padding-right: 4%;
+ }
+
+.header .close {
+    height: 40%;
+    float: right;
+    margin-top: 4%;
+    padding-right: 55%;
+    display: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner .title1 {
+    width: 60%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .title2 {
+    width: 46%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.introduce {
+    width: 100%;
+    position: relative;
+}
+
+.introduce .introduce_h1 {
+    width: 474px;
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.introduce .introduce_h2 {
+    width: 30%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    background: url("../images/function_bg.png") no-repeat;
+}
+
+.swiper-slide {
+    position: relative;
+    text-align: center;
+}
+
+.swiper-container .page {
+    width: 320px;
+    height: 300px;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgb(0,0,0);
+}
+
+.swiper-container .page span {
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 18px;
+    width: 80%;
+
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-container .page p {
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 32px;
+    text-align: left;
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-slide-active .page {
+    background-color: rgba(0, 134, 219, 0.8);
+    color: #fff;
+}
+
+.newsTitle_box {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.news_img {
+    transform: translateX(16%);
+}
+
+.news {
+    width: 560px;
+    height: 600px;
+    margin: 20px auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30px 20px 30px 20px;
+    box-shadow:  1px 1px 80px -20px #888888;
+    position: relative;
+}
+
+.news li {
+    width: 480px;
+    height: 130px;
+    padding: 15px 0px 15px 0px;
+    box-sizing: border-box;
+    /*background-color: #5a0099;*/
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+}
+
+.news li:last-child {
+    border-bottom: none;
+}
+
+.news li .date {
+    /*height: 49px;*/
+    /*background-color: #00a0e9;*/
+    /*position: relative;*/
+}
+
+.news li .date .day {
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    font-size: 35px;
+    color: #666666;
+}
+
+.news li .date .year_month {
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    font-size: 18px;
+    color: #666666;
+}
+
+.news li .news_content {
+    width: 340px;
+    height: 100%;
+    float: right;
+    /* background-color: #0E2D5F; */
+    font-size: 12px;
+}
+
+.news li .news_content .news_title {
+    color: #0079ea;
+    font-weight: 400;
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+}
+
+.news li .news_content .news_text {
+    color: #333333;
+    font-weight: 300;
+    position: absolute;
+    bottom: 22px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.news .slash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 50px;
+    box-sizing: border-box;
+    /* border: 1px solid #333; */
+    /* line-height: 120px; */
+    /* text-indent: 5px; */
+    z-index: 30;
+}
+
+.news .slash::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 75px;
+    width: 100%;
+    /* height: 50px; */
+    box-sizing: border-box;
+    border-bottom: 0.5px solid #e1e1e1;
+    transform-origin: bottom center;
+    transform: rotateZ(-35deg) scale(1.414);
+}
+
+.footer {
+    padding: 32px 40px 25px 40px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 260px;
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+}
+
+.footer span {
+    font-weight: 100;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer .lianxi_title {
+    margin: 0px auto;
+    margin-top: 32px;
+    font-size: 26px;
+}
+
+.footer .contact {
+    text-align: left;
+    margin: 0 auto;
+    line-height: 35px;
+    width: 560px;
+    /* height: 142px; */
+    font-size: 18px;
+    padding: 25px 0px 25px 0px;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.footer .contact span{
+    font-size: 18px;
+}
+
+.footer .copyright {
+    display: inline-block;
+    font-size: 14px;
+    margin: 25px 0px 24px 0px;
+}
+
+.msk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0);
+}

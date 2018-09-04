@@ -1,0 +1,222 @@
+/*整体基础ui*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Arial, "microsoft yahei";
+}
+
+/*通用*/
+.hidden {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+/*.scene_b {*/
+/*position: absolute;*/
+/*width: 640px;*/
+/*height: auto;*/
+/*perspective: 1200px;*/
+/*-webkit-backface-visibility: hidden;*/
+/*}*/
+/*布局相关*/
+
+/*主页面*/
+.scene .index {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*-webkit-transform-style: preserve-3d;*/
+    /*overflow: hidden;*/
+    /*background: url(../images/1-bg2.jpg) no-repeat;*/
+    background-size: 100% auto;
+}
+
+.scene .bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+/*头部*/
+.scene .index .hd .hd_bg {
+    position: absolute;
+    z-index: 2;
+}
+
+.scene .index .hd .hd_title {
+    position: absolute;
+    z-index: 2;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.scene .index .hd .hd_rule {
+    position: absolute;
+    z-index: 5;
+    left:253px;
+    top:214px;
+}
+/*舞台*/
+.scene .index .stage .stage_light {
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.scene .index .stage .stage_decoration {
+    position: absolute;
+    left: 0px;
+    top: 154px;
+    z-index: 2;
+}
+/*红包*/
+.scene .index .stage .pocket .stage_pocket {
+    position: absolute;
+    left: 161px;
+    top: 273px;
+    z-index: 500;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.scene .index .stage .pocket .stage_pocket1 {
+    position: absolute;
+    left: 161px;
+    top: 273px;
+    color: #f05050;
+    text-align: center;
+}
+.scene .index .stage .pocket .stage_pocket1 .stage_pocket1_text {
+    background: url("../images/redpocket1.png") no-repeat;
+    width: 320px;
+    height: 330px;
+    font-size: 25px;
+    line-height: 130px;
+    text-align: center;
+}
+.scene .index .stage .pocket .stage_pocket1 p{
+    font-size: 50px;
+    display: inline-block;
+}
+.scene .index .stage .pocket .stage_pocket2 {
+    position: absolute;
+    left: 161px;
+    top: 273px;
+    color: #f05050;
+    text-align: center;
+}
+.scene .index .stage .pocket .stage_pocket2 .stage_pocket2_text {
+    background: url("../images/redpocket2.png") no-repeat;
+    width: 320px;
+    height: 330px;
+    font-size: 30px;
+    line-height: 130px;
+    text-align: center;
+}
+/*活动*/
+.scene .index .activities {
+    position: absolute;
+    left: 0px;
+    top: 755px;
+}
+
+.scene .index .activities .activities1 {
+    float: left;
+}
+.scene .index .activities .activities2 {
+    float: right;
+}
+.scene .index .activities .activities3 {
+    float: left;
+}
+.scene .index .activities .activities4 {
+    float: right;
+}
+.scene .index .activities .activities5 {
+    float: left;
+}
+.scene .index .activities .activities6 {
+    float: right;
+}
+/*规则蒙层*/
+.scene .ruleMsk {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 1472px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.scene .ruleMsk .content{
+    position: absolute;
+    left:61px;
+    top:175px;
+}
+.scene .ruleMsk .content .msktext {
+    position: absolute;
+    width: 369px;
+    height: auto;
+    line-height: 1.5;
+    left: 79px;
+    top: 88px;
+    z-index: 2;
+    font-size: 2em;
+    color: #B95A00;
+    overflow: auto
+}
+.scene .ruleMsk .content .closeBtn {
+    position: absolute;
+    left:450px;
+    top:25px;
+    width: 50px;
+    height: 50px;
+    /*background: #000000;*/
+    /*z-index: 1001;*/
+}
+    /*二维码蒙层*/
+.scene .codeMsk {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 1472px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.scene .codeMsk .content{
+    position: absolute;
+    left:69px;
+    top:107px;
+}
+.scene .codeMsk .content .closeBtn {
+    position: absolute;
+    left:380px;
+    top:210px;
+    width: 50px;
+    height: 50px;
+    /*background: #000000;*/
+}
+
+/*开心一刻蒙层*/
+.scene .defMsk {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 1472px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.scene .defMsk .content{
+    position: absolute;
+    left:60px;
+    top:375px;
+}
+.scene .defMsk .content .closeBtn {
+    position: absolute;
+    left:450px;
+    top:-170px;
+    width: 50px;
+    height: 50px;
+    /*background: #000000;*/
+}
+
+

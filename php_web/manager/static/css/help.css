@@ -1,0 +1,68 @@
+.main .content{
+	font-size:15px;
+	color:#272822;
+	letter-spacing:1px;
+}
+.main .content .h2{
+	font-size:20px !important;
+	font-weight:bold;
+}
+.main .content .h3{
+	font-size:16px !important;
+	font-weight:bold !important;
+}
+.main .content .h5{
+	font-size:14px !important;
+	font-weight:bold !important;
+	color:#4B79C1 !important;
+}
+.main .content .tip{
+	color:red !important;
+	font-size:13px !important;
+	margin-left:10px !important;
+}
+.main .content .paragraph{
+	font-size:14px;
+	text-indent: 2em;
+	line-height:35px;
+}
+.main .rightmain .content .impor{
+	color:red;
+	font-weight:bold;
+}
+.main .rightmain .content .vip{
+	margin-top:20px !important;
+	font-size:15px !important;
+	font-weight:bold !important;
+	text-indent: 2em !important;
+	line-height:35px !important;
+	color:red !important;
+}
+.main .content .paragraph img{
+	width:auto;
+	/*max-width:800px;*/
+	height:auto;
+	margin:10px auto;
+}
+.main .content .space{
+	padding-left:60px !important;
+	font-size:13px !important;
+	text-indent:0 !important;
+}
+.ab{
+	clear:both;
+	margin-top:30px;
+}
+.contentab{
+	margin-left:30px;
+}
+.abtext{
+	font-size:14px;
+	line-height:28px;
+	width:95%;
+}
+.abimgtitle{
+	font-size:16px;
+	font-weight:bold;
+	margin-top:20px;
+}

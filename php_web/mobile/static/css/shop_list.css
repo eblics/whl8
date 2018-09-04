@@ -1,0 +1,28 @@
+.head{z-index:1;position:fixed;top:0;left:0;width:100%;background-color:white;}
+.head>.title{line-height:50px;height:50px;border-bottom:1px solid #e5e5e5;display:flex;align-items:center;}
+.head>.title>.menu{flex-grow:1;color:#333333;display:flex;justify-content:center;align-items:center;font-size:14px;}
+.head>.title>.menu>.icon{margin-left:5px;height:4px;width:7px;background-size:cover;background-image:url(/static/images/xiala.png);}
+.head>.title>.line{border-left:1px solid #e5e5e5;height:25px;}
+.head>.menulist{text-align:center;overflow:auto;-webkit-overflow-scrolling:touch;}
+.head>.menulist>.menuitem{line-height:40px;border-bottom:1px solid #e5e5e5;color:#333333;}
+.head>.menulist>.menuitem.selected{color:#f05050;}
+.masklayer{position:fixed;top:0;right:0;left:0;bottom:0;background-color:#cccccc;opacity:0.5;}
+
+.content>.item{padding:0 11px;margin-bottom:7px;background-color:white;}
+.content>.item:last-child{margin-bottom:0px;}
+.content>.item>.address{border-bottom:1px dashed #e5e5e5;display:flex;align-items:center;}
+.content>.item>.address>.info{min-height:46px;margin:11px 0;color:#333333;flex-grow:1;display:flex;flex-direction:column;}
+.content>.item>.address>.info>.basic{}
+.content>.item>.address>.info>.basic>.name{margin-right:17px;font-size:16px;font-weight:bold;}
+.content>.item>.address>.info>.basic>.telephone{}
+.content>.item>.address>.info>.text{margin-top:5px;}
+.content>.item>.address>.edit{flex-shrink:0;height:17px;width:17px;background-image:url(/static/images/bianji.png);background-size:cover;margin-right:15px;margin-left:6px;}
+.content>.item>.address>.delete{flex-shrink:0;height:17px;width:17px;background-image:url(/static/images/shanchu.png);background-size:cover;margin-right:6px;}
+.content>.item>.address>.revoke{flex-shrink:0;height:17px;width:17px;background-image:url(/static/images/revoke.png);background-size:cover;margin-right:6px;}
+.content>.item>.state{height:34px;display:flex;align-items:center;}
+.content>.item>.state>.info{flex-grow:1;color:#333333;}
+.content>.item>.state>.time{color:#f05050;}
+.add{border-top:1px solid #e5e5e5;height:48px;background-color:white;position:fixed;bottom:0; left:0; width:100%;display:flex;justify-content:center;align-items:center;}
+.add:active{background-color:#e1e1e1;}
+.add>.icon{height:18px;width:18px;background-image:url(/static/images/tianjia.png);background-size:cover;}
+.add>.info{font-size:16px;margin-left:7px;color:#333333}

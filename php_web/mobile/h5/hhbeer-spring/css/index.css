@@ -1,0 +1,116 @@
+/*reset*/
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,form, fieldset, input, textarea, p, blockquote, th, td {margin: 0;padding: 0;outline: none;font-size: 12px;}
+table {border-collapse: collapse;border-spacing: 0;}
+fieldset, img {border: 0;}
+address, caption, cite, code, dfn, em, strong, th, var {font-style: normal;font-weight: normal;}
+ol, ul {list-style: none;}
+caption, th {text-align: left;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+q:before, q:after {content: '"';}
+abbr, acronym {border: 0;}
+/*pace*/
+
+/*main*/
+
+@font-face {
+    font-family:"title";
+    src: url("../font/title.otf");
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg.png") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    /*position: relative;*/
+    /*z-index: -10;*/
+    display: none;
+}
+
+.blessing {
+    position: relative;
+    top: 55px;
+    left: 55%;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+    font-family: title;
+    font-size: 45px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+}
+
+.redpacket {
+    position: absolute;
+    top: 240px;
+    left: 132px;
+    width: 168px;
+    height: 174px;
+    padding-top: 45px;
+    background: url("../images/redpocket_bg.png") no-repeat;
+    z-index: 88;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.erweima {
+    position: absolute;
+    top: 240px;
+    right: 105px;
+    width: 191px;
+    height: 174px;
+    background: url("../images/erweima.png") no-repeat;
+    z-index: 88;
+}
+
+.erweima img {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 128px;
+    height: 128px;
+    z-index: 999;
+}
+
+.fireworks {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /*transform: translateX(-50%);*/
+    width: 622px;
+    height: 471px;
+    background: url("../images/fireworks.png") no-repeat;
+    z-index: 88;
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 2s;*/
+    animation-iteration-count: infinite;
+}
+
+.beer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 640px;
+    height: 615px;
+    background: url("../images/beer2.png") no-repeat;
+}
+
+.title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 277px;
+    height: 155px;
+    background: url("../images/title.png") no-repeat;
+    z-index: 90;
+}

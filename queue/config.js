@@ -1,0 +1,29 @@
+{
+    "development":{
+        "port":3010,
+        "master":{"host":"localhost","user":"root","password":"1acctrue1","database":"hls_dev","multipleStatements":true},
+        "mysql":{"host":"localhost","port":3306,"user":"root","password":"1acctrue1","database":"hls_dev","multipleStatements":true},
+        "redis":{"host":"localhost","port":6379,"password":"Acctrue886"},
+        "trg_servers":[{"host":"localhost","port":3306,"user":"root","password":"1acctrue1","database":"hls_dev","multipleStatements":true,"maxPacketSize":16777216}],
+        "trg_queue_size":1,
+        "ci_env":"development"
+    },
+    "testing":{
+        "port":3011,
+        "master":{"host":"10.30.147.58","user":"root","password":"1acctrue1","database":"hls_test","multipleStatements":true},
+        "mysql":{"host":"10.30.147.58","port":3306,"user":"root","password":"1acctrue1","database":"hls_test","multipleStatements":true},
+        "redis":{"host":"10.30.146.201","port":6379,"password":"Acctrue886"},
+        "trg_servers":[{"host":"10.30.147.58","port":3306,"user":"root","password":"1acctrue1","database":"hls_test","multipleStatements":true,"maxPacketSize":16777216}],
+        "trg_queue_size":1,
+        "ci_env":"testing"
+    },
+    "production":{
+        "port":3010,
+        "master":{"host":"10.45.238.131","user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true,"connectionLimit":2048},
+        "mysql":{"host":"10.45.238.131","port":3306,"user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true,"connectionLimit":2048},
+        "redis":{"host":"r-m5e1c7e6a2a727d4.redis.rds.aliyuncs.com","port":6379,"password":"Acctrue886"},
+        "trg_servers":[{"host":"10.30.182.113","port":3306,"user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true}],
+        "trg_queue_size":16,
+        "ci_env":"production"
+    }
+}

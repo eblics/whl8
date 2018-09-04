@@ -1,0 +1,65 @@
+header > nav > a {
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+
+header > nav > a.selected {
+	color: #f05050;
+    border-bottom: 2px solid #f05050;
+}
+
+.trans-list {
+	padding: 10px 15px;
+}
+
+.trans-list li {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.trans-list li p {
+	display: box;
+	display: -webkit-box;
+	display: flex;
+	display: -webkit-flex;
+	font-size: .9em;
+}
+
+.trans-list li p span {
+	display: block;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	box-flex:1;
+	-webkit-box-flex: 1;
+	text-align: center;
+	width: 33.3%;
+}
+
+.text-red {
+	color: #f05050;
+}
+
+.trans-list li p span:first-child {
+	text-align: left;
+	color: #333;
+}
+
+.trans-list li p span.card-type-title {
+	color: #666;
+}
+
+.trans-list li p span:last-child {
+	text-align: right;
+	
+}
+
+.trans-list li small {
+	color: #999;
+	font-size: .8em;
+}
+
+.trans-list .item-empty {
+	border-bottom: none;
+    color: gray;
+    padding: 50% 0;
+}

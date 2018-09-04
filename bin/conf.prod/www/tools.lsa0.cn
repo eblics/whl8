@@ -1,0 +1,26 @@
+server {
+    server_name  tools.lsa0.cn;
+    index index.php;
+	root /var/www/tools/www;
+
+    location / {
+	    if ($http_origin ~* 'http?://(localhost|.*\.lsa0\.cn)') {
+	        add_header 'Access-Control-Allow-Origin' "$http_origin";
+	        add_header 'Access-Control-Allow-Credentials' 'true';
+	        add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS';
+	        add_header 'Access-Control-Allow-Headers' 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With';
+	    }   
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+	location ~ \.php$ {
+	    include fastcgi.conf;
+	    fastcgi_pass php;
+	    fastcgi_param CI_ENV production;
+	}
+    
+	    location /files/private/cert{
+        deny all;
+        return 403;
+    }   
+}

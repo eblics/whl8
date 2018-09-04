@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link type="text/css" rel="stylesheet" href="/h5/zhengdao/style/pace-theme-center-atom.css" />
+    <title>乌苏兄弟连</title>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="/static/js/loader.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/h5/zhengdao/script/jquery.eraser-0.5.1.min.js"></script>
+    <script type="text/javascript" src="/h5/zhengdao/script/pace-1.0.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+    <script type="text/javascript" src="/static/js/hlsjs.js"></script>
+    <script type="text/javascript">
+        loadStyle(['/h5/wusu-xiongdilian/css/jifen.css']);
+    </script>
+</head>
+<body>
+    <div class="msk"></div>
+    <div class="rule"></div>
+    <div class="popup">
+        <div class="erweima">
+            <img id="qrcode" src="">
+        </div>
+        <div id="result"></div>
+    </div>
+    <script type="text/javascript">
+    $(window).load(function() {
+        hlsjs.ready(function() {
+            hlsjs.takeActivity(function(resp) {
+                $('.erweima').css({
+                    'background': 'url('+ resp.qrcode_url +')',
+                    'background-position': 'center',
+                    'background-size': 'cover',
+                });
+                if (resp.errcode == 0) {
+                    if (resp.datatype === 3) { // 3 为积分奖品
+                        $('#result').text(resp.amount);
+                        $(".msk").show();
+                        $(".popup").fadeIn();
+                    } else {
+                        alert('不支持的奖品类型。');
+                    }
+                } else {
+                    alert(resp.errmsg);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

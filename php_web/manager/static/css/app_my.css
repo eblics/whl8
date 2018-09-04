@@ -1,0 +1,9 @@
+.my-app .title {
+	width: 240px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.my-app .url {
+	width: 400px;
+}

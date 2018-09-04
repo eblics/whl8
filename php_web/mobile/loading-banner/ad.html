@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>欢乐扫</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            position: fixed;
+        }
+
+        /*.demo {*/
+            /*width: 100%;*/
+            /*height: 50%;*/
+            /*background-color: #00B83F;*/
+        /*}*/
+
+        /*.ad {*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<div class="demo">
+
+</div>
+<!-- 广告位：扫码入口界面广告 -->
+<script>
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div id="' + s + '" class="ad"></div>');
+        (window.slotbydup=window.slotbydup || []).push({
+            id: '4266398',
+            container: s,
+            size: '6,5',
+            display: 'inlay-fix'
+        });
+    })();
+</script>
+<script src="http://dup.baidustatic.com/js/om.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/*.content{position:absolute;top:0;right:0;bottom:0;left:0;overflow:auto;background-color:#f5f5f5;}*/
+html,body{background-color:#f5f5f5;}
+.content>div{background-color:white;margin-bottom:7px}
+.head{height:113px;display:flex;align-items:center;}
+.head>.photo{flex-shrink:0;margin-left:34px;margin-right:27px;height:77px;width:77px;background-size:cover;border-radius:50%;}
+.head>.info{}
+.head>.info>.name{display:block;color:#333333;font-size:19px;}
+.head>.info>.address{display:flex;margin-top:6px;align-items:center;}
+.head>.info>.address>.icon{flex-shrink:0;background:url(/static/images/dingwei.png);background-size:cover;height:16px;width:16px;}
+.head>.info>.address>.text{font-size:14px;color:#999999;flex-grow:1;margin-left:3px;}
+.shortcut{height:90px;display:flex;}
+.shortcut>.item{flex-grow:1;border-right:1px solid #e5e5e5;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.shortcut>.item:active{background-color:#e1e1e1;}
+.shortcut>.item:last-child{border-right-width:0px;}
+.shortcut>.item>.icon{display:block;height:35px;width:35px;background-size:cover;}
+.shortcut>.item>.score{background-image:url(/static/images/jifen.png);}
+.shortcut>.item>.redpacket{background-image:url(/static/images/hongbaoxiangqing.png);}
+.shortcut>.item>.card{background-image:url(/static/images/kaquan.png);}
+.shortcut>.item>.text{font-size:15px;color:#333333;text-align:center;margin-top:6px;}
+.menu>.item{display:flex;height:51px;align-items:center;}
+.menu>.item:active{background-color:#e1e1e1;}
+.menu>.item>.icon{margin:0 19px;width:18px;height:19px;background-size:cover;}
+.menu>.item>.icon.order{background-image:url(/static/images/dingdan.png);}
+.menu>.item>.icon.info{background-image:url(/static/images/xinxi.png);}
+.menu>.item>.icon.users{background-image:url(/static/images/icon_users.png);background-repeat:  no-repeat;background-position:  center;background-size: 100%;}
+.menu>.item>.icon.address{background-image:url(/static/images/dizhi.png);}
+.menu>.item>.icon.scanrank{background-image:url(/static/images/saomapaihang.png);}
+.menu>.item>.icon.scorerank{background-image:url(/static/images/jifenpaihang.png);}
+.menu>.item>.label{flex-grow:1;height:100%;border-bottom:1px solid #e5e5e5;color:#333333;display:flex;align-items:center;/*-webkit-transform:scaleY(0.5);border:0;*/}
+/*.menu>.item>.label:after{position:absolute;right:auto;left:0;z-index:15;display:block;width:100%;height:1px;background-color:#d9d8d0;content:''}*/
+
+/*.menu>.item:nth-child(2)>.label{-webkit-transform:scaleY(0.5);}
+.menu>.item:nth-child(3)>.label{-webkit-transform:scaleY(0.33);}*/
+.menu>.item>.label>.text{flex-grow:1;font-size:15px;}
+.menu>.item>.label>.symbol{width:8px;height:15px;background:url(/static/images/jiantou.png);background-size:cover;margin-right:20px;}
+.menu>.item:last-child>.label{border-bottom-width:0px;}
+
+.menuview{font-size:14px;background-color:white;height:54px;border-top:1px solid #e5e5e5;position:fixed;bottom:0;left:0;width:100%;display:flex;}
+.menuview>.menu{flex-grow:1;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.menuview>.menu:active{background-color:#e1e1e1;}
+.menuview>.menu>.icon{width:22px;height:21px;background-size:cover;}
+.menuview>.menu>.icon.home{background-image:url(/app/mall/images/sy_normal.png);}
+.menuview>.menu.selected>.icon.home{background-image:url(/app/mall/images/sy_pressed.png);}
+.menuview>.menu>.icon.list{background-image:url(/app/mall/images/fenlei_normal.png);}
+.menuview>.menu.selected>.icon.list{background-image:url(/app/mall/images/fenlei_pressed.png);}
+.menuview>.menu>.icon.trolley{background-image:url(/app/mall/images/gwc_normal.png);}
+.menuview>.menu.selected>.icon.trolley{background-image:url(/app/mall/images/gwc_pressed.png);}
+.menuview>.menu>.icon.myboard{background-image:url(/app/mall/images/wo_normal.png);}
+.menuview>.menu.selected>.icon.myboard{background-image:url(/app/mall/images/wo_pressed.png);}
+.menuview>.menu>.text{color:#666666;font-size:12px;margin-top:2px;}
+.menuview>.menu.selected>.text{color:#f05050;}

@@ -1,0 +1,135 @@
+html, body{background:#f9f9f9;min-width:1000px;}
+.main{background-color:#fff}
+.main>.content{background:#fff;border:none;width:1200px;padding:10px 20px;margin:0px auto}
+.main .title{margin:30px 30px;}
+.main .title-text{color:#333333;font-size:20px;}
+.main .title .unit{font-size:12px;margin-left:7px;margin-right:-8px;}
+.main .title .amount{border-radius:20px;background-color:#4dc075;padding:2px 8px;font-size:14px;color:white;margin-left:13px;}
+.main .title .label-menu span{border-radius:20px;padding:5px 15px;font-size:14px;color:#5a8edd;cursor:pointer;}
+.main .title .label-menu span.selected{background-color:#5a8edd;color:white;cursor:auto;}
+.main .title .label-menu{float:right;margin-right: 20px;}
+
+.main .split{border-top:1px dashed #ccc;margin:15px;margin-top:85px;margin-bottom:45px;}
+.main .center-info{position:absolute;left:50%;margin-left:-60px;top:93px;font-size:26px;color:#666666;width:120px;text-align:center;}
+.main .center-info.nodata{color:#aaaaaa;letter-spacing: 4px;margin-top:30px;}
+.main #rpLabel{width:400px;height:48px;margin: 0 auto;position: relative;top:0px;}
+.main #rpLabel .line{position:absolute;height:2px;background-color:#f0f0f0;left:6px;top:6px;width:100%;display:none}
+/*红包*/
+.main .redpacket{float:left;z-index:1;text-decoration: none;margin-top:8px;width:47px}
+.main .redpacket:hover{cursor: pointer;}
+.main .redpacket:hover .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .redpacket:hover .text{color:#999999;}
+.main .redpacket .circle{display:inline-block;margin:0 auto;
+background-image:url(/static/images/nomal.png);background-size: 80%;background-repeat:no-repeat;background-position:center;width:30px;height:30px;display:block;border-radius:50%;}
+.main .redpacket .text{width:100px;margin-left:-44px;text-align: center;display:block;margin-top:3px;color:transparent;}
+.main .redpacket.selected .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .redpacket:hover .text{color:#999999;}
+.main .redpacket.selected .text{color:#f0715b}
+/*卡券*/
+.main .cardpacket{float:left;z-index:1;text-decoration: none;margin-top:8px;width:47px}
+.main .cardpacket:hover{cursor: pointer;}
+.main .cardpacket:hover .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .cardpacket:hover .text{color:#999999;}
+.main .cardpacket .circle{display:inline-block;margin:0 auto;
+background-image:url(/static/images/nomal.png);background-size: 80%;background-repeat:no-repeat;background-position:center;width:30px;height:30px;display:block;border-radius:50%;}
+.main .cardpacket .text{width:100px;margin-left:-44px;text-align: center;display:block;margin-top:3px;color:transparent;}
+.main .cardpacket.selected .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .cardpacket:hover .text{color:#999999;}
+.main .cardpacket.selected .text{color:#f0715b}
+/*积分*/
+.main .pointpacket{float:left;z-index:1;text-decoration: none;margin-top:8px;width:47px}
+.main .pointpacket:hover{cursor: pointer;}
+.main .pointpacket:hover .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .pointpacket:hover .text{color:#999999;}
+.main .pointpacket .circle{display:inline-block;margin:0 auto;
+background-image:url(/static/images/nomal.png);background-size: 80%;background-repeat:no-repeat;background-position:center;width:30px;height:30px;display:block;border-radius:50%;}
+.main .pointpacket .text{width:100px;margin-left:-44px;text-align: center;display:block;margin-top:3px;color:transparent;}
+.main .pointpacket.selected .circle{height:30px;width:30px;
+background-image:url(/static/images/big.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;}
+.main .pointpacket:hover .text{color:#999999;}
+.main .pointpacket.selected .text{color:#f0715b}
+
+.foot{margin-top:0px}
+/****new style*****/
+.Swiper_content{height:420px;width:100%}
+.dh_content{width:100%;background:#fff;padding:65px 0 45px 0;border-bottom:1px dashed #ccc}
+.dh_content .main{width:1200px;height:300px;border:0px solid red;margin:0 auto;background:#fff}
+.dh_content .main .container{width:33%;float:left;text-align:center}
+.dh_content .main .container a{text-decoration:none}
+.dh_content .main .container .con_1{width:250px;margin:0 auto}
+.dh_content .main .container .con_1 .title{font-size:24px;margin-bottom:8px;font-weight:blod;color:#333333;letter-spacing:2px}
+.dh_content .main .container .con_1 .desc{font-size:16px;color:#999;line-height:1.5;letter-spacing:1px}
+.dh_content .main .container .con_1 img{width:175px;margin-bottom:10px;transition: all 0.2s linear 0s;-webkit-transition: all 0.2s linear 0s;-webkit-font-smoothing: antialiased;}
+.dh_content .main .container .con_1 img:hover{cursor:pointer;transform: translate3d(0, -10px, 0);-webkit-transform: translate3d(0, -10px, 0);}
+.dh_content .main .container .con_1 .hover{cursor:pointer;transform: translate3d(0, -10px, 0);-webkit-transform: translate3d(0, -10px, 0);}
+.dh_content .main .container .con_1 p{line-height:2}
+.swiper-container{width:100%;height:100%}
+.swiper-slide{background-position:center;background-size:cover}
+.swiper-pagination-bullet{background:#fff;opacity:10}
+.swiper-pagination-bullet-active{opacity:10;background:#fcc600}
+/*红包样式*/
+.main #redLabel{background-image:url(/static/images/tiao.png);background-repeat:no-repeat;background-position:center;background-size: 90%;width:400px;height:48px;margin: 0 auto;position: relative;top:0px;}
+.main #redTool{left:15px;width: 200px;height:60px;margin:0 auto;position:relative;overflow:hidden}
+.redList_piclist{height:48px;position:absolute;left:0;top:0}
+.main .red_center-info{top:85px}
+.red_center-name{position:absolute;left:50%;margin-left:-60px;top:120px;font-size:16px;color:#999;width:120px;text-align:center}
+.main .red_prev{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/left.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .red_next{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/right.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .red_prev:hover{cursor:pointer;background-image:url(/static/images/left_big.png);background-size: 80%;}
+.main .red_next:hover{cursor:pointer;background-image:url(/static/images/right_big.png);background-size: 80%;}
+/*卡券样式*/
+.main #cardLabel{background-image:url(/static/images/tiao.png);background-repeat:no-repeat;background-position:center;background-size: 90%;width:400px;height:48px;margin: 0 auto;position: relative;top:0px;}
+.main #cardTool{left:15px;width: 200px;height:60px;margin:0 auto;position:relative;overflow:hidden}
+.cardList_piclist{height:48px;position:absolute;left:0;top:0}
+.main .card_center-info{top:85px}
+.card_center-name{position:absolute;left:50%;margin-left:-60px;top:120px;font-size:16px;color:#999;width:120px;text-align:center}
+.main .card_prev{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/left.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .card_next{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/right.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .card_prev:hover{cursor:pointer;background-image:url(/static/images/left_big.png);background-size: 80%;}
+.main .card_next:hover{cursor:pointer;background-image:url(/static/images/right_big.png);background-size: 80%;}
+/*积分样式*/
+.main #pointLabel{background-image:url(/static/images/tiao.png);background-repeat:no-repeat;background-position:center;background-size: 90%;width:400px;height:48px;margin: 0 auto;position: relative;top:0px;}
+.main #pointTool{left:15px;width: 200px;height:60px;margin:0 auto;position:relative;overflow:hidden}
+.pointList_piclist{height:48px;position:absolute;left:0;top:0}
+.main .point_center-info{top:85px}
+.point_center-name{position:absolute;left:50%;margin-left:-60px;top:120px;font-size:16px;color:#999;width:120px;text-align:center}
+.main .point_prev{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/left.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .point_next{display:block;width:37px;height:48px;margin:0 auto;position:relative;background-image:url(/static/images/right.png);background-size: 80%;background-repeat:no-repeat;cursor:pointer;background-position:center}
+.main .point_prev:hover{cursor:pointer;background-image:url(/static/images/left_big.png);background-size: 80%;}
+.main .point_next:hover{cursor:pointer;background-image:url(/static/images/right_big.png);background-size: 80%;}
+
+#walkthrough-content{display:none}
+#walkthrough-content h3{height:30px; line-height:30px}
+#walkthrough-content p{line-height:28px}
+#jpWalkthrough #jpwTooltip #tooltipInner {
+    font-family: 'xjlFont','Microsoft yahei';
+    color: #ffffff;
+    text-align: left;
+    font-size: 22px;
+    line-height: 35px;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner p{font-size:16px}
+/*s首页幻灯片*/
+.banner_1{background-image:url(/static/images/banner2.jpg)}
+.banner_2{background-image:url(/static/images/banner.jpg)}
+.main .content{text-align:center;}
+.main .content .c_title{font-size:35px;font-weight: 800;letter-spacing: 3px;}
+.main .content .sub_c_title{font-size:24px;color:#666;font-weight: 100;}
+.main .content .toolgroup .tool_prev{width:15px;text-align:center;position: relative;float:left;height: 48px;line-height:48px;margin-left:50px}
+.main .content .toolgroup .tool_next{width:15px;text-align:center;position: relative;float:right;height: 48px;line-height:48px;margin-right:70px}
+.main .content .title .sub_title{font-size:20px;text-align:left;color:#333;}
+.main .content .title .sub_title img{margin-right:12px}
+.main .content .title .sub_title span{color:#f05050;font-weight: 800;}
+.redList,.cardList,.pointList{width:100%;}
+.panel_con{position: relative;}
+.panel_con .panel_title{display: block;font-size: 25px;font-weight: 400;color: #333;}
+.clow .title .cl_title{font-size:24px;text-align:left;color:#333;} 
+.clow .title .cl_scannum{font-size: 22px;line-height: 40px;height: 40px;color:#333;font-weight: 100}
+.clow .title .cl_totalscan{font-size:20px;text-align:left;color:#333;margin-bottom:20px}
+.progress_bar{width:100%;height:55px;border:none;background-color:#e0e0e0;border-radius:5px;}
+.progress_sweep{position:relative;border-top-left-radius:5px;border-bottom-left-radius:5px;text-align:right;color:#ffffff;background-color:#30b4b2;height:55px;line-height:55px;font-family:Arial;display:block;width:0%;font-size:30px;}

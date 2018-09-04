@@ -1,0 +1,24 @@
+server { 
+	server_name shop.lsa0.cn;
+	root /var/www/lsa0.cn/php_web/shop;
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~ \.php$ {
+		include fastcgi.conf;
+		fastcgi_pass php;
+		fastcgi_param CI_ENV production;
+	}
+
+	location /files/private {
+		deny all;
+		return 403;
+	}
+
+	location /lua {
+		deny all;
+		return 444;
+	}
+}

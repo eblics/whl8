@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>致中和 - 开盖扫码刮刮奖</title>
+        <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no" />
+            <!--pace插件皮肤-->
+
+        <link rel="stylesheet" type="text/css" href="style/pace-theme-center-atom.css"/>
+        <link rel="stylesheet" type="text/css" href="style/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="style/index.css" />
+
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript"  src="/static/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript"  src="http://m.lsa0.cn/static/js/hlsjs.js?v=1.0"></script>
+            <!--jq2.1.1，含tap事件-->
+        <script src="/static/js/common.js"></script>
+            <!--pace插件-->
+        <script  src="script/pace-1.0.0.min.js"></script>
+            <!-- 刮刮卡插件 -->
+        <script  src="script/jquery.eraser-0.5.1.min.js"></script>
+
+        <script src="script/app.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="scene hidden">
+            <!-- 主页面1 -->
+            <div class="index">
+                <!--<div class="bg_light"></div>-->
+                <!--<div class="bg_star"></div>-->
+                <div class="tt x-c">
+                    <!--<img src="images/share.png" width="100%">-->
+                </div>
+                <div class="works x-c">
+                    <!--<img class="works_img" src="images/works.png">-->
+                </div>
+                <div class="b_cont">
+                    <div class="b_move">
+                        <div class="sc_cont x-c">
+                            <img src="images/g_bg.png">
+                            <div id="errmsg" class="true_text x-c"></div>
+                        </div>
+                        <div class="de_cont x-c">
+                            <img src="images/g_bg.png">
+                            <div class="false_text x-c" id="result">抽奖中</div>
+                        </div>
+                        <div class="sc_msk x-c">
+                            <img id="mskImg" src="images/g_msk.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="rule_btn">活动规则</div>
+            </div>
+            <!-- 规则蒙层 -->
+            <div class="ruleMsk">
+                <div class="content c-c">
+                    <div class="msktext">
+                        <div style="overflow:hidden; padding:10px;line-height:25px;font-size:1em;line-height:1.4em;">1.本活动总中奖数量为1270000个，每个中奖金额随机，奖金总金额111950元，综合中奖率100%；</br>
+                            2.兑奖截止时间：2018年6月30日；</br>
+                            3.兑奖方式：按照扫描产品内卡片上抽奖二维码后的手机提示操作，领取微信红包；</br>
+                            4.红包金额累计满1元后，方可提取；</br>
+                            5.每个抽奖二维码只可扫描一次；</br>
+                            6.活动详情请关注 “致中和食品”微信公众号</br>
+                            7.活动咨询电话：0571-28056587（周一至周五，9:00-17:00，节假日除外）</br>
+                        </div>
+                    </div>
+                    <img src="images/rule_msk.png">
+                    <div class="closeBtn"></div>
+                </div>
+            </div>
+            <!-- 二维码蒙层 -->
+            <div class="codeMsk">
+                <div class="content">
+                    <img class="code_img" src="images/s_msk1.png">
+                    <div class="closeBtn"></div>
+                </div>
+            </div>
+            <!-- 开心一刻蒙层 -->
+            <div class="defMsk">
+                <div class="content">
+                    <div id="alttext" class="msktext"></div>
+                    <img class="code_img" src="images/d_msk2.png">
+                    <div class="closeBtn" style="z-index:1001;"></div>
+                </div>
+				<div class="content" style="z-index:1000;margin-top:-200px;">
+					<img style="position:absoulte;top:-110px;" class="code_img" src="images/mask.png"/>
+				</div>
+            </div>
+        </div>
+        
+        <!-- 分享蒙层 -->
+        <div class="shareMsk">
+            <div class="shareImg">
+                <img src="images/share_msk.png">
+            </div>
+        </div>
+    </body>
+
+</html>

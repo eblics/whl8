@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="/static/js/jquery-2.1.1.min.js"></script>
+    <script src="/static/lib/layer/layer.js"></script>
+    <script src="/static/js/loader.js?v=1.0"></script>
+    <script type="text/javascript">
+        loadStyle(['css/main.css']);
+    </script>
+</head>
+<body style="display: none;">
+    <audio id="shake_music" src="audio/shake.mp3" style="display: none;"></audio>
+    <img class="rule_img" src="./images/rule.png" alt="">
+    <img class="shake_img animated shake" src="./images/shake.png" alt="">
+    <img class="title_img" src="./images/title2.png" alt="">
+    <img class="goods_img" src="./images/goods.png" alt="">
+    <img class="logo_img" src="./images/logo.png" alt="">
+
+    <!--规则蒙层-->
+    <div class="msk_rule">
+        <div class="close_btn rule_close"></div>
+        <img src="./images/popup01.png" alt="">
+        <div class="ruletext">
+            1.每个乐码只可以扫一次。<br/>
+            2.奖品分为红包和积分。<br/>
+            3.红包可以直接通过微信发放。<br/>
+            4.积分可以兑换成红包。<br/>
+        </div>
+    </div>
+
+    <!--开心一刻蒙层-->
+    <div class="msk_kxyk">
+        <div class="close_btn rule_close"></div>
+        <img src="./images/popup02.png" alt="">
+        <div class="kxyktext"></div>
+    </div>
+
+    <!--红包蒙层-->
+    <div class="msk_redpocket">
+        <div class="close_btn redpocket_close"></div>
+        <img src="./images/redpocket.png" alt="">
+        <div class="redpockettext">
+            中奖了
+            <p id="prize_name" class="prize_name"></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        loadScript(['/static/js/util.js', '/static/js/hlsjs.js', 'js/main.js']);
+    </script>
+</body>
+</html>

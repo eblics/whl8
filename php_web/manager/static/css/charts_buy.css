@@ -1,0 +1,167 @@
+html body {
+	min-width: 1280px;
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hls-hidden {
+	display: none;
+}
+
+.fix:after { content: ''; display:table; clear:both;}
+.fix {*zoom:1}
+
+/* app_desc */
+
+.rightmain .title span {
+	color: #666;
+}
+
+.app-desc {
+	padding-top: 30px;
+}
+
+.app-desc > img {
+	width: 480px;
+	vertical-align: middle;
+}
+
+.app-desc .app-desc-txt {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 60px;
+	max-width: 34%;
+}
+
+.app-desc .app-desc-txt h3 {
+	font-size: 24px;
+	margin: 18px 0;
+}
+
+.app-desc .app-desc-txt h3:first-child {
+	color: #666;
+}
+
+.app-desc .app-desc-txt h3.price {
+	color: #5a8edd;
+}
+
+.app-desc .app-desc-txt h2 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #5a8edd;
+}
+
+.app-desc .app-desc-txt div {
+	color: #777;
+}
+
+.app-desc .app-desc-txt p {
+	font-size: 18px;
+}
+
+.app-desc .app-desc-txt button {
+	padding: 0px 40px;
+	border-radius: 10px;
+	height: 40px;
+	font-size: 18px;
+}
+
+.pay-layer {
+	position: fixed;left: 0;top: 0;
+	width: 100%;height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.month-selector-layer {
+	position: fixed;left: 0;top: 0;
+	width: 100%;height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.month-selector-layer ul li {
+	float: left;
+	margin-right: 15px;
+	color: #5a8edd;
+	border: 1px solid #5a8edd;
+	padding: 3px 10px;
+}
+
+.month-selector-layer ul li.selected, .month-selector-layer ul li.selected input {
+	background-color: #5a8edd;
+	color: white;
+}
+
+
+.month-selector-layer ul li:hover, .month-selector-layer ul li:hover input {
+	cursor: pointer;
+	background-color: #5a8edd;
+	color: white;
+}
+
+.month-selector-layer ul li input {
+	border: none;
+	color: #5a8edd;
+}
+
+.month-selector-layer .month-list {
+	padding: 25px;
+}
+
+.label {
+	position: relative;
+	top: 25%;
+	left: 50%;
+	width: 630px;
+	margin-left: -315px;
+	text-align: center;
+	background-color: white;
+	padding: 20px 0;
+	background-clip: padding-box;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border: 8px solid rgba(255,255,255,0.2);
+	box-shadow: 0 0 3px 3px rgba(157,157,157,0.1);
+}
+
+.label > .tip {
+	position: absolute;
+	top: 0px;
+	background-color: #5a8edd;
+	border-bottom-right-radius: 10px;
+	padding: 10px 20px;
+	font-size: 22px;
+	color: white;
+}
+
+.label h3 {
+	font-size: 22px;
+	margin: 10px 0px;
+	margin-top: 55px;
+}
+
+.label .btn {
+	border-radius: 20px;
+	font-size: 18px;
+	height: 42px;
+	width: 150px;
+}
+
+.label canvas {
+	width: 144px;
+	border: 1px solid;
+	padding: 12px;
+	margin: 5px 0;
+}
+
+.label .expire {
+	color: #666;
+}
+
+.label .expire span {
+	color: red;
+}

@@ -1,0 +1,78 @@
+#page-err{background-color:#F5F5F5;	overflow:hidden;width:auto;position: absolute;width: 100%;height: 100%;}
+#page-err .err-backimg{
+	background-image:url(../images/bg_error.png);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	margin-left:10%;
+	margin-right:10%;
+	margin:50px auto;
+	max-width:230px;
+	height:130px;
+	clear:both;
+}
+#page-err .err-false{
+	margin-top:60px;
+	clear:both;
+	color:#999;
+	font-size:14px;
+	text-align:center;
+}
+#page-err .err-text{
+	margin-top:5px;
+	clear:both;
+	font-size:16px;
+	color:#333;
+	text-align:center;
+	letter-spacing:1px;
+}
+#page-err .err-button{
+	margin-top:25px;
+	width:280px;
+	height:45px;
+	background:#EF5032;
+	margin-left:auto;
+	margin-right:auto;
+	color:white;
+	border-radius:25px;
+	font-size:20px;
+	text-align:center;
+	letter-spacing:3px;
+	line-height:45px;
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  	-webkit-user-select: none;
+}
+#page-err .err-button div{
+	display:block;
+	text-decoration:none;
+	font-size:20px;
+	color:white;
+}
+#page-err .err-button div:active{
+	background:#D2181B;
+	border-radius:25px;
+}
+#page-err .err-button input{
+	width:280px;
+	height:45px;
+	overflow-x:visible;
+	overflow-y:visible;
+	background:#3282FB;
+	border:none;
+	border-radius:30px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	line-height:40px;
+	font:20px;
+	color:white;
+	letter-spacing:3px;
+}
+
+#page-err .err-pic{
+	margin-top:25px;
+	width:280px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}

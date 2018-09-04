@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.title_img {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform:translateX(-250px);
+    width: 500px;
+}
+
+.shake_img {
+    position: absolute;
+    top: 12%;
+    left: 40%;
+    transform: translateX(-55px);
+    width: 110px;
+}
+
+.rule_img {
+    position: absolute;
+    top: 5%;
+    right: 0;
+}
+
+.goods_img {
+    position: absolute;
+    bottom: 8%;
+    left: 2%;
+}
+
+.logo_img {
+    position: absolute;
+    bottom: 9%;
+    right: 2%;
+}
+
+.msk_rule,.msk_kxyk,.msk_redpocket {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.msk_rule img,.msk_kxyk img,.msk_redpocket img{
+    position: absolute;
+    transform:translateX(-250px);
+    top:22%;
+    left:50%
+}
+
+.msk_rule .ruletext,.msk_kxyk .kxyktext {
+    font-size: 25px;
+    color: black;
+    z-index: 222;
+    display: inline-block;
+    position: absolute;
+    width: 424px;
+    height: 400px;
+    overflow: hidden;
+    transform:translateX(-212px);
+    top: 34%;
+    left: 51%;
+    text-align: left;
+    line-height: 2em;
+    padding: 1em;
+}
+
+.close_btn {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 24%;
+    right: 15%;
+    z-index: 333;
+}
+
+.msk_redpocket .redpocket_close {
+    top: 42%;
+    right: 20%;
+}
+
+.msk_redpocket .redpockettext {
+    color: #ffffff;
+    font-size: 36px;
+    position: absolute;
+    width: 406px;
+    height: 294px;
+    overflow: hidden;
+    transform: translateX(-203px);
+    top: 49%;
+    left: 50%;
+}
+
+.prize_name {
+    text-align: left;
+    padding: 0 1em;
+    color: yellow;
+}

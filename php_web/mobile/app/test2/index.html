@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>test2</title>
+<link rel="stylesheet" type="text/css" href="/static/css/hls_app.css">
+<style type="text/css">
+	p {
+		margin: 0;
+		padding: 10px;
+	}
+</style>
+</head>
+<body>
+<p id="title"></p>
+<script type="text/javascript" src="/static/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/js/hls_app.js"></script>
+<script type="text/javascript">
+$(function() {
+	var appPath = 'test2',
+		appConfig;
+
+	// 获取当前用户编号
+	hlsApp.getCurrentMember(appPath, function(resp) {
+		hls.h5util.closeLoading();
+		appConfig = JSON.parse(resp.data.app_config);
+
+		$('#title').text('Of course, this is an application, the name is：' + appConfig.name);
+	}, function(err) {
+		hls.h5util.closeLoading();
+		$('.hls-page-error').show();
+	});
+});
+</script>
+</body>
+</html>

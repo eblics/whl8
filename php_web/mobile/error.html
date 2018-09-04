@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
+<title>欢乐扫·友情提示</title>
+<style>
+/*reset css*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul,dl,li,dt,dd {list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after {content:'"';}
+abbr,acronym{border:0;}
+a{ outline:none;}
+html{font-size:62.5%;}
+html,body{background: #fff;text-align: center;}
+#img{margin-top:15%;}
+#btn{height:3.5rem; line-height:3.5rem;width:56%; margin: 0 auto; border-radius:3.5rem; background: #f6554d; text-align: center; color: #fff; font-size: 1.6rem; margin-top:15%;}
+#btn:active{background-color:#c00;}
+.middle{height:3.5rem; line-height:3.5rem;text-align: center;font-size: 1.2rem;color: #666;}
+.middle em{font-size: 1.2rem; line-height:3.5rem;}
+</style>
+</head>
+<body>
+    <img id="img" src="/static/images/503.png" width="43%" alt="前方拥堵，正在排队中..." />
+    <div id="btn">重试</div>
+    <div>{{err}}</div>
+    <div class="middle"><em id="time">5</em> 秒后自动重试</span></div>
+    <script type="text/javascript">
+    document.addEventListener("touchmove",function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    },false);
+    document.getElementById('btn').ontouchend=function(){
+        window.location.reload();
+    }
+    var defaultTime=5;
+    setInterval(function(){
+        document.getElementById('time').innerHTML=defaultTime;
+        if(defaultTime==0){
+            window.location.reload();
+            defaultTime=5;
+        }else{
+            defaultTime--;
+        }
+    },1000);
+    </script> 
+</body>
+</html>
+

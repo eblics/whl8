@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title>Loading...</title>
+<link rel="stylesheet" type="text/css" href="/static/css/hls_app.css?v=1">
+<link rel="stylesheet" type="text/css" href="css/ranking.css?v=2">
+</head>
+<body>
+	<div class="hls-page hls-page-ranking">
+		<header>
+			<nav class="fix">
+				<a id="1" href="javascript:void(0)">今天</a>
+				<a id="2" href="javascript:void(0)">本周</a>
+				<a id="3" href="javascript:void(0)">当月</a>
+				<a id="4" href="javascript:void(0)">当年</a>
+				<a id="0" class="show selected" href="javascript:void(0)">所有</a>
+			</nav>
+			<div class="position-wrapper">
+				<a id="select_city" href="javascript:void(0)">
+					<img src="images/dingwei.png">
+					<h3>全国</h3>
+					<small>切换</small>
+					<small class="pull-right"><span id="total_scan">--</span>人参与扫码</small>
+				</a>
+			</div>
+		</header>
+		<article>
+			<ul id="hls_ranking_list">
+				<!-- list container -->
+			</ul>
+		</article>
+	</div>
+
+	<!-- 省地区 -->
+	<section class="hls-layer hls-layer-province">
+		<article class="area-container">
+			<dl id="areas_list">
+				<!-- list container -->
+			</dl>
+		</article>
+	</section>
+
+	<!-- 市地区 -->
+	<section class="hls-layer hls-layer-city">
+		<article class="area-container">
+			<dl id="city_list">
+				<!-- list container -->
+			</dl>
+		</article>
+	</section>
+	<script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/hls_app.js?v=1.0"></script>
+	<script type="text/javascript" src="js/ranking.js?v=1.2"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    background-image: url("../images/logo.png");
+    width: 142px;
+    height: 71px;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+
+.slogan {
+    background-image: url("../images/slogan.png");
+    width: 167px;
+    height: 94px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.title3 {
+    background-image: url("../images/title3.png");
+    width: 526px;
+    height: 136px;
+    position: absolute;
+    left: 50%;
+    top:15%;
+    transform: translateX(-50%);
+}
+
+.title3_left {
+    background-image: url("../images/title3_left.png");
+    width: 204px;
+    height: 100px;
+    position: absolute;
+    left: 15%;
+    bottom:10%;
+    /*transform: translateX(-50%);*/
+}
+
+.title3_right {
+    background-image: url("../images/title3_right.png");
+    width: 204px;
+    height: 100px;
+    position: absolute;
+    right: 15%;
+    bottom:14%;
+    /*transform: translateX(-50%);*/
+}
+
+.msk {
+    position: absolute;
+    z-index: 990;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    top: 0;
+}
+
+.stands {
+    background-image: url("../images/stands.png");
+    width: 640px;
+    height: 931px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+
+    z-index: 998;
+}
+
+.ball {
+    background-image: url("../images/ball.png");
+    width: 151px;
+    height: 150px;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+
+    z-index: 997;
+}
+
+.title {
+    background-image: url("../images/title4.png");
+    width: 568px;
+    height: 215px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+
+    z-index: 997;
+}

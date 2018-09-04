@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>禅宝 - 千万现金 汹涌来袭</title>
+    <link type="text/css" rel="stylesheet" href="../../static/css/common.css" />
+    <style type="text/css">
+    html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{font-size: 62.5%;}
+    .bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;right:0;bottom:0;overflow:hidden;background:#cb0202 url("images/bg.jpg") no-repeat center;background-size:100% 100%;}
+    .pack{width:10rem;margin:60% auto 0 auto;display: block;position:relative;z-index:2;-webkit-animation:rotateIn 1s linear infinite alternate;}
+    @-webkit-keyframes rotateIn{
+        0%{-webkit-transform:rotate(-5deg)}
+        50%{-webkit-transform:rotate(0)}
+        100%{-webkit-transform:rotate(5deg)}
+    }
+    .mask{width: 100%;height: 100%;position: absolute;top: 0;left: 0;background:rgba(0,0,0,.5);z-index:8;display: none}
+    .result{display:none;position: absolute;z-index:11;width:60%; height:auto; left:50%;top:10rem;margin:0 0 0 -30%; background:#cb2121;text-align:center;color:#fff;overflow:hidden;}
+    .result .msg{line-height:6rem; font-size:2.5rem;}
+    .result .data{line-height:4rem; font-size:1rem; background:#fff45c;color:#333;}
+    .result .code{width:65%;margin:1.5rem auto;}
+    .result .tip{font-size:1.5rem;line-height:2rem;color:#fff;margin-bottom:1.2rem;}
+    .result.got .msg{line-height:5rem; border-shadow:0 0 1px #f00;}
+    .result.got .data{font-size:3rem;background:none;color:#fff; line-height:3rem;}
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<!--点击赢红包-->
+<img src="images/pack.png" class="pack" id="pack">
+<!--结果-->
+<div class="result">
+    <p class="msg"></p>
+    <p class="data"></p>
+    <img src="images/code.png" class="code">
+    <p class="tip">长按二维码关注微信公众号<br>更多精彩活动等着你</p>
+</div>
+<div class="mask"></div>
+<script  src="../../static/js/jquery-2.1.1.min.js"></script>
+<script  src="../../static/js/common.js"></script>
+<script  src="http://m.lsa0.cn/static/js/hlsjs.js?v=1.0"></script>
+<script>
+    $(function(){
+        $(document).on("touchmove",function(e){
+            e.preventDefault();
+        });
+        //点击红包抽奖
+        $("#pack").off("touchstart").on("touchstart",function(){
+            //显示中奖结果
+            common.loading();
+            hlsjs.ready(function(x){
+                hlsjs.takeActivity(function(data) {
+                    common.unloading();                         
+                    if(data.errcode == 0){
+                        //成功 data.amount 中奖金额，单位分，实际使用元需要/100
+                        getpack((Number(data.amount) / 100).toFixed(2));
+                    }else if(data.errcode == 20){
+                        //未中奖 
+                        nopack();
+                    }else if(data.errcode == 12 || data.errcode == 13){
+                        //奖品发完
+                        error("奖品已发完，更多惊喜，敬请期待！");
+                    }else if(data.errcode == 2 || data.errcode == 3){
+                        //重复扫码
+                        scaned();
+                    }else{
+                        //失败  错误信息
+                        error(data.errmsg);
+                    }
+               });
+            });
+        });
+        
+    });
+    
+    //中奖
+    function getpack(data){
+        $(".result").show().addClass('got');
+        $(".mask").show();
+        $(".msg").html("恭喜您中得");
+        $(".data").html(data+"元");
+        $(".tip").html("长按二维码关注微信公众号<br>更多精彩活动等着你");
+    }
+    //未中奖
+    function nopack(){
+        $(".result").show().removeClass('got');
+        $(".mask").show();
+        $(".msg").html("谢谢惠顾");
+        $(".data").html("不要灰心，请继续扫码赢红包！");
+        $(".tip").html("长按二维码关注微信公众号<br>更多精彩活动等着你");
+    }
+    //码被扫过
+    function scaned(){
+        $(".result").show().removeClass('got');
+        $(".mask").show();
+        $(".msg").html("此码已被扫过");
+        $(".data").html("不要灰心，请继续扫码赢红包！");
+        $(".tip").html("长按二维码关注微信公众号<br>更多精彩活动等着你");
+    }
+    //出错
+    function error(msg){
+        $(".result").show().removeClass('got');
+        $(".mask").show();
+        $(".msg").html("很遗憾！");
+        $(".data").html(msg);
+        $(".tip").html("长按二维码关注微信公众号<br>更多精彩活动等着你");
+    }
+</script>
+
+
+</body>
+</html>

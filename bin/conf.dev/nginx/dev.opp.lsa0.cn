@@ -1,0 +1,14 @@
+server {
+	server_name dev.opp.lsa0.cn;
+	root        /var/www/lsa0.cn/dev/php_web/opp;
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~ \.php$ {
+		include fastcgi.conf;
+		fastcgi_pass 127.0.0.1:9000;
+		fastcgi_param CI_ENV development;
+	}
+}

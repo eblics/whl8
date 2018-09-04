@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1080, target-densitydpi=device-dpi, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>捷虎扫码送红包</title>
+        <meta name="description" content="捷虎扫码送红包">
+        <link rel="stylesheet" href="css/index.css">
+        <script>
+            // 禁止页面移动
+            // var jinzhi=0;
+            // document.addEventListener("touchmove",function(e){
+            //   if(jinzhi==0){
+                //     e.preventDefault();
+                //     e.stopPropagation();
+            //   }
+            // },false);
+            var referrer = document.referrer;
+            if (document.referrer.indexOf('m.lsa0.cn/code/scan/') === -1) {
+                location.href='xuanchuan.html?v=2.0';
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 微信分享图片 400 x 400 -->
+        <div style="display:none">
+            <img src="./images/logo2.png">
+        </div>
+        <div id="webContent">
+            <!-- loading页 -->
+            <div class="loading">
+                <img class="loading-demo" style="display:none" src="./images/loading.jpg">
+                <img class="loading-top" src="./images/loading-top.png">
+                <img class="loading-bottom" src="./images/loading-bottom.png">
+                <img class="shake-img" src="./images/shake.gif" alt="">
+                <div class="cover" style="display:none">
+                    <div class="info load1">
+                        <span>正在抽奖中</span>
+                        <div class="loader">Loading...</div>
+                    </div>
+                </div>
+                <button class="btn-huodong2">活动规则</button>
+            </div>
+            <div class="container">
+                <div class="item item1">
+                    <img class="btn_w" src="./images/btn1.png" alt="">
+                    <div class="fixed_box">                       
+                       <img src="images/bimg1.png">
+                       <div class="close_b"></div>
+                    </div>
+                    <!-- <img class="item1-bg" src="./images/item1-bg.jpg" alt=""> -->
+                    <!-- <img class="img-hand" src="./images/hand.png" alt=""> -->
+                    <button class="btn-details"></button>
+                    <div class="hongbao-num">
+                        <!-- <img src="./images/comeon.png" alt=""> -->
+                        <!--<p>还有<span>500000</span>个红包</p>-->
+                        <!-- <p>很遗憾，红包与您<br>擦肩而过了...</p> -->
+                    </div>
+                    <!-- <img class="img-logo" src="./images/icon-yetai.png" alt=""> -->
+                </div>
+                <div class="item item2">
+                    <!-- <img class="item2-bg" src="./images/item2-bg.jpg" alt="" width="100%"/> -->
+                    <h6>1个现金红包</h6>
+                    <button class="btn-item2">立即查看</button>
+                    <button class="btn-huodong">活动规则</button>
+                </div>
+                <div class="item item2-1">
+                    <button class="icon-delete3 icon-delete31"></button>
+                    <div class="scroll-wrapper">
+                        <iframe src="./xuanchuan.html?v=2.0" frameborder="0" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+                <div class="item item-QR">
+                    <button class="icon-delete3 icon-delete32"></button>
+                    <div class="info">
+                        <img src="./images/lee.jpg" alt="">
+                        <p>长按识别二维码</p>
+                        <p>领取奖品</p>
+                    </div>
+                </div>
+                <div class="item redmonery">
+                    <button class="icon-delete"><img src="./images/icon-delete.png" alt=""></button>
+                    <div class="info">
+                        <img class="logo2" src="./images/logo2.png" alt="">
+                        <p>捷虎能量<br><span>给您发了一个红包</span></p>
+                        <h3>喝捷虎, 能量动起来!</h3>
+                        <img class="open" src="./images/open.png" alt="">
+                    </div>
+                </div>
+                <div class="item redmoneryInfo">
+                    <div class="info">
+                        <!-- <button class="icon-delete2"><img src="./images/icon-delete2.png" alt=""></button> -->
+                        <img class="logo2" src="./images/logo2.png" alt="">
+                        <p>捷虎能量的<span>红包</span><br>喝捷虎, 能量动起来!</p>
+                        <h2>0.68<span>元</span></h2>
+                        <h6>请长按识别二维码领取</h6>
+                        <!--<h5>一个红包共<span>0.68</span>元</h5>-->
+                        <div class="QR-div">
+                            <img class="QR-img2" src="./images/erweima.png" alt="">
+                            <img class="icon-hand" src="./images/hand.gif" alt="">
+                        </div>
+                        <!-- <button class="chakan">请长按“识别二维码”领取</button> -->
+                    </div>
+                    <img class="red-bottom" src="./images/red-bottom.png" alt="">
+                </div>
+              <!--   <div class="item item3 form">
+                    <img class="item-che" src="./images/item-che.jpg" alt="">
+                    <div class="form-info2">
+                        <h5>恭喜您获得<span>捷虎山地车一台</span></h5>
+                        <p>请提交您的信息，方便我们发送奖品</p>
+                        <div class="form-info">
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的姓名(必填)">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的手机号(必填)">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的地址(必填)">
+                            </div>
+                            <button class="btn-submit">用户提交</button>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="item item4 form">
+                    <img class="item-che" src="./images/item-monery.jpg" alt="">
+                    <div class="form-info2">
+                        <h5>恭喜您获得<span>捷虎999元红包大奖</span></h5>
+                        <p>请提交您的信息，方便我们发送奖品</p>
+                        <div class="form-info">
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的姓名(必填)">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的手机号(必填)">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="请输入您的地址(必填)">
+                            </div>
+                            <button class="btn-submit">用户提交</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <audio id="shake-music" src="js/shake.mp3"></audio>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script  src="/static/js/jquery-2.1.1.min.js"></script>
+        <script  src="/static/js/common.js"></script>
+        <script  src="/static/js/hlsjs.js"></script>
+        <!-- <script src='http://www.eol.cn/js/common/jquery/1.0/jquery.js'></script> -->
+        <script>
+            $(window).load(function () {
+            $('.item3').css('height',$('#webContent').height());
+            $('#webContent').css('overflow','auto');
+            $('.cover').css('height',$('.loading .loading-demo').height());
+            $('.item').css('height',$('.loading .loading-demo').height());
+            $('.redmonery.item').css('height','1212px');
+            // $('#shake-music').get(0).play();
+            $(document).on('touchstart', function() {
+                $('#shake-music').get(0).load();
+            })
+            // var data = {};
+            // data = {
+            //   errcode : 0,
+            //   amount : 90,
+            //   datatype : 0,
+            //   data:{
+                //     name:'山地车'
+            //   }
+            // }
+            // 模拟网络请求
+            var net_time = 100;
+            var item2_ready = true;
+            var RootUrl;
+            var moneryNum;
+            // 中奖4种，0：未中奖 1：小额奖金 2：999现金 3：山地车
+            var Jiang;
+            // 出现识别二维码
+            function itemQR(t){
+                setTimeout(function(){
+                if(item2_ready == true){
+                    $(".item-QR").css("opacity",1).css("z-index",101);
+                    $(".item-QR .info").addClass("zoomIn");
+                }
+                },t)
+            }
+            // 点击关闭按钮
+            $('.btn-close').on("touchstart",function(){
+                $('.item1').addClass("hide");
+                $(".loading").show();
+                $(".loading .cover").hide();
+            })
+            $('.btn-details,.btn-huodong').on("touchstart",function(){
+                $('.item2-1').css("opacity",1).css("z-index",100);
+                $('.item1').addClass("hide");
+            })
+            $('.btn-huodong2').on("touchstart",function(){
+                $('.item2-1').css("opacity",1).css("z-index",100);
+                $('.container').show();
+                $('.item1').addClass("hide");
+                $('.item2-1').attr('nav','loading');
+            })
+            // $('.btn-item2').on("touchstart",function(){
+            //   $('.redmonery').addClass("zoomIn");
+            // })
+            $('.icon-delete').on("touchstart",function(){
+                $('.redmonery').removeClass("zoomIn");
+            })
+            $('.icon-delete3').on("touchstart",function(){
+                $(this).parent().css('opacity',0).css('z-index',1);
+                $(this).siblings('.info').removeClass('zoomIn');
+                $('.item1').removeClass('hide');
+                if($('.item2-1').attr('nav') == 'loading'){
+                $('.container').hide();
+                $('.item2-1').attr('nav','none');
+                }
+            })
+            $('.icon-delete2').on("touchstart",function(){
+                $('.redmonery').removeClass("zoomIn");
+                $('.redmoneryInfo').css('opacity',0).css('z-index',1);
+                item2_ready = false;
+            })
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            $('.form-info input').focusin(function(e){
+                var $this = $(this);
+                e.preventDefault();
+                setTimeout(function(){
+                    $(window).scrollTop($this.offset().top - 10);
+                },200)
+                // if(isAndroid){
+                //   $('.form-info2').addClass('show');
+                // }
+            })
+            $('.form-info input').focusout(function(e){
+                var $this = $(this);
+                e.preventDefault();
+                setTimeout(function(){
+                    $(window).scrollTop(0);
+                },200)
+                // if(isAndroid){
+                //   $('.form-info2').removeClass('show');
+                // }
+            })
+            // 点击打开红包
+            //$('.open').
+            $('.btn-item2').on("touchstart",function(){
+                // $(this).addClass('zhuan');
+                setTimeout(function(){
+                item2_ready = true;
+                if(Jiang == 3){
+                    $('.item3').show().css('z-index',100);
+                }else if(Jiang == 2){
+                    $('.item4').show().css('z-index',100);
+                }else{
+                    $('.redmoneryInfo').css('opacity',1).css('z-index',100);
+                }
+                // $('.open').removeClass('zhuan');
+                },10);
+            });
+            $('.btn-item2').on("touchend",function(){
+                return false;
+            });
+            // 点击立即领取
+            // $('.redmoneryInfo .btn-item2').on("touchstart",function(){
+            //   if(Jiang == 1){
+            //
+            //   }else if(Jiang == 3){
+                //     $(".item3").css("opacity",1).css("z-index",100);
+            //   }else if(Jiang == 2){
+                //     $(".item4").css("opacity",1).css("z-index",100);
+            //   }
+            //
+            //
+            // })
+            // 预先定义好mch_id 用户表单信息
+            var mch_id;
+            var mobile;
+            var realname;
+            var address;
+            // 999现金红包用户信息提交
+            $('.item4 .btn-submit,.item3 .btn-submit').on("touchstart",function(){
+                var mobile = $(this).parent().find('.input').eq(1).find('input').val();
+                var realname = $(this).parent().find('.input').eq(0).find('input').val();
+                var address = $(this).parent().find('.input').eq(2).find('input').val();
+                var phoneRight = /^1(3|4|5|7|8)\d{9}$/;
+                if(mobile.length == 0 || realname.length == 0 || address.length == 0){
+                alert('请输入完整信息！')
+                }else if(!phoneRight.test(mobile)){
+                alert('手机号输入错误！')
+                }else{
+                console.log("开始传递jsonp数据");
+                common.loading();
+                $.ajax({
+                    url: RootUrl + "/myboard/update_personalinfo/jsonp",
+                    dataType: "jsonp",
+                    data:"mobile="+mobile+"&realname="+realname+"&address="+address+"&mchid="+mch_id,
+                    jsonp: "callback",
+                    success: function(result){
+                        if(result.errcode==0){
+                            $('.redmoneryInfo').css('opacity',1).css('z-index',101);
+                            $(".QR-img2").attr("src","./images/erweima2.png");
+                        }else{
+                            alert("保存失败，请重试！");
+                        }
+                        common.unloading();
+                    },
+                    error: function(){
+                        alert("发送失败！");
+                        common.unloading();
+                    }
+                });
+                $('.redmoneryInfo').css('opacity',1).css('z-index',101);
+                }
+                //itemQR();
+            })
+            var moneryNum='';
+            // 摇一摇
+            //运动事件监听
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion',deviceMotionHandler,false);
+            }
+            //获取加速度信息
+            //通过监听上一步获取到的x, y, z 值在一定时间范围内的变化率，进行设备是否有进行晃动的判断。
+            //而为了防止正常移动的误判，需要给该变化率设置一个合适的临界值。
+            var SHAKE_THRESHOLD = 4000;
+            var last_update = 0;
+            var x, y, z, last_x = 0, last_y = 0, last_z = 0;
+            var IsShake = false;
+            function deviceMotionHandler(eventData) {
+                var acceleration =eventData.accelerationIncludingGravity;
+                var curTime = new Date().getTime();
+                if ((curTime-last_update)> 10) {
+                    var diffTime = curTime -last_update;
+                    last_update = curTime;
+                    x = acceleration.x;
+                    y = acceleration.y;
+                    z = acceleration.z;
+                    var speed = Math.abs(x +y + z - last_x - last_y - last_z) / diffTime * 10000;
+                    if (speed > SHAKE_THRESHOLD && !IsShake) {
+                        $('#shake-music').get(0).play();
+                        $('.loading .cover').css('display','block');
+                        IsShake = true;
+                        // 2s之后执行抽奖
+                        setTimeout(function(){
+                        $(".container").show();
+                        hlsjsFun();
+                        },2000);
+                    }
+                    last_x = x;
+                    last_y = y;
+                    last_z = z;
+                }
+            }
+            // 8秒自动摇一摇
+            var i;var intervalid;
+            i = 13;
+            intervalid = setInterval(fun, 1000);
+             function fun() {
+                  if (i == 0) {
+                     clearInterval(intervalid);
+                     if(!IsShake){
+                        $('#shake-music').get(0).play();
+                        $('.loading .cover').css('display','block');
+                        IsShake = true;
+                        // 2s之后执行抽奖
+                        setTimeout(function(){
+                        $(".container").show();
+                        hlsjsFun();
+                        },2000);
+                     }
+                  }
+                  i--;
+            }
+            // $('#shake-music').get(0).play();
+            // $('.loading .cover').css('display','block');
+            // IsShake = true;
+            // // 2s之后执行抽奖
+            // setTimeout(function(){
+            //   $(".container").show();
+            //   hlsjsFun();
+            // },200);
+            function hlsjsFun() {
+            hlsjs.ready(function(x) {
+                // 获取根路径
+                RootUrl = hlsjs.getRootUrl();
+            hlsjs.takeActivity(function(data) {
+                if (data.errcode == 0){
+                    //成功
+                    if(data.datatype == 0){
+                    // 中了小额奖金
+                    moneryNum = (data.amount/100)+'元红包';
+                    setTimeout(function(){
+                        $(".loading").hide();
+                        $(".item2").css("opacity",1).css("z-index",100);
+                        Jiang = 1;
+                        $('.redmonery p span').html('给您发了一个红包');
+                        $('.redmoneryInfo p span').html('红包');
+                        // $('.redmoneryInfo h2').html( data.amount/100 + '<span>元</span>').css('font-size','150px');
+                        $('.redmoneryInfo h2').html('恭喜您获得').css('font-size','46px').hide();
+                        $('.item2 h6').html('<span>恭喜您获得</span><br/>现金红包');
+                        $('.redmoneryInfo h5').html('一个红包共<span>' + data.amount/100 +'</span>元');
+                        $('.QR-img2').show();
+                        $('.redmoneryInfo h6').show().html(data.amount/100 + '<span>元</span>').css('font-size','115px').css('margin-top','440px');
+                        $('.redmoneryInfo .btn-item2').html('红包离您只有0.01公分了');
+                        $('.redmoneryInfo').css('opacity',1).css('z-index',100);
+                        $('.QR-div').css('bottom','inherit').css('top','-117px');
+                    },net_time)
+                    }
+                    if (data.datatype == 2 && data.data.name.indexOf('山地车')!=-1)
+                    {
+                    // 中了山地车
+                    moneryNum = '“'+data.data.name+'”';
+                    setTimeout(function(){
+                        $(".loading").hide();
+                        $(".item2").css("opacity",1).css("z-index",100);
+                        Jiang = 3;
+                        $('.redmonery p span').html('给您发了一份奖品');
+                        $('.redmoneryInfo p span').html('奖品');
+                        $('.redmoneryInfo h2').html(data.data.name);
+                        $('.item2 h6').html('<span>恭喜您</span><br/>中大奖啦');
+                        $('.QR-img2').show();
+                        $('.redmoneryInfo .btn-item2').html('请长按“识别二维码”<BR>静候我司与您联系兑奖').css({'line-height':'60px','font-size':'1rem'});
+                        $('.redmoneryInfo h5').hide();
+                        $('.redmoneryInfo h6').hide();
+                        $('.redmoneryInfo h2').hide();
+                        $('.redmoneryInfo h6').show().html('提交的资料正在审核，相关负责人会在24小时之内联系您兑奖，请留意手机来电。').css('font-size','44px').css('margin-top','452px');
+                        $('.item3').show().css('z-index',100);
+                        $('.QR-div').css('bottom','inherit').css('top','-117px');
+                        $('.redmoneryInfo').addClass('big');
+                        // $('.redmoneryInfo').css('background', 'url(../images/red-bg.jpg) no-repeat').css('background-size', '100%');
+                    },net_time)
+                    }
+                    if (data.datatype == 2 && data.data.name.indexOf('999')!=-1)
+                    {
+                    // 中了999红包
+                    moneryNum = '“'+data.data.name+'”';
+                    setTimeout(function(){
+                        $(".loading").hide();
+                        $(".item2").css("opacity",1).css("z-index",100);
+                        Jiang = 2;
+                        $('.redmonery p span').html('给您发了一个红包');
+                        $('.redmoneryInfo p span').html('红包');
+                        $('.redmoneryInfo h2').html(data.data.name);
+                        $('.item2 h6').html('<span>恭喜您</span><br/>中大奖啦');
+                        $('.QR-img2').show();
+                        $('.redmoneryInfo .btn-item2').html('请长按“识别二维码”<BR>静候我司与您联系兑奖').css({'line-height':'60px','font-size':'1rem'});
+                        $('.redmoneryInfo h5').hide();
+                        $('.redmoneryInfo h6').hide();
+                        $('.redmoneryInfo h2').hide();
+                        $('.redmoneryInfo h6').show().html('提交的资料正在审核，相关负责人会在24小时之内联系您兑奖，请留意手机来电').css('font-size','44px').css('margin-top','452px');
+                        $('.item4').show().css('z-index',100);
+                        $('.QR-div').css('bottom','inherit').css('top','-117px');
+                        $('.redmoneryInfo').addClass('big');
+                    },net_time)
+                    }
+                }else if(data.errcode == 20){
+                    //未中奖
+                    setTimeout(function(){
+                    $(".loading").hide();
+                    $(".item1").addClass("zoomIn");
+                    $('.img-hand').addClass('show');
+                    Jiang = 0;
+                    $('.item-QR .info').find('p').eq(0).html('更多活动，关注我们');
+                    $('.item-QR .info').find('p').eq(1).html('');
+                    itemQR(2000);
+                    },net_time)
+                }else if(data.errcode == 2){
+                    $(".item1").css({
+                        "background": 'url(images/item1-bg2.jpg)no-repeat top center',
+                        "background-size": '100%'
+                    });
+                    // 此码已被他人扫过
+                    setTimeout(function(){
+                    $(".loading").hide();
+                    $(".item1").addClass("zoomIn");
+                    $('.img-hand').addClass('show');
+                    Jiang = 0;
+                    $('.item-QR .info').find('p').eq(0).html('更多活动');
+                    $('.item-QR .info').find('p').eq(1).html('长按“识别二维码”<BR>关注我们');
+                    itemQR(2000);
+                    },net_time)
+                }else if(data.errcode == 3){
+                    // 未中奖
+                    $(".loading").html('');
+                    $('.loading').append('<img class="loading-demo" src="./images/loading.jpg">')
+                    $('.item-QR .info').find('p').eq(0).html('您已扫过此码');
+                    $('.item-QR .info').find('p').eq(1).html('长按“识别二维码”<BR>查看我的红包');
+                    itemQR(0);
+                }
+                else{
+                    //失败
+                    setTimeout(function(){
+                    $(".loading").hide();
+                    $(".item1").addClass("zoomIn");
+                    $('.img-hand').addClass('show');
+                    Jiang = 0;
+                    $('.item-QR .info').find('p').eq(0).html('更多活动，关注我们');
+                    $('.item-QR .info').find('p').eq(1).html('');
+                    // itemQR(2000);
+                    },net_time)
+                }
+                if(moneryNum==''){
+                    moneryNum='一个红包';
+                }
+                // 微信分享
+                var wx=hlsjs.wx();
+                wx.ready(function(){
+                  wx.hideOptionMenu();
+                  wx.showMenuItems({
+                      menuList: ['menuItem:share:timeline','menuItem:share:appMessage']
+                  });
+                  wx.onMenuShareAppMessage({
+                      title: '我在捷虎扫码送红包活动中，领取了'+moneryNum+'，你也来看看吧', // 分享标题  moneryNum为中奖金额；
+                      link:RootUrl+'/h5/beiqi-jiehu/xuanchuan.html?v=2.0',//分享链接
+                      desc: '我在捷虎扫码送红包活动中，领取了'+moneryNum+'，你也来看看吧', // 分享描述
+                      imgUrl: RootUrl+'/h5/beiqi-jiehu/images/logo2.png', // 分享图标
+                      success: function() {
+                          console.log('success');
+                      },
+                      cancel: function() {
+                          console.log('cancel');
+                      }
+                  });
+                  wx.onMenuShareTimeline({
+                      title:  '我在捷虎扫码送红包活动中，领取了'+moneryNum+'，你也来看看吧', // 分享标题
+                      link:RootUrl+'/h5/beiqi-jiehu/xuanchuan.html?v=2.0',//分享链接
+                      desc: '我在捷虎扫码送红包活动中，领取了'+moneryNum+'，你也来看看吧',// 分享描述
+                      imgUrl: RootUrl+'/h5/beiqi-jiehu/images/logo2.png', // 分享图标
+                      success: function() {
+                          console.log('success');
+                      },
+                      cancel: function() {
+                          console.log('cancel');
+                      }
+                  });
+                });
+            });
+            // 获取用户表单信息
+            hlsjs.getCurrentUser(function(d){
+                mch_id = d.data.mchId;
+                mobile = d.data.mobile;
+                realname = d.data.realName;
+                address = d.data.address;
+                // 默认填入中奖者表单信息（如果存在）
+                $('.item3 .form-info').find('.input').eq(1).find('input').val(mobile);
+                $('.item3 .form-info').find('.input').eq(0).find('input').val(realname);
+                $('.item3 .form-info').find('.input').eq(2).find('input').val(address);
+                $('.item4 .form-info').find('.input').eq(1).find('input').val(mobile);
+                $('.item4 .form-info').find('.input').eq(0).find('input').val(realname);
+                $('.item4 .form-info').find('.input').eq(2).find('input').val(address);
+            })
+            });
+            }
+            });
+            $(".btn_w").click(function(event) {
+                $(".fixed_box").addClass('zoomIn').show();
+            });
+
+            $(".close_b").click(function(event) {
+                 $(".fixed_box").removeClass('zoomIn').hide();
+            });
+        </script>
+    </body>
+</html>

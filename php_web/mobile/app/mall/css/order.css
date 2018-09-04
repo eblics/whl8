@@ -1,0 +1,27 @@
+.head{z-index:1;position:fixed;top:0;left:0;width:100%;background-color:white;line-height:50px;height:50px;border-bottom:1px solid #e5e5e5;display:flex;align-items:center;}
+.head>.tab{flex-grow:1;color:#333333;height:100%;display:flex;justify-content:center;}
+.head>.tab>.text{width:84px;color:#333333;text-align:center;}
+.head>.tab.selected>.text{border-bottom:2px solid #f05050;color:#f05050;}
+.head>.line{border-left:1px solid #e5e5e5;height:25px;}
+.content>.item{margin-top:7px;background-color:white;}
+.content>.item>.body{margin:0 11px;color:#333333;}
+.content>.item>.body>.title{padding:5px 0;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #e5e5e5;}
+.content>.item>.body>.title>.order{}
+.content>.item>.body>.title>.info{display:flex;justify-content:space-between;}
+.content>.item>.body>.title>.info>.state{color:#f05050;}
+.content>.item>.body>.title>.info>.time{color:#666666;}
+.content>.item>.body>.good{height:112px;display:flex;align-items:center;border-bottom:1px dashed #e5e5e5;}
+.content>.item>.body>.good.last{border-bottom:0px;}
+.content>.item>.body>.good>.icon{background-image:url(/app/mall/images/noimage.png);flex-shrink:0;background-size:contain;background-repeat:no-repeat;background-position:center;width:90px;height:90px;border-radius:1px;/*border:1px solid #e5e5e5;*/}
+.content>.item>.body>.good>.text{display:flex;flex-direction:column;justify-content:center;margin-left:15px;flex-grow:1;}
+.content>.item>.body>.good>.text>.name{font-size:15px;}
+.content>.item>.body>.good>.text>.data{margin-top:7px;display:flex;justify-content:space-between;}
+.content>.item>.body>.good>.text>.data>.info{display:flex;flex-direction:column;justify-content:center;}
+.content>.item>.body>.good>.text>.data>.info>.point{color:#f05050;margin-bottom:7px;}
+.content>.item>.body>.good>.text>.data>.info>.amount{}
+.content>.item>.body>.good>.text>.data>.statistics{margin-bottom:3px;align-self:flex-end;}
+.content>.item>.body>.good>.text>.data>.statistics>.info{margin-right:6px;}
+.content>.item>.body>.good>.text>.data>.statistics>.point{color:#f05050;}
+.content>.item>.body>.buttons{height:50px;display:flex;align-items:center;justify-content:flex-end;}
+.content>.item>.body>.buttons>span{margin-left:11px;line-height:28px;color:#333333;text-align:center;width:73px;height:28px;border-radius:4px;border:1px solid #e5e5e5;}
+.content>.item>.body>.buttons>.red{border-color:#f05050;background-color:#f05050;color:white;}

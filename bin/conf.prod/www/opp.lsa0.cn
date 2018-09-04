@@ -1,0 +1,20 @@
+server {
+    server_name  opp.lsa0.cn;
+	root /var/www/lsa0.cn/php_web/opp;
+    index index.php;
+
+	location / {
+	    try_files $uri $uri/ /index.php?$query_string;
+	}   
+
+	location ~ \.php$ {
+	    include fastcgi.conf;
+	    fastcgi_pass php;
+	    fastcgi_param CI_ENV production;
+	}
+
+	location /files/private/cert{
+        deny all;
+        return 403;
+    }   
+}

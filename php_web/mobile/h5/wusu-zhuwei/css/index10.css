@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    background-image: url("../images/logo.png");
+    width: 142px;
+    height: 71px;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+}
+
+.slogan {
+    background-image: url("../images/slogan.png");
+    width: 167px;
+    height: 94px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.erweima {
+    /*background-image: url("../images/erweima.png");*/
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+}
+
+.text9 {
+    background-image: url("../images/text10.png");
+    width: 422px;
+    height: 146px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+}
+
+
+.product {
+    background-image: url("../images/product.png");
+    width: 373px;
+    height: 466px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}

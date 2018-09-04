@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>欢乐扫大转盘</title>
+<link rel="stylesheet" type="text/css" href="css/style.css?v=1.0">
+<link rel="stylesheet" type="text/css" href="lib/mobilescroll/mobiscroll.custom-2.5.2.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/hls_app.css?v=1.0">
+</head>
+<body>
+<div class="banner">
+
+	<!-- 转盘区域 -->
+	<div class="turnplate">
+		<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+		<img class="pointer" src="images/turnplate-pointer.png?v=2"/>
+
+		<!-- 抽奖规则按钮，此按钮不可见 -->
+		<button class="btn btn-rule" id="btn_rule">抽奖规则</button>
+		<!-- 我的奖品按钮，此按钮不可见 -->
+		<button class="btn btn-prize" id="btn_prize">抽奖规则</button>
+	</div>
+
+</div>
+
+<!-- 中得的奖品弹出框 -->
+<section class="layer layer-prize">
+	<article>
+		<ul id="prize_container"></ul>
+		<button class="btn btn-back btn-layer-close">返　回</button>
+	</article>
+	<footer>
+	</footer>
+</section>
+
+<!-- 中奖结果弹出框 -->
+<section class="layer layer-blank">
+	<header>
+		<a class="btn-layer-close" href="javascript:;">X</a>
+	</header>
+	<article>
+		<h2>恭喜您，中奖了！</h2>
+		<p>(奖品：<span id="prize_name">--</span>)</p>
+		<ul id="form_container">
+			<li>
+				<input class="phone" type="text" name="phone" placeholder="手机号" />
+			</li>
+			<li class="center">
+				<input id="birthday_input" class="birthday" type="text" name="birthday" placeholder="生日" />
+			</li>
+			<li>
+				<input id="city_input" class="city" type="text" name="city" placeholder="城市" />
+			</li>
+		</ul>
+		<button id="btn_get_prize" class="btn">点击领取</button>
+	</article>
+	<img src="/app/turntable/images/tankuang.png" />
+</section>
+
+<!-- 抽奖规则弹出框 -->
+<section class="layer layer-rule">
+	<header>
+		<a class="btn-layer-close" href="javascript:;">X</a>
+	</header>
+	<article>
+		<p>1. 每个用户可以抽奖一次；如果没有中奖，可以继续抽奖。</p>
+		<p>2. 中奖后，填写正确的信息才可以领取奖品。</p>
+		<p>3. 奖品可以在“我的奖品”中查看。</p>
+		<p>4. 本活动最终解释权欢乐扫平台所有。</p>
+	</article>
+	<img src="/app/turntable/images/guize_pop.png" />
+</section>
+
+<!-- 省列表弹出框 -->
+<section class="layer layer-province">
+	<article class="area-container">
+		<dl id="areas_list">
+			<!-- list container -->
+		</dl>
+	</article>
+</section>
+
+<!-- 市区列表弹出框 -->
+<section class="layer layer-city">
+	<article class="area-container">
+		<dl id="city_list">
+			<!-- list container -->
+		</dl>
+	</article>
+</section>
+
+<!-- canvas绘制需要的图片资源 -->
+<div style="display:none">
+	<img id="img01" src="/app/turntable/images/1.png?v=1">
+	<img id="img02" src="/app/turntable/images/2.png?v=1">
+	<img id="img03" src="/app/turntable/images/3.png?v=1">
+</div>
+<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="lib/mobilescroll/mobiscroll.custom-2.5.2.min.js"></script>
+<script type="text/javascript" src="lib/mobilescroll/mobiscroll.android-ics-2.5.2.js"></script>
+<script type="text/javascript" src="lib/mobilescroll/mobiscroll.datetime-2.5.1-zh.js"></script>
+<script type="text/javascript" src="/static/js/hls_app.js?v=1.0"></script>
+<script type="text/javascript" src="js/turntable.js?v=2.0"></script>
+</body>
+</html>

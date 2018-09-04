@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>欢乐扫 - 工具</title>
+	<style type="text/css">
+		.spinner {
+			display: none;position: fixed;
+			text-align: center;padding-top: 25%;
+			background-color: rgba(0,0,0,0.3);
+			top: 0;left: 0;right: 0;bottom: 0;
+		}
+	</style>
+	<script type="text/javascript" src="/static/js/common/jquery.js"></script>
+</head>
+<body>
+	<section>
+		<aside>
+			<div class="spinner">
+				<img src="/static/images/loading.gif">
+			</div>
+		</aside>
+		<article>
+			<div>
+				<button onclick="deployTest()">测试环境部署</button>
+			</div>
+		</article>
+	</section>
+</body>
+<script type="text/javascript">
+	function deployTest() {
+		$('.spinner').fadeIn();
+		$.get('/tools/api/deploy.test', {}, function(resp) {
+			$('.spinner').fadeOut();
+			if (resp.errcode === 0) {
+				alert('部署成功。');
+			} else {
+				alert(resp.errmsg + '。');
+			}
+		}).fail(function() {
+			$('.spinner').fadeOut();
+			alert('无法链接服务器。');
+		});
+	}
+</script>
+</html>

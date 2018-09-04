@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>兰州黄河嘉酿啤酒</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        /*loading样式*/
+
+        .app-loading {
+            background: #fff100;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg) scale(1);
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                -webkit-transform: rotate(180deg) scale(0.6);
+                transform: rotate(180deg) scale(0.6);
+            }
+            100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        .ball-clip-rotate-multiple {
+            position: relative;
+        }
+
+        .ball-clip-rotate-multiple > div {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border: 2px solid #530803;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            border-radius: 100%;
+            height: 35px;
+            width: 35px;
+            -webkit-animation: rotate 1s 0s ease-in-out infinite;
+            animation: rotate 1s 0s ease-in-out infinite;
+        }
+
+        .ball-clip-rotate-multiple > div:last-child {
+            display: inline-block;
+            top: 10px;
+            left: 10px;
+            width: 15px;
+            height: 15px;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            border-color: #530803 transparent #530803 transparent;
+            -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+        }
+
+        .loader {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="app-loading">
+            <div class="top">
+                <!-- <div class="beer-light sun1"></div>
+        <div class="beer-light sun2"></div>
+        <div class="beer-light sun3"></div> -->
+                <div class="center-point start">
+                    <div class="beer circle1"><img src="./images/capsule.png" /></div>
+                    <div class="computer"><img src="./images/computer.png" /></div>
+                    <div class="camera"><img src="./images/camera.png" /></div>
+                    <div class="weibolu"><img src="./images/weibolu.png" /></div>
+                    <div class="word"><img src="./images/word.png" /></div>
+                </div>
+            </div>
+        </div>
+        <!-- 主要内容 -->
+        <div class="index">
+            <div class="home">
+                <div class="home-bg"></div>
+                <div class="home-bg2"></div>
+                <div class="top">
+
+                    <div class="center-point start">
+                        <div class="beer beer2 circle1"><img src="./images/capsule.png" /></div>
+                        <div class="computer"><img src="./images/computer.png" /></div>
+                        <div class="camera"><img src="./images/camera.png" /></div>
+                        <div class="weibolu"><img src="./images/weibolu.png" /></div>
+                        <div class="word"><img src="./images/word.png" /></div>
+
+                    </div>
+                    <em class="rule"><img src="./images/rule.png" alt=""></em>
+                </div>
+                <div class="bottom">
+                    <div class="QR-place" id="bb">
+                        <div class="QR-result"><em>抽奖中..</em></div>
+                        <canvas class="QR-canvas" id="cas" touched="false"></canvas>
+                        <div class="QR-hand"></div>
+
+                    </div>
+                </div>
+                <div class="people">
+                    <img src="./images/people.png" />
+                </div>
+            </div>
+            <!-- 弹出层 -->
+            <div class="diag-info">
+                <div class="info">
+                    <h2>活动规则</h2>
+                    <div class="txt">
+                        <p>1. 即日起凡购买黄河啤酒系列产品，开盖扫描盖内二维码，就有机会“码”上赢取超级大奖。</p>
+                        <p>2. 寻奖流程：</p>
+                        <p>微信扫描盖内二维码，刮开图层，开启寻奖之旅。凡刮得 “机”、“脑”、“炉”字即视为中奖，中奖消费者将获得奖字对应的不同级别大奖。每个二维码有且只有一次扫码寻奖机会，首次扫码后即刻作废。</p>
+                        <p>3. 奖项设置：</p>
+                        <p>一等奖：价值4700元奥林巴斯微单相机1部；</p>
+                        <p>二等奖：价值1299元海尔青春小蓝平板电脑二合一1台；</p>
+                        <p>三等奖：价值350元格兰仕微波炉1台；</p>
+                        <p>4. 中奖者需根据页面提示，关注黄河嘉酿微信公众号，在我的账户-码上赢大奖-个人信息中完善中奖信息，务必留下联系方式并保持手机畅通，我方工作人员会在15个工作日内与您联系，沟通兑奖事宜，中奖者也可来电咨询。</p>
+                        <p>5. 活动咨询电话：0931-7845896</p>
+                        <p>6. 兑奖截止日期：2016年12月31日</p>
+                        <p>7. 实际兑付需中奖者携带本人身份证进行领取，不可代领。活动最终解释权归兰州黄河嘉酿啤酒有限公司所有。</p>
+                    </div>
+                    <div class="btn-back">
+                        <em>返回抽奖</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 擦除弹窗 -->
+            <div class="diag-prize">
+                <div class="info">
+                    <em class="icon-delete"></em>
+                    <div class="prize-txt">
+                        <div class="prize-zhong">
+                            <img src="./images/icon-zhongjiang.jpg" alt="">
+                            <p></p>
+                        </div>
+                        <div class="prize-sorry">
+                            <img src="./images/icon-sorry.jpg" alt="">
+                            <p>好运离你只差<br>一个黄河金盖的距离!</p>
+                        </div>
+                        <div class="prize-shishen">
+                            <img src="./images/icon-shishen.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="QR-img" style="display:none">
+                      <img src="./images/QR.jpg" alt="">
+                      <p class="show-info">长按关注公众号查看中奖信息</p>
+                    </div>
+                    <div class="form">
+                      <div class="form-info">
+                        <div class="input">
+                          <label for="">请输入您的姓名</label>
+                          <input type="text" placeholder="真实姓名必填">
+                        </div>
+                        <div class="input">
+                          <label for="">请输入您的手机号</label>
+                          <input type="text" placeholder="手机号必填">
+                        </div>
+                        <div class="input">
+                          <label for="">请输入您的地址</label>
+                          <input type="text" placeholder="地址必填">
+                        </div>
+                        <button class="btn-submit">提交</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script src="/static/js/jquery-2.1.1.min.js"></script>
+    <script src="/static/js/common.js"></script>
+    <script src="http://m.lsa0.cn/static/js/hlsjs.js?v=1.0"></script>
+    <script src="./js/chachu.js"></script>
+    <script>
+        //初始化页面位置
+        $(".people").css("bottom", screen.width * 202 / 640 - 2);
+        $(".QR-place").css("bottom", screen.width * 46 / 640);
+        $(".diag-info .txt").css("height", screen.height * 0.6);
+        window.onload = function() {
+            $(".index").show();
+            $(".app-loading").hide();
+            setTimeout(function() {
+                $(".beer2").addClass("circle2").addClass("show");
+            }, 500)
+            setTimeout(function() {
+                $(".home-bg").addClass("show");
+            }, 500)
+            setTimeout(function() {
+                $(".home-bg").css("border-radius", "0");
+            }, 800)
+            setTimeout(function() {
+                $(".bottom").css("display", "block").animate({
+                    bottom: 0
+                }, 800);
+            }, 300)
+            setTimeout(function() {
+                $(".bottom").addClass("tada")
+            }, 500)
+            setTimeout(function() {
+                $(".people").fadeIn();
+            }, 1900)
+            setTimeout(function() {
+                $(".rule").fadeIn();
+            }, 1900)
+            setTimeout(function() {
+                $(".computer").fadeIn(400).addClass("show");
+                $(".camera").fadeIn(400).addClass("show");
+                $(".weibolu").fadeIn(400).addClass("show");
+                $(".word").fadeIn(400).addClass("show");
+            }, 1930)
+            setTimeout(function() {
+                $(".home-bg2").fadeIn(1000);
+            }, 2500)
+            setTimeout(function() {
+                $(".QR-hand").fadeIn(600).addClass("show");
+            }, 2800)
+        }
+    </script>
+    <!-- 活动规则 -->
+    <script>
+        $("body").on("tap", '.rule', function() {
+            $(".diag-info").animate({
+                top: 0
+            }, 444)
+        })
+        $("body").on("tap", '.btn-back em', function() {
+            $(".diag-info").animate({
+                top: "-100%"
+            }, 300)
+        })
+        $("body").on("tap", '.diag-prize .icon-delete', function() {
+            $(this).parent().parent().css("background", "none").css("transition", "0.5s all").fadeOut();
+            $(this).parent().animate({
+                marginTop: "-100%"
+            }, 300)
+            $("#cas").attr("touched", "true");
+        })
+    </script>
+
+    <!-- 检测结果 -->
+    <script>
+        function jiance() {
+            $(".diag-prize").fadeIn();
+            $(".diag-prize").css("background", "url(images/blank1.png) repeat").css("transition", "0.5s all");
+            $(".diag-prize .info").animate({
+                marginTop: "10%"
+            }, 300)
+            $(".QR-hand").fadeOut(400);
+            $("#cas").addClass("noOp");
+        }
+    </script>
+</body>
+
+</html>

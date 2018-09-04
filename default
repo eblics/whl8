@@ -1,0 +1,74 @@
+
+upstream dev.m.backend  {
+    server 127.0.0.1:9000;
+}
+
+server {
+  	server_name  monitor.lsa0.cn;
+
+  	access_log  /var/log/nginx/nagios.access.log;
+  	error_log   /var/log/nginx/nagios.error.log info;
+
+  	expires 31d;
+
+  	root /usr/share/nagios3/htdocs;	
+  	index index.php index.html;
+
+  	auth_basic "Nagios Restricted Access";
+  	auth_basic_user_file /etc/nagios3/htpasswd.users;
+
+  location /stylesheets {
+	alias /etc/nagios3/stylesheets;
+  }
+  location ~ \.cgi$ {
+	root /usr/lib/cgi-bin/nagios3;
+
+	rewrite ^/cgi-bin/nagios3/(.*)$ /$1;
+
+	include /etc/nginx/fastcgi_params;
+
+	fastcgi_param AUTH_USER $remote_user;
+	fastcgi_param REMOTE_USER $remote_user;
+	fastcgi_param SCRIPT_FILENAME /usr/lib/cgi-bin/nagios3$fastcgi_script_name;	
+
+	fastcgi_pass localhost:9000;
+  }
+
+  location ~ \.php$ {
+	#include /etc/nginx/fastcgi_params;
+	include fastcgi.conf;
+	fastcgi_pass localhost:9000;
+  }
+}
+
+
+server { 
+	server_name dev.lsa0.cn;
+	rewrite     ^/[c|C]/([\w\d]+)$  http://dev.m.lsa0.cn/code/scan/$1 last;
+	rewrite     ^/[p|P]/([\w\d]+)$  http://v2.m.lsa0.cn/pubcode/scan/$1 last;
+	rewrite     ^/[s|S]/([\w\d]+)$  http://v2.m.lsa0.cn/secretcode/scan/$1 last;
+}
+
+server { 
+	resolver 114.114.114.114;
+	resolver_timeout 5s;
+	listen 0.0.0.0:5809;
+	location / {
+		proxy_pass $scheme://$host$request_uri;
+		proxy_set_header Host $http_host;
+	}
+	
+}
+
+server { 
+	server_name  dev.mall.lsa0.cn;
+	root         /var/www/lsa0.cn/dev/mall;
+	location /{
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+	location ~ \.php$ {
+		include fastcgi.conf;
+		fastcgi_pass localhost:9000;
+		fastcgi_param CI_ENV development;
+	}
+}

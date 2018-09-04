@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+header {
+	position: relative;
+	text-align: center;
+	padding: 50px;
+	background: white;
+}
+
+header img {
+	position: absolute;
+	width: 7%;
+	left: 35%;
+    top: 50px;
+}
+
+header p.first {
+	margin-left: 35px;
+	font-size: 20px;
+}
+
+header p:last-child {
+	margin-top: 100px;
+	margin-left: 25px;
+}
+
+header p.green {
+	color: #3CBC6E;
+}
+
+.tip {
+	font-size: 12px;
+	padding: 5px 15px;
+}
+
+.tip img {
+	width: 12px;
+	vertical-align: middle;
+}
+
+.tip span {
+	vertical-align: middle;
+}
+
+button.hls-btn {
+	font-size: 16px;
+	padding: 8px !important;
+	margin-top: 65px;	
+}
+
+button.hls-btn.disable {
+	background-color: #CCC;
+	border: none;
+	box-shadow: 0px 0px 0px #fff;
+}
+
+button.hls-btn.disable:active {
+	background-color: #CCC !important;
+}
+
+.txt-gray {
+	color: #999;
+}

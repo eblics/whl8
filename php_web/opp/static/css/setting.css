@@ -1,0 +1,6 @@
+.page_setting .tab{height:46px; padding:15px 20px 0 20px;background: #eee; border-bottom:1px solid #ddd;}
+.page_setting .tab li{height: 45px; line-height: 45px; text-align: center; padding: 0 20px; font-size: 15px; border:1px solid #ddd; border-radius:5px 5px 0 0 ; color: #999;display: inline-block;cursor: pointer;}
+.page_setting .tab li.current{ background: #fff; border-color: #ccc; color: #666; border-bottom-color: #fff;}
+.page_setting .tab_con .padding{ clear: both; padding:20px;}
+.page_setting .tab_con .tr{ overflow: hidden; width: 100%;}
+.page_setting .tab_con .tip{ overflow: hidden; width: 100%; line-height: 26px; padding: 0 10px; background: #ff9; color:#900;}

@@ -1,0 +1,10 @@
+{
+    "production":{
+        "port":3002,
+        "master":{"host":"localhost","user":"root","password":"lsl2001","database":"db","multipleStatements":true,"connectionLimit":2048},
+        "mysql":{"host":"localhost","user":"root","password":"lsl2001","database":"db","multipleStatements":true,"connectionLimit":2048},
+        "redis":{"host":"localhost","port":6379,"password":"lsl2001"},
+	"white_list":["127.0.0.1"],
+        "trg_queue_size":16
+    }
+}

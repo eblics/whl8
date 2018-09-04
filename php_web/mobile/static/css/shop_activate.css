@@ -1,0 +1,17 @@
+html,body{background-color:#f5f5f5;}
+.content>.block{margin-bottom:7px;background-color:white;}
+.content>.block>.list{margin:0 11px;}
+.content>.block>.list>.item{height:50px;font-size:15px;border-bottom:1px solid #e5e5e5;display:flex;align-items:center;}
+.content>.block>.list>.item.textarea{height:auto;padding:10px 0;min-height:30px;}
+.content>.block>.list>.item.textarea>.textbox{min-height:19px;word-break:break-all;}
+.content>.block>.list>.item:last-child{border-bottom:0px;}
+.content>.block>.list>.item>.info{margin-right:17px;flex-shrink:0;}
+.content>.block>.list>.item>.textbox{font-size:14px;flex-grow:1;border:0px;}
+.content>.block>.list>.item>.textbox:disabled{background:white;color:black;}
+.content>.block>.list>.item>.textspan{font-size:14px;flex-grow:1;color:#a9a9a9;height:100%;display:flex;align-items:center;}
+.content>.block>.list>.item>.textspan.value{color:black;}
+.content>.buttons{display:flex;margin:17px 7px 0;}
+.content>.buttons>.validate,
+.content>.buttons>.activate{margin:0 6px;flex-grow:1;height:40px;line-height:40px;background-color:#f05050;color:white;letter-spacing:3px;font-size:19px;border-radius:5px;text-align:center;}
+.content .getaddress{height:30px;line-height:30px;background-color:#f05050;color:white;font-size:15px;border-radius:20px;text-align:center;padding: 0 10px;}
+.content .disabled{background-color:#cccccc;}

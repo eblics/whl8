@@ -1,0 +1,62 @@
+.mlock  .search-type{
+	clear:both;
+	color: #333;
+    font-size:13px;
+}
+.mlock .ct1{
+	font-weight:bold;
+	float:left;
+	width:150px;
+	text-align:center;
+}
+.mlock .ct2{
+	float:left;
+}
+.mlock .ct2 select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #CCCCCC;
+/*  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;*/
+  width:100px;
+}
+.mlock .ct3{
+	float:left;
+	margin-left:15px;
+}
+.mlock .ct3 input{
+	border:none;
+	border:1px solid #CCCCCC;
+	border-radius:2px;
+	width:150px;
+	margin-top: -2px;
+    width: 200px;
+    height: 20px;
+}
+/*.mlock .ct2 select::-ms-expand { display: none; }*/
+.mlock .ct4{
+	float:left;
+	margin-left:10px;
+}	
+.mlock .ct4 button{
+	width:60px;
+	height:26px;
+	color:white;
+	background:#5A8EDD;
+	border:none;
+	border-radius:2px;
+	text-align:center;
+	line-height:26px;
+	margin-top: -2px;
+}
+.mlock .ct4 button:hover{
+	cursor:pointer;
+	background:#4679CB;
+}
+.mlock .hr-line{
+	border-bottom:1px #E1E1E1 solid;
+	clear: both;
+    height: 30px;
+    width: 100%;
+}
+

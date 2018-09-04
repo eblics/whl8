@@ -1,0 +1,15 @@
+.permission-list label {
+	display: inline-block;
+	width: 150px;
+	padding: 10px 0;
+	color: silver;
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+}
+
+.permission-list label.selected {
+	color: black;
+}

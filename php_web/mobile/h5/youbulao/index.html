@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>优布劳开盖扫码赢大奖</title>
+    <script type="text/javascript">
+        var winW=document.documentElement.clientWidth;
+        document.documentElement.style.fontSize=(winW/640)*100+"px";
+    </script>
+    <style type="text/css">
+    @charset "utf-8";
+    body,div,p{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+    img{border:0 none;vertical-align:top;width: 100%}
+    html{width:100%;height: 100%;overflow:hidden;}
+    body{height:100%;background:url("images/bg.jpg") no-repeat;-webkit-background-size:cover;font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;-webkit-text-size-adjust:none;color: #221e1f;text-align: center;}
+    .title{margin:0.48rem 0 0.1rem;/*-webkit-animation: pop 2.4s infinite linear;*/}
+    .pack{width:2.2rem;margin:0 auto;display: block;position:relative;z-index:2;-webkit-animation:rotateIn 1s linear infinite alternate;}
+    @-webkit-keyframes rotateIn{
+        0%{-webkit-transform:rotate(-5deg)}
+        50%{-webkit-transform:rotate(0)}
+        100%{-webkit-transform:rotate(5deg)}
+    } 
+    .ani{position: absolute;bottom:-0.46rem;left: 0;opacity:0;}
+    .rule{width:1.02rem;position: absolute;right: 0;bottom: 5.48rem;z-index: 10;}
+    .bottle{position: absolute;bottom:0;left:0;right: 0;margin:auto;z-index: 10;-webkit-animation: move 1s;}
+    @-webkit-keyframes move{
+        0%{-webkit-transform:translateX(-10rem)}
+    }
+/*    @-webkit-keyframes pop{
+        0%{-webkit-transform:scale(1)}
+        50%{-webkit-transform:scale(1.05)}
+        100%{-webkit-transform:scale(1)}
+    }*/
+    /*第二页中奖页*/
+    .mask{width: 100%;height: 100%;position: absolute;top: 0;left: 0;background:rgba(0,0,0,.2);z-index:8;display: none}
+    .page2{position: absolute;top: 1rem;left: 0;right:0;width:3.16rem;height: 4.74rem;margin:auto;background: #a72b37;-webkit-transform:scale(0.2);-webkit-transition:-webkit-transform 1s;opacity: 0;z-index: 0}
+    .img_top{width: 2.74rem;margin-top: 0.24rem;}
+    .money{font-size: 0.54rem;line-height:0.8rem;color: #f0eacf;margin-top: -0.3rem}
+    .code{margin-bottom: 0.14rem;}
+    .page2 .code{width: 1.78rem;border:2px solid #f0eacf;border-radius: 2px}
+    .page3 .code{width: 1.72rem;}
+    .page4 .code{width: 2rem}
+    .focustip{font-size: 0.28rem;line-height: 0.34rem}
+    .page2 .focustip{color: #fff;line-height: 0.4rem} 
+    /*未中奖*/
+    .page3{display: none;height: 3.24rem;margin: 0 auto;position: relative;z-index: 2}
+    .msg{font-size: 0.38rem;line-height: 0.66rem;font-weight: bold;margin-top: 0.2rem}       
+    .page4{display:none;position: relative;z-index: 2}
+    .page4 .msg{line-height: 0.54rem}
+    /*规则*/        
+    .page5{position: absolute;width: 4.8rem;left: 0;right:0;top:1.18rem;margin:auto;-webkit-transform:scale(0.5);-webkit-transition:-webkit-transform 0.6s linear;opacity: 0;z-index: 0}
+    .close{position: absolute;top:0;right:0;width:0.76rem;height:0.76rem;z-index: 10}
+    .page5 img{display: block;}
+    .detail{background:#f3e570;padding:0.3rem 0.34rem;font-size:0.24rem;line-height: 0.42rem;text-align: left;}
+    .active{opacity:1;z-index:20}
+    .active{-webkit-transform:scale(1);}
+    @media screen and (max-device-height:480px){
+        .bottle{width: 80%;}
+        .ani{left: 0.6rem;width: 80%}
+        .msg{line-height: 0.46rem;margin-top: 0}
+        .code{margin-bottom: 0.06rem}
+        .page4 .code{width: 1.8rem}
+        .page4 .focustip{font-size: 0.24rem;line-height: 0.26rem}
+        .page2{height: 4.6rem;top: 0.2rem}
+    }
+    @media screen and (min-device-width: 375px){
+        .page2{top: 1.2rem}
+    }
+    @media screen and (device-width: 360px) and (max-height: 540px){
+        .msg{margin-top: 0}
+        .page4 .msg{line-height: 0.48rem}
+        .page2{top: 0.32rem}
+        .page3 .code,.page4 .code{margin-bottom: 0.05rem}
+        .page4 .focustip{font-size: 0.24rem;line-height: 0.28rem}
+    }
+    </style>
+</head>
+<body>
+<!--点击赢红包-->
+<img src="images/title.png" class="title">
+<img src="images/pack.png" class="pack" id="pack">
+<img src="" class="ani">
+<img src="images/rule.png" class="rule" id="rule">
+<img src="images/bottle.png" class="bottle">
+<!--中奖xx元-->
+<div class="page2">
+    <img src="images/word.png" class="img_top">
+    <p class="money" id="amount">XX元</p>
+    <img src="images/code.png" class="code">
+    <p class="focustip">长按二维码关注微信<br>公众平台，领取奖品</p>
+</div>
+<!--未中奖-->
+<div class="page3">
+    <p class="msg">敬自己一杯优布劳</p>
+    <img src="images/code.png" class="code">
+    <p class="focustip">关注微信公众平台<br>参与更多精彩活动</p>
+</div>
+<!--重复扫码-->
+<div class="page4">
+    <p class="msg">请再接再厉</p>
+    <img src="images/code.png" class="code">
+    <p class="focustip">关注微信公众平台<br>参与更多精彩活动</p>
+</div>
+<!-- 规则 -->
+<div class="page5">
+    <i class="close" id="close"></i>
+    <img src="images/headline.png">   
+    <div class="detail">
+        <p>1.即日起购买优布劳啤酒，揭开瓶盖，  微信扫描盖内二维码，就有机会赢取大奖，综合中奖率70%。</p>
+        <p>2.每个二维码有且只有一次中奖机会，首次扫描后即刻作废，中奖金额可提现至微信零钱包。多买多得。</p>
+        <p>3.活动日期：即日起-2018年12月31日</p>
+        <p>4.兑奖截止日期：2018年12月31日</p>
+        <p>5.活动区域：全部销售区域，作为赠品或礼品的酒除外。</p> 
+        <p>6.优布劳（中国）啤酒饮料有限公司保留对上述规则进行解释的权利</p>
+    </div>
+</div>
+<div class="mask"></div>
+<script src="/static/js/jquery-2.1.1.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="http://m.lsa0.cn/static/js/hlsjs.js?v=1.0"></script>
+<script>
+    $(function(){
+        $(document).on("touchmove",function(e){
+            e.preventDefault();
+        });
+        firstDo();
+        //点击显示规则页
+        $("#rule").off("touchstart").on("touchstart",function(){
+            $(".mask").show();
+            $(".page5").addClass("active");
+        });
+        $("#close").off("touchstart").on("touchstart",function(){
+            $(".mask").hide();
+            $(".page5").removeClass("active");
+        });
+        //点击红包抽奖
+        $("#pack").off("touchstart").on("touchstart",function(){
+            //显示中奖结果
+            hlsjs.ready(function(x){
+                hlsjs.takeActivity(function(data) {                             
+                    if(data.errcode == 0){
+                        //成功 data.amount 中奖金额，单位分，实际使用元需要/100
+                        if (data.datatype == 0) {
+                            getpack((Number(data.amount) / 100).toFixed(2));
+                        } else {
+                           galert('<span style="font-size:12px;">不支持的奖励展示类型，请到个人中心查看奖品</span>');  
+                        }
+                    }else if(data.errcode == 20){
+                        //未中奖 
+                        galert('<span style="font-size:12px;">未中奖，继续扫码赢大奖，中奖率高达70%！</span>'); 
+                    }else if(data.errcode == 12 || data.errcode == 13){
+                        //未中奖 
+                        galert('<span style="font-size:12px;">奖品已发完，更多惊喜，敬请期待！</span>'); 
+                    }else if(data.errcode == 2 || data.errcode == 3){
+                        //重复扫码
+                        repeatDo();
+                    }else{
+                        //失败  错误信息
+                        galert(data.errmsg);
+                    }
+               });
+            });
+        });
+        
+    });
+    
+    //重复扫码
+    function repeatDo(){
+        $("#pack").hide();
+        $(".page4").show();
+    }
+    //第一次扫码
+    function firstDo(){
+        setTimeout(function(){            
+            $(".ani").css("opacity",1);  
+            $(".ani").attr("src","images/pack.gif"); 
+        },800); 
+    }
+    //中奖
+    function getpack(data){
+        $(".title").css("-webkit-animation","none");
+        $(".mask").show();
+        $(".page2").addClass("active");
+        $("#amount").text(data+"元");
+    }
+    //未中奖
+    function nopack(){
+        $("#pack,.ani").hide();
+        $(".page3").show();
+    }
+    function galert(str) {
+        var alertDom = $('#jquery-alert');
+        var style = $('#jquery-alert-style');
+
+        if (!style.length) {
+            $('body').append('<style id="jquery-alert-style">#jquery-alert{background-color:rgba(0,0,0,.8);position:fixed;top:0;left:0;right:0;bottom:0;z-index:999}#jquery-alert>div{background-image:url(images/jquery.alert.png);background-size:100% 100%;position:absolute;top:16.7658%;left:50%;margin-left:-124px;width:248px;height:164px}#jquery-alert>div>p{color:#333;text-align:center;font-size:13px;position:absolute;bottom:0;width:100%;line-height:40px;overflow:hidden;white-space:nowrap}#jquery-alert-close{position:absolute;right:0;top:0;width:36px;height:36px}</style>');
+        }
+        if (!alertDom.length) {
+            $('body').append('<div id="jquery-alert" style="display:none"><div><div id="jquery-alert-close"></div><p></p></div ></div >');
+            alertDom = $('#jquery-alert');
+        }
+        alertDom.show().off('touchstart').on('touchstart',function(event){
+            // console.log(event.target.id);
+            // if(event.target.id==='jquery-alert'||event.target.id==='jquery-alert-close'){
+            //     alert.hide().off('click');
+            // }
+            alertDom.hide().off('touchstart');
+            nopack();
+        }).find('p').html(str);
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=640,user-scalable=0"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+<body>
+
+<div class="popup">
+    <a href="#jianjie">欢乐扫简介</a>
+    <a href="#gongneng">欢乐扫功能</a>
+    <a href="#neirong">新闻内容</a>
+    <a href="#lianxi">联系我们</a>
+</div>
+<div class="popup_bg">
+</div>
+
+<div class="header">
+    <img src="./images/logo.png" alt="" class="logo">
+    <img src="images/list.png" alt="" class="list" id="list">
+    <a href="#dingbu">
+        <img src="images/homepage.png" alt="" class="home">
+    </a>
+    <img src="images/close.png" alt="" class="close">
+</div>
+<div class="banner" id="dingbu">
+    <img class="banner" src="./images/banner.png">
+    <img class="title1" src="images/title1.png">
+    <img class="title2" src="images/title2.png">
+</div>
+<div class="introduce" id="jianjie">
+    <div class="msk"></div>
+    <img src="images/introduce_bg.png" class="img_width_full">
+    <img class="introduce_h1" src="images/introduce.png">
+    <img class="introduce_h2" src="images/canDu.png">
+</div>
+<!-- Swiper -->
+<div class="swiper-container" id="gongneng">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="page">
+                <span>消费者促销</span>
+                <p>通过红包、实物、卡券、积分等多样化促销方式，获取用户及用户数据，有效解决企业促销费用投入不可控、参与度低等问题</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page">
+                <span>流量应用模式</span>
+                <p>充分应用促销活动中所获取的流量资源。通过线上&线下活动组合、电商组合、广告组合等平台设置，实现流量价值应用最大化</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page">
+                <span>门店应用模式</span>
+                <p>一码多用，支持消费者和门店的促销活动同时开展，支持一店一策促销策略，提高门店销量，解决门店用户流失问题</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page">
+                <span>会员体系搭建</span>
+                <p>通过促销活动获取用户及用户数据，建立企业粉丝、会员体系，通过积分奖励等方式持续开展会员运营</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page">
+                <span>数据应用分析</span>
+                <p>通过数据分析获取线上和线下的消费者空间分布、偏好等信息，进行消费者画像。优化企业媒介选择、渠道选择，提升营销转化率，真正实现效果营销</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="newsTitle_box" id="neirong">
+    <div class="msk"></div>
+    <img src="images/newstitle.png" class="img_width_full news_img">
+</div>
+
+<div class="news">
+    <div class="msk"></div>
+    <ul>
+        <li>
+            <div class="date">
+                <div class="day">22</div>
+                <div class="slash"></div>
+                <div class="year_month">2017-11</div>
+            </div>
+            <div class="news_content">
+                <div class="news_title">防刷功能</div>
+                <div class="news_text">腾讯天御防刷功能接入</div>
+            </div>
+        </li>
+        <li>
+            <div class="date">
+                <div class="day">03</div>
+                <div class="slash"></div>
+                <div class="year_month">2017-08</div>
+            </div>
+            <div class="news_content">
+                <div class="news_title">红包代发</div>
+                <div class="news_text">企业可以选择红包由欢乐扫代发</div>
+            </div>
+        </li>
+        <li>
+            <div class="date">
+                <div class="day">29</div>
+                <div class="slash"></div>
+                <div class="year_month">2017-06</div>
+            </div>
+            <div class="news_content">
+                <div class="news_title">盗扫分类控制</div>
+                <div class="news_text">对盗扫他人码行为进行控制,对参加不同活动的用户，在微信公众平台分类打标签</div>
+            </div>
+        </li>
+        <li>
+            <div class="date">
+                <div class="day">19</div>
+                <div class="slash"></div>
+                <div class="year_month">2017-01</div>
+            </div>
+            <div class="news_content">
+                <div class="news_title">自动发放</div>
+                <div class="news_text">中红包可以自动发放</div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<div class="footer" id="lianxi">
+    <div class="msk"></div>
+    <span class="lianxi_title">联系我们</span> <br>
+    <div class="contact">
+        <span>运营支持邮箱：acctrueyun@acctrue.com</span> <br>
+        <span>商务合作电话：010-62638686-318</span>
+    </div>
+    <span class="copyright">Copyright©2015-2017 lsa0.cn 版权所有</span>
+</div>
+
+
+<!-- Jquery JS -->
+<script src="../static/js/jquery-2.2.0.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="./js/swiper.jquery.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    $(function () {
+        $("body").fadeIn();
+//        $(".swiper-container").height((window.screen.width) / 1.6);
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: 2000,
+            speed: 1000,
+            effect: 'coverflow',
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            loop: true,
+            coverflow: {
+                rotate: 5,
+                stretch: 1,
+                depth: 100,
+                modifier: 2,
+                slideShadows: false
+            },
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplayDisableOnInteraction: false,
+            loopAdditionalSlides: 1,
+        });
+
+        $("#list").click(function () {
+            $(".popup").stop(true, true);
+            $(".popup").animate({right: "0"});
+            $(".logo,.home,.list").hide();
+            $(".close").fadeIn();
+            $(".popup_bg").show();
+            $("body").css('overflow', 'hidden');
+            $(".close,.popup_bg").click(function () {
+                $(".popup").stop(true, true);
+                $(".popup").animate({right: "-50%"});
+                $("body").css('overflow', 'visible');
+                $(".logo,.home,.list").fadeIn();
+                $(".close").hide();
+                $(".popup_bg").hide();
+            })
+        })
+    })
+
+
+</script>
+</body>
+</html>

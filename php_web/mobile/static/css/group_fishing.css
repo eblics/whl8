@@ -1,0 +1,109 @@
+@-webkit-keyframes flash {
+  0%,100% { opacity: 1;}
+  50% { opacity: 0;}
+}
+@-webkit-keyframes bgcolorFlash {
+  0%,100% {background:rgba(0,0,0,0);}
+  50% {background:rgba(0,0,0,0.5);}
+}
+@-webkit-keyframes laoMovie {
+  0% {background-position:0% 0%;}
+  10% {background-position:0% 25%;}
+  20% {background-position:0% 50%;}
+  40% {background-position:0% 75%;}
+  60% {background-position:0% 50%;}
+  70% {background-position:0% 75%;}
+  100% {background-position:0% 100%;}
+}
+@-webkit-keyframes shoushi {
+  0%,20%,40% {right:0;bottom:-20px;}
+  10%,30%,50% {right:50px;bottom:-10px;}
+  60%,100% {right:0px;bottom:-50px;}
+}
+@-webkit-keyframes largeToSmall {
+  0%,50% {background-size:50%;background-position:50% 60%;}
+  60% {background-position:50% 30%;}
+  80% {background-size:5%;background-position:50% 55%;}
+  100% {background-size:0%;background-position:50% 55%;}
+}
+.page_fishing{position: absolute;top: 0;right: 0;bottom: 0;left: 0;}
+.page_fishing .flash{-webkit-animation:flash 4s linear infinite;}
+.page_fishing .bgcolor_flash{-webkit-animation:bgcolorFlash 4s linear infinite;}
+.page_fishing .shoushi{-webkit-animation:shoushi 3s linear infinite;}
+.page_fishing .start_fishing{-webkit-animation:laoMovie 4s linear;}
+.page_fishing .large_to_small{-webkit-animation:largeToSmall 2s linear;}
+
+.wraper{position:fixed;top:0;right:0;bottom:0;left:0;overflow:auto;-webkit-overflow-scrolling: touch;}
+.app_fishing_main{background: url(../images/group_fishing/bg.png) no-repeat;background-size: 100% 100%;}
+.app_fishing_main .opacity{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background:rgba(0,0,0,0.5);}
+.app_fishing_main .dengguang{position: absolute;top:33.5%;left: 12%; z-index: 1;width: 65%;height: 56%;background: url(../images/group_fishing/dengguang.png) no-repeat;background-size: 100%;opacity: 0.1;}
+.app_fishing_main .menu{position: absolute;bottom:0;left:6%;right: 6%; z-index: 2;height:18%;padding: 0 5%;background: url(../images/group_fishing/menu.png) no-repeat top;background-size: 100%;}
+.app_fishing_main .menu li{width:33.3%;height:61%;margin-top:6%;float: left;border-radius: 150px;}
+.app_fishing_main .menu li:active{background: rgba(0,0,0,0.2);} 
+.app_fishing_main .laobg{display:none;position: absolute;top:0%;left:20%; z-index: 1;width: 60%;height:72.4%;background: url(../images/group_fishing/laobg.png) no-repeat;background-size: 100% 100%;}
+.app_fishing_main .laotool{display:none;position: absolute;top:44%;left:50%; margin-left: -70px; z-index:2;width:160px;height:160px;background: url(../images/group_fishing/laotool.png) no-repeat;}
+.app_fishing_main .laotool .shou{display:none;position: absolute;right:0;bottom:0%;width:60px;height:80px;background: url(../images/group_fishing/shou.png) no-repeat;background-size: 100%;} 
+.app_fishing_main .rule{position: absolute;top:20px;left:20px;width:70px;height:20px;line-height:20px;text-align: center;font-size: 1.1rem;color: #fff;border: 1px solid #fff; border-radius: 30px;}
+.app_fishing_main .rule:active{border-color: #49a8d4;color: #239ad2;}
+.app_fishing_main .count{position: absolute;top:20px;left:100px;width:150px;height:22px;line-height:22px;text-align: center;font-size:1.1rem;color: #ddd;border:0px solid #ccc; border-radius: 30px;}
+.app_fishing_main .count span{color: #f90;}
+
+.app_fishing_ren{background:rgba(0,0,0,0.5);z-index: 2;display: none;}
+.app_fishing_ren .box{position: absolute;top:22%;left: 11%; z-index: 1;width:78%;height:56%;background:url(../images/group_fishing/tankuang.png) no-repeat;background-size: 100%;}
+.app_fishing_ren .box .close{position: absolute;top:1.8%;right:12.5%;width:12.5%;height:10.5%;}
+.app_fishing_ren .box .title{height:12%;margin-top:13%;text-align: center;font-size: 2.5rem;color: #005f8b;font-weight: 700;}
+.app_fishing_ren .box .txt{height:10%;margin-top:8%;font-size:1.5rem;color: #005f8b;padding:0 12%;}
+.app_fishing_ren .box .amount{height:34%;padding:0 12%;}
+.app_fishing_ren .box .amount li{width:45%;padding: 0.2rem 0;margin:5% 4% 4% 0;box-shadow: 0 0 1px #239ad2; color: #239ad2; font-size: 1.6rem; text-align: center;border-radius:5rem;float: left;}
+.app_fishing_ren .box .amount li:active{background:#49a8d4;}
+.app_fishing_ren .box .amount li.cur{background:#239ad2;color: #fff; }
+.app_fishing_ren .box .btn{width:76%;padding: 0.4rem 0;margin:0 12%;font-size:1.8rem;background:#239ad2;color: #fff; text-align: center;border-radius:5rem;display: inline-block;vertical-align: middle;}
+.app_fishing_ren .box .btn:active{background:#49a8d4;}
+.app_fishing_ren .rening{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: url(../images/group_fishing/xiang.png) no-repeat center center; background-size: 0 0;}
+
+.app_fishing_kai{background:rgba(0,0,0,0.5);z-index: 2;display: none;}
+.app_fishing_kai .box{position: absolute;top:20%;left: 11%; z-index: 1;width:78%;height:60%;background:#fff;border-radius: 10px;}
+.app_fishing_kai .box .close{position: absolute;top:2%;right:2%;width:12.5%;height:10.5%;background:url(../images/group_fishing/close.png) no-repeat center; background-size:40%;}
+.app_fishing_kai .box .title{height:12%;margin-top:5%;text-align: center;font-size: 2.3rem;color: #ed453a;}
+.app_fishing_kai .box .pic{height:30%;padding:0 12%;background:url(../images/group_fishing/xiang.png) no-repeat center; background-size:50%;}
+.app_fishing_kai .box .txt{height:16%;font-size:1.3rem;color: #333;padding:0 12%;text-align: center;}
+.app_fishing_kai .box .btn{height:34%;padding:1rem 12% 0 12%;}
+.app_fishing_kai .box .btn li{padding: 0.3rem 0;font-size:1.8rem;background:#ed453a;color: #fff; text-align: center;border-radius:5rem;box-shadow: 0 0 1px #ed453a; margin:1.2rem 0 0 0;}
+.app_fishing_kai .box .btn li:active{background:#ed353a;}
+.app_fishing_kai .box .btn li#btnBack{background:#fff;color: #ed453a;}
+.app_fishing_kai .box .btn li#btnBack:active{background:#eee;}
+.app_fishing_kai .rening{position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: url(../images/group_fishing/xiang.png) no-repeat center center; background-size: 0 0;}
+
+.app_fishing_result{background:rgba(0,0,0,0.5);z-index: 2;display: none;}
+.app_fishing_result .box{position: absolute;top:20%;left: 11%; z-index: 1;width:78%;height:60%;background:#fff;border-radius: 10px;}
+.app_fishing_result .box .close{position: absolute;top:2%;right:2%;width:12.5%;height:10.5%;background:url(../images/group_fishing/close.png) no-repeat center; background-size:40%;}
+.app_fishing_result .box .title{height:12%;margin-top:5%;text-align: center;font-size: 2.3rem;color: #ed453a;}
+.app_fishing_result .box .pic{height:60%;margin:0 12%;background:url(../images/group_fishing/hongbao.png) no-repeat center; background-size:60%; text-align: center;}
+.app_fishing_result .box .pic span{color:#fff;display: inline-block; margin: 0 auto; margin-top:68%;font-size: 1.5rem;}
+.app_fishing_result .box .pic.baozha{background-image:url(../images/group_fishing/baozha.png); background-size:120%;}
+.app_fishing_result .box .pic.baozha span{color:#ed453a; margin-top:48%;}
+.app_fishing_result .box .btn{width:76%;padding: 0.4rem 0;margin:0 12%;font-size:1.8rem;background:#ed453a;color: #fff; text-align: center;border-radius:5rem;display: inline-block;vertical-align: middle;}
+
+.fishing_log_tit{height:4rem;line-height:4rem;background: #333; font-size: 1.3rem; color: #eee;}
+.fishing_log_tit .btn{height:3.4rem; line-height:3.4rem; margin-top:0.3rem; width:5rem; display: inline-block;margin-right: 1rem; color: #eee;border-right: 1px solid #444; font-size: 1.6rem; text-align: center;}
+.fishing_log li{height:4rem; line-height: 4rem; border-bottom:1px solid #eee;font-size: 1.5rem; padding:0.5rem 5%; overflow: hidden;}
+.fishing_log li span{float:left;color: #999;font-size: 1.3rem;width:30%; line-height:1.5rem;height:3.5rem;padding-top:0.5rem;overflow: hidden;}
+.fishing_log li strong{float:left;color: #666;width: 50%;overflow: hidden;}
+.fishing_log li em{float:left;color: #f33;width: 20%; text-align: right;overflow: hidden;}
+.fishing_log li.sub0 *{color: #bbb;}
+.fishing_log li.sub0 span{font-size: 1rem;}
+.fishing_log li.sub0 strong{width: 70%; font-size: 1.2rem;}
+.fishing_log li.sub0 em{display: none;}
+.fishing_log li.sub1 *{color: #bbb;}
+.fishing_log li.sub1 span{font-size: 1rem;}
+.fishing_log li.sub1 strong{font-size: 1.2rem;}
+.fishing_log li.sub1 em{color: #f33;}
+.fishing_log_more{height:4rem;line-height:4rem;text-align: center; color: #ccc;font-size: 1.3rem;display: none;}
+.fishing_log_more:active{background: #eee;} 
+
+.app_fishing_rule{background:rgba(0,0,0,0.5);z-index: 2;display: none;}
+.app_fishing_rule .box{position: absolute;top:20%;left: 11%; z-index: 1;width:78%;height:60%;background:#fff;border-radius: 10px;}
+.app_fishing_rule .box .close{position: absolute;top:2%;right:2%;width:12.5%;height:10.5%;background:url(../images/group_fishing/close.png) no-repeat center; background-size:40%;}
+.app_fishing_rule .box .title{height:12%;margin-top:5%;text-align: center;font-size: 2.3rem;color: #ed453a;}
+.app_fishing_rule .box .txt{height:16%;font-size:1.3rem;color: #333;padding:0 12%;text-align:left;}
+.app_fishing_rule .box .txt p{margin-top:1rem;}

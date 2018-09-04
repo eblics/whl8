@@ -1,0 +1,9 @@
+server { 
+	server_name dev.api.lsa0.cn;
+
+	location / {
+		proxy_pass http://127.0.0.1:3100;
+		proxy_read_timeout 60m;
+		client_max_body_size 200m;
+	}
+}

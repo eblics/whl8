@@ -1,0 +1,223 @@
+/*login*/
+.login{font-size:40px}
+.login_main{
+	width:600px;
+	height:400px;
+	margin:0 auto;
+	margin-top:40px;
+	background:url(../images/reg.png) no-repeat;
+}
+.reg{
+	height:450px;
+	background:url(../images/reg.png) no-repeat;
+}
+.login_one{
+	height:auto;
+	width:auto;
+	color:#5B8EDD;
+	font-size:20px;
+	line-height:100px;
+	text-align:center;
+	letter-spacing:5px;
+	font-family:微软雅黑;
+	font-weight:bold;
+	clear:both;
+}
+.login_two{
+	/*margin:0 auto;*/
+	margin-left:auto;
+	margin-right:auto;
+}
+.login_two input{
+	width:255px;
+	height:40px;
+	padding-left:5px;
+	margin-left:172px;
+	border-color:#D7D7D7;
+	border-style:solid;
+	line-height:40px;
+}
+.login_three input{
+	width:255px;
+	height:40px;
+	padding-left:5px;
+	margin-left:172px;
+	border-color:#D7D7D7;
+	border-style:solid;
+	line-height:40px;
+}
+/*.login_main .input{
+	float:both;
+	width:auto;
+}*/
+.login_three{
+	margin-top:10px;
+	float:both;
+}
+.login_four{
+	color:#6E6E6E;
+	margin-top:15px;
+	margin-left:172px;
+	float:both;
+	width:264px;
+}
+.login_four input{
+	vertical-align: sub;
+}
+.login_five{
+	width:260px;
+	height:40px;
+	margin-top:20px;
+	margin-left:172px;
+	background:#5B8EDD;
+	color:white;
+	line-height:40px;
+	font-size:18px;
+	letter-spacing:5px;
+	text-align:center;
+}
+.login_five input{
+	width:260px;
+	height:40px;
+	background:#5B8EDD;
+	color:white;
+	line-height:40px;
+	font-size:18px;
+	letter-spacing:5px;
+	text-align:center;
+	border-width:0;
+	-webkit-appearance:none; /*去除input默认样式*/
+}
+.login_five input:hover{
+	background:#4D79C1;
+	color:#DEDEDE;
+	cursor:pointer;
+}
+.login_six{
+	float:both;
+	width:260px;
+	height:30px;
+	margin-left:172px;
+	line-height:30px;
+}
+.lsix_left{
+	float:left;
+	color:#A0A0A0;
+}
+.lsix_left a{
+	text-decoration:none;
+	color:#A2A2A2;
+}
+.lsix_left a:hover{
+	color:red;
+}
+.lsix_right{
+	float:right;
+}
+.lsix_right a{
+	text-decoration:none;
+	color:#9BB6E7;
+}
+.lsix_right a:hover{
+	color:#5B8EDD;
+}
+/*注册部分CSS*/
+.login_check{
+	width:260px;
+	height:40px;
+	margin-top:10px;
+	margin-left:172px;
+	border-width:2px;
+	border-color:#D7D7D7;
+	border-style:solid;
+	position:relative;
+}
+.lc_left{
+	float:left;
+	width:150px;
+	height:40px;
+	border-left-width:2px;
+	border-top-width:2px;
+	border-bottom-width:2px;
+	border-bottom-right:2px;
+	padding-left:5px;
+}
+.lc_left input{
+	overflow:hidden;
+	border-style:none;
+	height:40px;
+	width:255px;
+	line-height:40px;
+	background:transparent;
+	/*background:pink;*/
+}
+.lc_line{
+	height:32px;
+	float:left;
+	line-height:32px;
+	border-width:1px;
+	margin-top:3px;
+	border-color:#D7D7D7;
+	border-style:solid;
+}
+.lc_right{
+	position:absolute;
+	left:105px;
+	float:right;
+	width:100px;
+	height:34px;
+	line-height:34px;
+	text-align:center;
+	margin-top:3px;
+	color:#6A94DE;
+	font-size:13px;
+}
+.lc_right:hover{
+	cursor:pointer;
+	color:#5881CB;
+}
+.lc_right img{
+	margin-top:2px;
+}
+.login_four a{
+	text-decoration:none;
+	color:#5B8EDD;
+}
+.login_four a:hover{
+	color:red;
+}
+#errmsg{
+    display:none;
+    color:red;
+    margin-left:10px;
+}
+#codeerrmsg{
+	position:relative;
+    display:none;
+    color:red;
+    width:200px;
+    height:30px;
+    top:10px;
+    left:120px;
+}
+#coderrmsg{
+	position:relative;
+    display:none;
+    color:red;
+    width:200px;
+    height:30px;
+    top:10px;
+    left:120px;
+}
+.main .login_check .validenable{
+
+}
+.main .login_check .validenable:hover{
+
+}
+.main .login_check .validisenable{
+	background:#E0E0E5;
+}
+.main .login_check .validisenable:hover{
+	cursor:wait;
+}

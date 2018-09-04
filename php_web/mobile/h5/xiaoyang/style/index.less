@@ -1,0 +1,677 @@
+/*整体基础ui*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: Arial, "microsoft yahei";
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;	
+}
+.swiper-wrapper {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+.swiper-slide {
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	overflow: hidden;
+	background: url(../images/bg.png)no-repeat;
+	background-size: 100% 100%;
+}
+.x-c,.w-c{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+}
+.y-c,.h-c{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+}
+.c-c{
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+}
+.hidden{
+	visibility:hidden;
+}
+/*动画设置*/
+/*晃动效果*/
+.shake {
+	animation: shake 2s ease-in-out infinite normal;
+	-webkit-animation: shake 2s ease-in-out infinite normal;
+}
+@-webkit-keyframes shake {  
+    0%,50%, 65%,100% {-webkit-transform: translateX(0);}  
+    52.5%, 57.5%, 62.5%{-webkit-transform: translateX(-5px);}  
+    55%, 60% {-webkit-transform: translateX(5px);}  
+} 
+
+/*撒钱效果*/
+.m_1 {
+	animation: m_1 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_1 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_1 {  
+    0%, 75%,100%{opacity:0;right: 100px; top: 20px;} 
+    25% {opacity:1;right: 130px; top: -20px;}   
+    50% {opacity:0;right: 160px; top: -60px;}  
+} 
+.m_2 {
+	animation: m_2 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_2 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_2 {  
+    0%, 50%{opacity:0;left: 80px; top: 20px;}
+    75% {opacity:1;left: 100px; top: -20px;}    
+    100% {opacity:0;left: 120px; top: -60px;}  
+}
+.m_3 {
+	animation: m_3 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_3 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_3 {  
+    0%, 20%,100%{opacity:0;right: 80px; top: 20px;}
+    50% {opacity:1;right: 110px; top: -20px;}  
+    75% {opacity:0;right: 140px; top: -60px;}  
+}
+.m_4 {
+	animation: m_4 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_4 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_4 {  
+    0%, 50%{opacity:0;right: 60px; top: 20px;} 
+    75% {opacity:1;right: 90px; top: -20px;} 
+    100% {opacity:0;right: 120px; top: -60px;}  
+}
+.m_5 {
+	animation: m_5 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_5 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_5 {  
+    0%, 75%,100%{opacity:0;right: 40px; top: 20px;} 
+    25% {opacity:1;right: 60px; top: -20px;} 
+    50% {opacity:0;right: 80px; top: -60px;}  
+}
+.m_6 {
+	animation: m_6 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_6 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_6 {  
+    0%, 75%, 100%{opacity:0;left: 0px; top: 20px;}
+    25% {opacity:1;left: 30px; top: -20px;}  
+    50% {opacity:0;left: 60px; top: -60px;}  
+}
+.m_7 {
+	animation: m_7 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_7 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_7 {  
+    0%, 25%, 100%{opacity:0;left: 40px; top: 20px;} 
+    50% {opacity:1;left: 60px; top: -20px;} 
+    75% {opacity:0;left: 80px; top: -60px;}  
+}
+.m_8 {
+	animation: m_8 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_8 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_8 {  
+    0%, 25%,100%{opacity:0;right: 20px; top: 20px;}  
+    50% {opacity:1;right: 30px; top: -20px;}
+    75% {opacity:0;right: 40px; top: -60px;}  
+}
+.m_9 {
+	animation: m_9 1.5s ease-in-out infinite normal;
+	-webkit-animation: m_9 1.5s ease-in-out infinite normal;
+}
+@-webkit-keyframes m_9 {  
+    0%, 50%{opacity:0;left: -20px; top: 20px;}  
+    75% {opacity:1;left: 0px; top: -20px;}
+    100% {opacity:0;left: 20px; top: -60px;}  
+}
+
+
+/*手指点击效果*/
+.pm {
+	animation: pm 1s ease-in-out infinite alternate;
+	-webkit-animation: pm 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes pm {  
+    0% ,50%{-webkit-transform: translateY(0);}  
+    25%{-webkit-transform: translateY(-8px);}  
+    100%{-webkit-transform: translateY(8px);}  
+} 
+
+/*左进入*/
+.leftIn {
+	animation: leftIn 1s ease-in-out 0.5s forwards;
+	-webkit-animation: leftIn 1s ease-in-out 0.5s forwards;
+}
+@-webkit-keyframes leftIn {  
+    0% {right:80px;opacity: 0.2;}
+    100% {right:60px;opacity: 1;}
+} 
+
+/*右进入*/
+.rightIn {
+	animation: rightIn 1s ease-in-out 0.5s forwards;
+	-webkit-animation: rightIn 1s ease-in-out 0.5s forwards;
+}
+@-webkit-keyframes rightIn {  
+    0% {left: 50px;opacity: 0.2;}
+    100% {left: 30px;opacity: 1;}
+}
+
+
+/*跑马灯效果*/
+.pmd1 {
+	animation: pmd1 0.9s linear 0s infinite normal;
+	-webkit-animation: pmd1 0.9s linear 0s infinite normal;
+}
+@keyframes pmd1 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes pmd1 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+.pmd2 {
+	animation: pmd2 0.9s linear 0.3s infinite normal;
+	-webkit-animation: pmd2 0.9s linear 0.3s infinite normal;
+}
+@keyframes pmd2 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes pmd2 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+.pmd3 {
+	animation: pmd3 0.9s linear 0.6s infinite normal;
+	-webkit-animation: pmd3 0.9s linear 0.6s infinite normal;
+}
+@keyframes pmd3 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes pmd3 {
+    0% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+
+/*呼吸*/
+.hx{
+	animation: hx 1.5s ease-in-out infinite alternate;
+	-webkit-animation: hx 1.5s ease-in-out infinite alternate;
+}
+@keyframes hx {
+    0% {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes hx {
+    0% {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+/*呼吸加缩放*/
+.hxm{
+	animation: hxm 1.5s ease-in-out infinite alternate;
+	-webkit-animation: hxm 1.5s ease-in-out infinite alternate;
+}
+@keyframes hxm {
+    0% { -webkit-transform:scale(1,1);opacity: 0.2;}
+    100% { -webkit-transform:scale(1.02,1.02);opacity: 1;}
+}
+@-webkit-keyframes hxm {
+    0% { -webkit-transform:scale(1,1);opacity: 0.2;}
+    100% { -webkit-transform:scale(1.02,1.02);opacity: 1;}
+}
+
+
+/*全局设置*/
+@color1 : #ffd12b;
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+.setP(@top: 15px ,@left: 30px){
+	top: @top;
+	left: @left;
+}
+
+
+/*页面布局*/
+/*page1*/
+.page1 {
+	
+	.title {
+		position: relative;
+		width: 557px;
+		height: 194px;
+		top: 100px;
+
+		img {
+			.img;
+		}
+
+		.xinxin {
+			position: absolute;
+			width: 508px;
+			height: 134px;
+			top: 50px;
+			left: 25px;
+
+			img {
+				.img;
+			}
+		}
+
+		.block {
+			background: url(../images/paoma.png) no-repeat;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 15px;
+			left: 30px;
+		}
+
+		.b1 {.setP(15px,30px)}
+		.b2 {.setP(10px,60px)}
+		.b3 {.setP(12px,90px)}
+		.b4 {.setP(11px,120px)}
+		.b5 {.setP(10px,150px)}
+		.b6 {.setP(12px,180px)}
+		.b7 {.setP(10px,210px)}
+		.b8 {.setP(11px,240px)}
+		.b9 {.setP(11px,270px)}
+		.b10 {.setP(10px,300px)}
+		.b11 {.setP(11px,330px)}
+		.b12 {.setP(12px,360px)}
+		.b13 {.setP(10px,390px)}
+		.b14 {.setP(11px,420px)}
+		.b15 {.setP(10px,450px)}
+		.b16 {.setP(12px,480px)}
+		.b17 {.setP(10px,510px)}
+		.b18 {.setP(25px,530px)}
+		.b19 {.setP(50px,540px)}
+		.b20 {.setP(80px,540px)}
+		.b21 {.setP(110px,540px)}
+		.b22 {.setP(140px,535px)}
+		.b23 {.setP(162px,520px)}
+		.b24 {.setP(171px,490px)}
+		.b25 {.setP(169px,460px)}
+		.b26 {.setP(170px,430px)}
+		.b27 {.setP(169px,400px)}
+		.b28 {.setP(168px,370px)}
+		.b29 {.setP(171px,340px)}
+		.b30 {.setP(170px,310px)}
+		.b31 {.setP(169px,280px)}
+		.b32 {.setP(171px,250px)}
+		.b33 {.setP(170px,220px)}
+		.b34 {.setP(169px,190px)}
+		.b35 {.setP(171px,160px)}
+		.b36 {.setP(170px,130px)}
+		.b37 {.setP(169px,100px)}
+		.b38 {.setP(170px,70px)}
+		.b39 {.setP(168px,40px)}
+		.b40 {.setP(150px,15px)}
+		.b41 {.setP(120px,5px)}
+		.b42 {.setP(90px,3px)}
+		.b43 {.setP(60px,6px)}
+		.b44 {.setP(35px,15px)}	
+	}
+
+	.ruleBtn {
+		position: absolute;
+	    right: 0px;
+	    top: 340px;
+	    width: 113px;
+	    height: 47px;
+
+		img {
+			.img;
+		}
+	}
+
+	.content {
+		position: absolute;
+		top: 400px;
+
+		.foot {
+			position: absolute;
+			top: 340px;
+		}
+
+		.hongbao {
+			position: absolute;
+			top: 30px;
+
+			.point {
+				position: absolute;
+			    top: 200px;
+			    display: block;
+			}
+
+			.defeat {
+				position: absolute;
+				width: 500px;
+				height: 300px;
+				display: none;
+			    top: 100px;
+
+				.sorry {
+					position: absolute;
+					right: 70px;
+				}
+
+				.sorrText {
+					position: absolute;
+					color: @color1;
+					font-size: 30px;
+				    top: 100px;
+				}
+			}
+
+			.succ {
+				position: absolute;
+				width: 500px;
+				height: 300px;
+				display: none;
+				top: 100px;
+
+				.succPic {
+					position: absolute;
+					right: 70px;
+				}
+
+				.icon {
+					position: absolute;
+					left: 150px;
+					top: 100px;
+				}
+
+				.succText {
+					position: absolute;
+					color: #ffd12b;
+					font-size: 34px;
+					font-weight: bold;
+					top: 80px;
+
+					span {
+						color: @color1;
+						font-size: 80px;
+					}
+				}
+			}
+		}
+
+		.jbLeft {
+			position: absolute;
+			top: 330px;
+			right: 60px;
+			opacity: 0;
+		}
+
+		.jbRight {
+			position: absolute;
+			top: 350px;
+			left: 30px;
+			opacity: 0;
+		}
+
+		.f_1 {
+			position: absolute;
+			right: 100px;
+			top: 20px;
+		}
+		.f_2 {
+			position: absolute;
+			left: 80px;
+			top: 20px;
+		}
+		.f_3 {
+			position: absolute;
+			right: 60px;
+			top: 20px;
+		}
+		.f_4 {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		.f_5 {
+			position: absolute;
+			right: -20px;
+			top: 20px;
+		}
+		.f_6 {
+			position: absolute;
+			left: 0px;
+			top: 20px;
+		}
+		.f_7 { 
+			position: absolute;
+			left: 40px;
+			top: 20px;
+		}
+		.f_8 {
+			position: absolute;
+			right: -60px;
+			top: 20px;
+		}
+		.f_9 {
+			position: absolute;
+			left: -40px;
+			top: 20px;
+		}
+	}
+
+	.showText {
+		position: absolute;
+		color: @color1;
+		font-size: 24px;
+		bottom: 110px;
+	}
+
+	.shareBtn {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	.code {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		height: 402px;
+		display: none;
+		z-index: 10;
+	}
+}
+
+/*page2*/
+.page2 {
+
+	.title {
+		position: relative;
+		width: 557px;
+		height: 194px;
+		top: 100px;
+
+		img {
+			.img;
+		}
+
+		.xinxin {
+			position: absolute;
+			width: 508px;
+			height: 134px;
+			top: 50px;
+			left: 25px;
+
+			img {
+				.img;
+			}
+		}
+
+		.block {
+			background: url(../images/paoma.png) no-repeat;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 15px;
+			left: 30px;
+		}
+
+		.b1 {.setP(15px,30px)}
+		.b2 {.setP(10px,60px)}
+		.b3 {.setP(12px,90px)}
+		.b4 {.setP(11px,120px)}
+		.b5 {.setP(10px,150px)}
+		.b6 {.setP(12px,180px)}
+		.b7 {.setP(10px,210px)}
+		.b8 {.setP(11px,240px)}
+		.b9 {.setP(11px,270px)}
+		.b10 {.setP(10px,300px)}
+		.b11 {.setP(11px,330px)}
+		.b12 {.setP(12px,360px)}
+		.b13 {.setP(10px,390px)}
+		.b14 {.setP(11px,420px)}
+		.b15 {.setP(10px,450px)}
+		.b16 {.setP(12px,480px)}
+		.b17 {.setP(10px,510px)}
+		.b18 {.setP(25px,530px)}
+		.b19 {.setP(50px,540px)}
+		.b20 {.setP(80px,540px)}
+		.b21 {.setP(110px,540px)}
+		.b22 {.setP(140px,535px)}
+		.b23 {.setP(162px,520px)}
+		.b24 {.setP(171px,490px)}
+		.b25 {.setP(169px,460px)}
+		.b26 {.setP(170px,430px)}
+		.b27 {.setP(169px,400px)}
+		.b28 {.setP(168px,370px)}
+		.b29 {.setP(171px,340px)}
+		.b30 {.setP(170px,310px)}
+		.b31 {.setP(169px,280px)}
+		.b32 {.setP(171px,250px)}
+		.b33 {.setP(170px,220px)}
+		.b34 {.setP(169px,190px)}
+		.b35 {.setP(171px,160px)}
+		.b36 {.setP(170px,130px)}
+		.b37 {.setP(169px,100px)}
+		.b38 {.setP(170px,70px)}
+		.b39 {.setP(168px,40px)}
+		.b40 {.setP(150px,15px)}
+		.b41 {.setP(120px,5px)}
+		.b42 {.setP(90px,3px)}
+		.b43 {.setP(60px,6px)}
+		.b44 {.setP(35px,15px)}	
+	}
+
+	.ruleCon {
+		position: absolute;
+		width: 557px;
+		height: 498px;
+	    top: 600px;
+	}
+
+	.shareBtn {
+		position: absolute;
+		bottom: 40px;
+	}
+}
+
+/*规则蒙层*/
+.ruleMsk {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	.img;
+	background: rgba(0,0,0,0.3);
+	z-index: 99;
+	display: none;
+
+	.content {
+		position: absolute;
+		width: 594px;
+		height: 494px;
+
+		.closeBtn {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			right: 5px;
+			top: 5px;
+			z-index: 1;
+		}
+	}
+}
+
+/*分享蒙层*/
+.shareMsk {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	.img;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+	display: none;
+
+	.line {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 258px;
+		height: 282px;
+
+		>img {
+			.img;
+		}
+
+		.s_j1 {
+			position: absolute;
+			right: 40px;
+			top: 100px;
+		}
+		.s_j2 {
+			position: absolute;
+			right: 140px;
+			top: 280px;
+		}
+		.s_j3 {
+			position: absolute;
+			right: 140px;
+			top: 20px;
+		}
+		.s_j4 {
+			position: absolute;
+			right: 70px;
+			top: 30px;
+		}
+		.s_j5 {
+			position: absolute;
+			right: 260px;
+		    top: 220px;
+		}
+		.s_j6 {
+			position: absolute;
+			right: 140px;
+			top: 140px;
+		}
+		.s_j7 {
+			position: absolute;
+			right: 175px;
+			top: 200px;
+		}
+	}
+
+	.shareText {
+		position: absolute;
+		right: 100px;
+		top: 380px;
+	}
+}

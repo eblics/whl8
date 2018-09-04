@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="../../../static/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<img src="./images/shangyun.png" alt="" class="shangyun animated slideInDown">
+<img src="./images/denglong.png" alt="" class="denglong animated bounceInDown">
+<img src="./images/yueliang.png" alt="" class="yueliang">
+<img src="./images/wenzi.png" alt="" class="wenzi animated bounceInDown">
+<img src="./images/yun.png" alt="" class="yun animated fadeInLeft">
+<img src="./images/xiangyun.png" alt="" class="xiangyun animated fadeIn">
+<img src="./images/yueyuanrenhe.png" alt="" class="yueyuanrenhe animated bounceIn">
+<img src="./images/hua.png" alt="" class="hua animated fadeIn">
+<img src="./images/xiayun.png" alt="" class="xiayun animated slideInUp">
+
+<!--红包蒙层-->
+<div class="msk_redpocket">
+
+</div>
+
+<script>
+    $(function(){
+        function mskPop() {
+            var timeout=setTimeout(function () {
+               $(".yueliang").hide();
+               $(".wenzi").hide();
+               $(".yun").hide();
+               $(".xiangyun").hide();
+               $(".yueyuanrenhe").hide();
+               $(".msk_redpocket").show();
+            },5000)
+        }
+        mskPop();
+    })
+</script>
+</body>
+</html>

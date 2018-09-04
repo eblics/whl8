@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.flower {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation-duration: 1.5s;
+    /*animation-delay: 1s;*/
+}
+
+.denglong {
+    width: 18%;
+    position: absolute;
+    top: 0;
+    right: 30px;
+
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.house {
+    width: 110%;
+    position: absolute;
+    bottom: 220px;
+    left: -35px;
+
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
+
+.lihua {
+    width: 60%;
+    position: absolute;
+    bottom: 208px;
+    left: 154px;
+    z-index: 20;
+
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
+
+.house3 {
+    width: 85%;
+    position: absolute;
+    bottom: 91px;
+    left: 50px;
+
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+.firework1 {
+    width: 30%;
+    position: absolute;
+    top: 270px;
+    left: 65px;
+    opacity: 0;
+
+    animation:breath 1s 2s infinite alternate;
+    -webkit-animation:breath 1s 2s infinite alternate;
+}
+
+.firework2 {
+    width: 35%;
+    position: absolute;
+    top: 331px;
+    right: 25px;
+    opacity: 0;
+
+    animation:breath 1s 2s infinite alternate;
+    -webkit-animation:breath 1s 2s infinite alternate;
+}
+
+.baozhu1 {
+    width: 12%;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    animation-duration: 2s;
+    /*animation-delay: 1.5s;*/
+}
+
+.baozhu2 {
+    width: 10%;
+    position: absolute;
+    bottom: 30px;
+    right: 45px;
+
+    animation-duration: 1.5s;
+    /*animation-delay: 0s;*/
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 22%;
+    transform: translateX(-200px);
+    width: 400px;
+    height: 200px;
+
+    font-size: 90px;
+    font-family: 微软雅黑;
+    color: #ffd657;
+
+    animation-duration: 2.5s;
+    animation-delay: 1.5s;
+}
+
+@keyframes breath {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+/*红包蒙层*/
+.msk_redpocket {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-230px,-300px);
+    z-index: 200;
+
+    width: 460px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #D2AC74;
+
+    display: none;
+}

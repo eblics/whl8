@@ -1,0 +1,21 @@
+.content>.basic{background-color:white;padding-bottom:23px;}
+.content>.basic>.swiper-container{height:270px;}
+.content>.basic>.swiper-container .swiper-slide{background-size:contain;background-repeat:no-repeat;background-position:center;}
+.content>.basic>.swiper-container .swiper-pagination-bullet{background:#fff;opacity:1;}
+.content>.basic>.swiper-container .swiper-pagination-bullet-active{background:#f05050;}
+.content>.basic>.name{margin-top:11px;text-align:center;color:#333333;font-size:16px;padding:0 45px;}
+.content>.basic>.price{margin:23px 0;display:flex;justify-content:center;align-items:center;}
+.content>.basic>.price>.info{color:#333333;margin-right:5px;}
+.content>.basic>.price>.point{color:#f05050;font-size:16px;}
+.content>.basic>.buttons{display:flex;justify-content:center;}
+.content>.basic>.buttons>span{margin:0 11px;text-align:center;line-height:28px;height:28px;width:101px;border:1px solid #f05050;border-radius:16px}
+.content>.basic>.buttons>.hollow{color:#f05050}
+.content>.basic>.buttons>.hollow:active{background-color:#f05050;color:white;}
+.content>.basic>.buttons>.solid{background-color:#f05050;color:white;}
+.content>.basic>.buttons>.solid:active{background-color:white;color:#f05050;}
+.content>.description{margin-top:7px;color:#333333;background-color:white;padding:0 23px;padding-top:17px;}
+.content>.description>.title{display:flex;align-items:center;}
+.content>.description>.title>.info{flex-shrink:0;margin:0 7px;}
+.content>.description>.title>.line{border-bottom:1px solid #e5e5e5;flex-grow:1;}
+.content>.description>.text{padding:17px 0;word-break:break-all;}
+.content>.description>.text img{max-width:100%;}

@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+
+.hls-page {
+	
+}
+
+div.hls-page {
+	background-image: url(../images/bg1.jpg);
+	background-size: 100% 100%;
+}
+
+.hls-red {
+	color: #e0353c;
+}
+img.hls-photo {
+	position: absolute;
+	top: 20px;left: 5%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%; /* Safari 和 Chrome */
+	border: 2px solid;
+	border-color: rgba(200, 200, 200, .33);
+	width: 15%;
+}
+.hls-prize {
+	position: absolute;
+	top: 5%;
+    left: 30%;
+    width: 55%;
+    letter-spacing: 1.5px;
+    line-height: 1.5em;
+    color: #999;
+    text-align: justify;
+}
+.hls-prize-detail {
+	position: absolute;
+	color: #e0353c;
+	top: 35%;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.hls-prize-detail p.title{
+	font-size: 17px;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+.hls-prize-detail p.amount {
+	font-size: 2em;
+	margin: 9% 0;
+}
+.hls-prize-detail p.amount span {
+	font-weight: bold;
+	font-size: 16px;
+}
+.hls-prize-detail p.prize-name {
+	letter-spacing: 1.5px;
+	font-size: 15px;
+}
+.btn-container {
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+	text-align: center;
+}
+.btn-container button {
+	font-size: 15px;
+	letter-spacing: 2px;
+ }
+.btn-container button.hls-use {
+	margin-bottom: 15px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #e0353c;
+	border: 1px solid #e0353c;
+	display: none;
+}
+
+
+/**
+ * 扫码错误页样式
+ */
+section {
+	background-color: #f5f5f5;
+	text-align: center;
+	padding-top: 30%;
+}
+
+section .txt-container {
+	margin: 25px;
+	letter-spacing: 5px;
+}
+
+section .txt-container p:last-child {
+	color: #999;
+	margin-top: 3px;
+}
+
+section img {
+	width: 60%;
+}
+
+section .btn-container {
+	bottom: 25%;
+}

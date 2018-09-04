@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="app-config">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link type="text/css" rel="stylesheet" href="/static/css/common.css" />
+</head>
+<body class="app-config">
+<form id="app_inst_edit_from">
+	<table class="table-form"><tr>
+            <td class="name" width="100">标题：</td>
+            <td class="value" width="350">
+            <input class="input" id="name" name="name" value="" maxlength="8" valType="NOTNULL" msg="<font color=red>*</font>『标题』不能为空" /></td>
+            <td class="tip">请输入标题</td>
+        </tr><tr>
+            <td class="name">默认城市：</td>
+            <td class="value">
+                <input id="location_area1" name="location_area" value="0" type="radio" />
+                <label for="location_area1">全国</label> &nbsp; &nbsp;
+                <input id="location_area2" name="location_area" value="1" type="radio" />
+                <label for="location_area2">地理位置</label> &nbsp; &nbsp;</td>
+        </tr><tr>
+            <td class="name">包含时间：</td>
+            <td class="value">
+                <input id="show_day"   name="show_day"   type="checkbox" />
+                <label for="show_day">天 &nbsp;</label>
+
+                <input id="show_week"  name="show_week"  type="checkbox" />
+                <label for="show_week">周 &nbsp;</label>
+
+                <input id="show_month" name="show_month" type="checkbox" />
+                <label for="show_month">月 &nbsp;</label>
+
+                <input id="show_year"  name="show_year"  type="checkbox" />
+                <label for="show_year">年 &nbsp;</label></td>
+        </tr><tr>
+            <td class="name"></td>
+            <td class="value">
+                <input id="show_self"  name="show_self"  type="checkbox" />
+                <label for="show_self">我的排名 &nbsp;</label></td>
+        </tr><tr>
+            <td class="name" width="100">每页个数：</td>
+            <td class="value" width="350">
+                <input class="input" id="per_page_num" name="per_page_num" value="10" maxlength="2" 
+                    valType="PAGE_SIZE" msg="<font color=red>*</font>『每页个数』请设置10-50之间" /></td>
+            <td class="tip">请输入每页个数</td>
+        </tr><tr>
+            <td></td>
+            <td><span id="btnSave" class="btn btn-blue noselect">保存</span></td><td></td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/validator.js"></script>
+<script type="text/javascript" src="/static/js/app_config.js"></script>
+<script type="text/javascript">
+function init() {
+    bindEvent();
+    setConfig();
+}
+
+function setConfig() {
+    $('#name').val(top.globals.name);
+
+    if (top.globals.location_area) {
+        $('#location_area2').prop('checked', true);
+    } else {
+        $('#location_area1').prop('checked', true);
+    }
+    if (top.globals.show_day) {
+        $('#show_day').prop('checked', true);
+    }
+    if (top.globals.show_week) {
+        $('#show_week').prop('checked', true);
+    }
+    if (top.globals.show_month) {
+        $('#show_month').prop('checked', true);
+    }
+    if (top.globals.show_year) {
+        $('#show_year').prop('checked', true);
+    }
+    if (top.globals.show_self) {
+        $('#show_self').prop('checked', true);
+    }
+    if (top.globals.per_page_num) {
+        $('#per_page_num').val(top.globals.per_page_num);
+    } 
+}
+
+function bindEvent() {
+    $('#btnSave').click(function() {
+        var location_area = false; // 默认是否定位区域
+        if ($('#location_area2').prop('checked')) {
+            location_area = true;
+        }
+        if (! beforeSubmitAct()) {
+            return;
+        }
+        var data = {
+            "location_area": location_area,
+            "show_day":      $('#show_day').prop('checked')   ? true : false,
+            "show_week":     $('#show_week').prop('checked')  ? true : false,
+            "show_month":    $('#show_month').prop('checked') ? true : false,
+            "show_year":     $('#show_year').prop('checked')  ? true : false,
+            "show_self":     $('#show_self').prop('checked')  ? true : false,
+            "per_page_num":  $('#per_page_num').val(),
+            "name":          $('#name').val()
+        };
+        hls.saveAppConfig(data, function(resp) {
+            common.alert('操作成功！', function() {
+                top.location.replace('/myapp');
+            });
+        }, function(err) {
+            common.alert(err.errmsg + '！');
+        });
+    });
+}
+
+init();
+</script>
+</body>
+</html>

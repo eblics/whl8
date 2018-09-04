@@ -1,0 +1,177 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Scan_api extends Mobile_Controller {
+
+    public function __construct() {
+        // 初始化，加载必要的组件
+        parent::__construct();
+        
+        $ipConfig=$this->config->item('api_accept_ip');
+        $linkIp=$this->input->server('REMOTE_ADDR');
+        if($ipConfig!=null&&(
+            (is_array($ipConfig)&&!in_array($linkIp,$ipConfig))||
+            (is_string($ipConfig)&&$linkIp!=$ipConfig)
+            )){
+            exit('fail');
+        }
+        
+        $this->load->model('scan_api_model','scan');
+        $this->load->library('api');
+    }
+
+    public function get_auth(){
+        header('Access-Control-Allow-Origin: *');
+        $config=[
+            'merchant_code'=>[
+                'desc'=>'生产企业编码',
+                'length'=>[1,45]
+            ]
+        ];
+        
+        $input=$this->api->get_input($config);
+        $data=$this->scan->get_auth($input);
+        if(is_array($data)){
+            $this->api->set_output(0,$data);
+        }
+        else{
+            $this->api->set_output(1,null,$data);
+        }
+    }
+    
+    public function scan(){
+        $config=[
+            'openid'=>[
+                'desc'=>'openid',
+                'length'=>[1,45]
+            ],
+            'subscribe'=>[
+                'desc'=>'是否关注公众号',
+                'options'=>[0,1,2]
+            ],
+            'nickname'=>[
+                'desc'=>'用户的昵称',
+                'length'=>[1,45]
+            ],
+            'sex'=>[
+                'desc'=>'用户的性别',
+                'options'=>[0,1,2]
+            ],
+            'country'=>[
+                'desc'=>'用户所在国家',
+                'length'=>[1,45]
+            ],
+            'province'=>[
+                'desc'=>'用户所在省份',
+                'length'=>[1,45]
+            ],
+            'city'=>[
+                'desc'=>'用户所在城市',
+                'length'=>[1,45]
+            ],
+            'language'=>[
+                'desc'=>'用户的语言',
+                'length'=>[1,45]
+            ],
+            'headimgurl'=>[
+                'desc'=>'用户头像',
+                'regexp'=>'/^http:\/\//',
+                'length'=>[1,255]
+            ],
+            'subscribe_time'=>[
+                'desc'=>'用户关注时间',
+                'numeric'=>true
+            ],
+            'remark'=>[
+                'desc'=>'公众平台备注',
+                'length'=>[1,255],
+                'required'=>false
+            ],
+            'groupid'=>[
+                'desc'=>'用户所在的分组ID',
+                'numeric'=>true
+            ],
+            'birthday'=>[
+                'desc'=>'用户生日',
+                'regexp'=>'/^\d{4}-\d{2}-\d{2}$/',
+                'required'=>false
+            ],
+            'email'=>[
+                'desc'=>'用户邮箱',
+                'regexp'=>'/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/',
+                'length'=>[1,45],
+                'required'=>false
+            ],
+            'mobile'=>[
+                'desc'=>'用户手机号',
+                'numeric'=>true,
+                'required'=>false
+            ],
+            'scan_ip'=>[
+                'desc'=>'扫描IP',
+                'regexp'=>'/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/'
+            ],
+            'scan_latitude'=>[
+                'desc'=>'地理位置纬度',
+                'numeric'=>true
+            ],
+            'scan_longitude'=>[
+                'desc'=>'地理位置经度',
+                'numeric'=>true
+            ],
+            'scan_time'=>[
+                'desc'=>'扫描时间',
+                'numeric'=>true
+            ],
+            'scan_code'=>[
+                'desc'=>'用户扫描的码',
+                'length'=>[1,45]
+            ],
+            'product_code'=>[
+                'desc'=>'产品编码',
+                'length'=>[1,45]
+            ],
+            'product_name'=>[
+                'desc'=>'产品名称',
+                'length'=>[1,45]
+            ],
+            'product_unit'=>[
+                'desc'=>'产品单位',
+                'length'=>[1,45]
+            ],
+            'product_specification'=>[
+                'desc'=>'产品规格',
+                'length'=>[1,45]
+            ],
+            'produce_batchno'=>[
+                'desc'=>'生产批次',
+                'length'=>[1,45]
+            ],
+            'produce_date'=>[
+                'desc'=>'药品生产日期',
+                'numeric'=>true
+            ],
+            'expire_date'=>[
+                'desc'=>'有效期',
+                'numeric'=>true
+            ],
+            'merchant_code'=>[
+                'desc'=>'生产企业编码',
+                'length'=>[1,45]
+            ],
+            'merchant_name'=>[
+                'desc'=>'生产企业名称',
+                'length'=>[1,32]
+            ]
+        ];
+        
+        $input=$this->api->get_input($config);
+        $msg=$this->scan->scan($input);
+        if($msg==null){
+            $this->api->set_output(0);
+        }
+        else{
+            $this->api->set_output(1,null,$msg);
+        }
+    }
+}

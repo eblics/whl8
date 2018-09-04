@@ -1,0 +1,734 @@
+/*整体基础ui*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: Arial, "microsoft yahei";
+}
+.scene_b {
+  position: absolute;
+  width: 640px;
+  height: auto;
+  perspective: 1200px;
+  -webkit-backface-visibility: hidden;
+}
+/*布局相关*/
+.x-c,
+.w-c {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-backface-visibility: hidden;
+}
+.y-c,
+.h-c {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -webkit-backface-visibility: hidden;
+}
+.c-c {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+}
+.hidden {
+  display: none;
+}
+/*动画设置*/
+/*上进入*/
+/*.topIn {
+  animation: topIn 1.5s ease-in-out forwards;
+  -webkit-animation: topIn 1.5s ease-in-out forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes topIn {
+  0% {
+    top: -50px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}*/
+/*隐现*/
+/*.yx {
+  animation: yx 1.5s ease-in-out 0.2s forwards;
+  -webkit-animation: yx 1.5s ease-in-out 0.2s forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes yx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}*/
+/*旋转出现*/
+/*.rs {
+  animation: rs 0.8s ease-in-out 0.2s forwards;
+  -webkit-animation: rs 0.8s ease-in-out 0.2s forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes rs {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+  }
+}*/
+/*放大出现*/
+/*.mas {
+  animation: mas 0.8s ease-in-out 0.2s forwards;
+  -webkit-animation: mas 0.8s ease-in-out 0.2s forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes mas {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}*/
+/*晃动效果*/
+.shake {
+  animation: shake 1s ease-in-out normal;
+  -webkit-animation: shake 1s ease-in-out normal;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes shake {
+  0%,
+  50%,
+  65%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  52.5%,
+  57.5%,
+  62.5% {
+    -webkit-transform: translateX(-5px);
+  }
+  55%,
+  60% {
+    -webkit-transform: translateX(5px);
+  }
+}
+/*呼吸效果*/
+/*.hxm {
+  animation: hxm 1s ease-in-out infinite alternate;
+  -webkit-animation: hxm 1s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}*/
+/*@-webkit-keyframes hxm {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.02);
+  }
+}*/
+/*分享动画*/
+/*.shm {
+  animation: shm 1s ease-in-out infinite alternate;
+  -webkit-animation: shm 1s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}*/
+/*@-webkit-keyframes shm {
+  0% {
+    right: 60px;
+    top: 40px;
+  }
+  100% {
+    right: 40px;
+    top: 20px;
+  }
+}*/
+@-webkit-keyframes floatUpDown {
+    0% {
+    top: 30px;
+    }
+    50% {
+    top: 50px;
+    }
+    100% {
+    top: 30px;
+    }
+}
+
+/*全局设置*/
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+/*内容1设置*/
+.scene {
+  position: absolute;
+  width: 640px;
+  height: 1008px;
+  overflow: hidden;
+  perspective: 1200px;
+  -webkit-backface-visibility: hidden;
+  /*主页1*/
+  /*规则蒙层*/
+  /*二维码蒙层*/
+  /*开心一刻蒙层*/
+}
+.scene .index {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  background: url(../images/bg3.png) no-repeat;
+  background-size: 100% 100%;
+}
+/*.scene .index .bg_light {*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*-webkit-transform-style: preserve-3d;*/
+  /*overflow: hidden;*/
+  /*background: url(../images/guang.png) no-repeat;*/
+  /*background-size: 100% auto;*/
+  /*-webkit-animation:flash 1s linear infinite;*/
+/*}*/
+/*.scene .index .bg_star {*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*-webkit-transform-style: preserve-3d;*/
+  /*overflow: hidden;*/
+  /*background: url(../images/dianguang.png) no-repeat;*/
+  /*background-size: 100% auto;*/
+  /*-webkit-animation:flash 3s linear infinite;*/
+/*}*/
+.scene .index .hb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.scene .index .hb .hbimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50px;
+  opacity: 0;
+}
+.scene .index .hb .logo {
+  position: absolute;
+  width: 91px;
+  height: 79px;
+  top: 60px;
+  left: 380px;
+  display: none;
+}
+.scene .index .tt {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 100px;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation:floatUpDown 2s linear infinite;
+}
+.scene .index .tt .tt_move {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.scene .index .tt .tt_move .text_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.scene .index .tt .title {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  top: 20px;
+}
+.scene .index .tt .title .title_1 {
+  position: absolute;
+  width: 81px;
+  height: 80px;
+  top: 40px;
+  left: 110px;
+  opacity: 0;
+}
+.scene .index .tt .title .title_2 {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  top: 30px;
+  left: 180px;
+  opacity: 0;
+}
+.scene .index .tt .title .title_3 {
+  position: absolute;
+  width: 93px;
+  height: 93px;
+  top: 30px;
+  left: 253px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene .index .tt .title .title_4 {
+  position: absolute;
+  width: 112px;
+  height: 110px;
+  top: 20px;
+  left: 330px;
+  opacity: 0;
+}
+.scene .index .tt .text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 150px;
+  z-index: 1;
+}
+.scene .index .tt .text .text_1 {
+  position: absolute;
+  width: 178px;
+  height: 188px;
+  top: -10px;
+  left: -5px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene .index .tt .text .text_2 {
+  position: absolute;
+  width: 125px;
+  height: 116px;
+  top: 12px;
+  left: 141px;
+  opacity: 0;
+}
+.scene .index .tt .text .text_3 {
+  position: absolute;
+  width: 151px;
+  height: 131px;
+  top: 0px;
+  left: 260px;
+  opacity: 0;
+}
+.scene .index .tt .text .text_4 {
+  position: absolute;
+  width: 166px;
+  height: 161px;
+  top: -20px;
+  left: 396px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene .index .shine {
+  position: absolute;
+  top: 260px;
+  z-index: 1;
+  display: none;
+}
+.scene .index .works_b {
+  position: absolute;
+  top: 490px;
+  display: none;
+}
+.scene .index .works {
+  position: absolute;
+  top: 625px;
+  display: none;
+}
+.scene .index .b_cont {
+  position: absolute;
+  width: 100%;
+  height: 238px;
+  bottom: 0px;
+  background: url(../images/bg_b.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 3;
+}
+.scene .index .b_cont .b_move {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.scene .index .b_cont .sc_cont {
+  position: absolute;
+  width: 400px;
+  height: 124px;
+  top: 70px;
+  display: block;
+}
+.scene .index .b_cont .sc_cont img {
+  position: absolute;
+}
+.scene .index .b_cont .sc_cont .true_text {
+  position: absolute;
+  top: 10px;
+  color: #e60514;
+  width: 100%;
+  font-size: 26px;
+  line-height: 100px;
+  text-align: center;
+}
+.scene .index .b_cont .sc_cont .true_text span {
+  color: #e60514;
+  font-size: 50px;
+  padding: 0px 6px;
+  font-weight: bold;
+}
+.scene .index .b_cont .de_cont {
+  position: absolute;
+  width: 400px;
+  height: 124px;
+  top: 70px;
+  display: none;
+}
+.scene .index .b_cont .de_cont img {
+  position: absolute;
+}
+.scene .index .b_cont .de_cont .false_text {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  color: #e60514;
+  font-size: 26px;
+  line-height: 100px;
+  text-align: center;
+}
+.scene .index .b_cont .sc_msk {
+  position: absolute;
+  width: 400px;
+  height: 124px;
+  top: 70px;
+  z-index: 3;
+}
+.scene .index .rule_btn {
+  position: absolute;
+  color: #f3c235;
+  font-size: 24px;
+  bottom: 250px;
+  left: 20px;
+  text-decoration: underline;
+  z-index: 3;
+  cursor: pointer;
+}
+.scene .ruleMsk {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+.scene .ruleMsk .content {
+  position: absolute;
+  width: 456px;
+  height: 610px;
+}
+.scene .ruleMsk .content img {
+  position: absolute;
+}
+.scene .ruleMsk .content .closeBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.scene .codeMsk {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 640px;
+  height: 1008px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+
+.scene .codeMsk .content {
+  position: absolute;
+  width: 500px;
+  height: 680px;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -340px;
+}
+.scene .codeMsk .content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.scene .codeMsk .content .closeBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 66px;
+  top: 260px;
+  z-index: 2;
+}
+.scene .defMsk {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 640px;
+  height: 1008px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+.scene .defMsk .content {
+  position: absolute;
+  width: 500px;
+  height: 620px;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -310px;
+}
+.scene .defMsk .content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.scene .defMsk .content .closeBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 40px;
+  top: 0px;
+  z-index: 1;
+}
+.scene .msktext{
+  position: absolute;
+  width:432px;
+  height:auto;
+  line-height:1.5;
+  left:35px;
+  top:120px;
+  z-index:2;
+  font-size: 2em;
+  color: #960;
+  overflow: auto;
+}
+.scene .msktext#alttext{height:200px;}
+/*内容2设置*/
+.scene_b {
+  position: absolute;
+  width: 640px;
+  height: 1008px;
+  perspective: 1200px;
+  -webkit-backface-visibility: hidden;
+  /*主页2*/
+}
+.scene_b .index2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.scene_b .index2 .hb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.scene_b .index2 .hb .hbimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50px;
+  opacity: 0;
+}
+.scene_b .index2 .hb .logo {
+  position: absolute;
+  width: 91px;
+  height: 79px;
+  top: 60px;
+  left: 380px;
+  display: none;
+}
+.scene_b .index2 .tt {
+  position: absolute;
+  width: 520px;
+  height: 333px;
+  top: 130px;
+  z-index: 2;
+}
+.scene_b .index2 .tt .tt_move {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.scene_b .index2 .tt .tt_move .text_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.scene_b .index2 .tt .title {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  top: 20px;
+}
+.scene_b .index2 .tt .title .title_1 {
+  position: absolute;
+  width: 81px;
+  height: 80px;
+  top: 40px;
+  left: 110px;
+  opacity: 0;
+}
+.scene_b .index2 .tt .title .title_2 {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  top: 30px;
+  left: 180px;
+  opacity: 0;
+}
+.scene_b .index2 .tt .title .title_3 {
+  position: absolute;
+  width: 93px;
+  height: 93px;
+  top: 30px;
+  left: 253px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene_b .index2 .tt .title .title_4 {
+  position: absolute;
+  width: 112px;
+  height: 110px;
+  top: 20px;
+  left: 330px;
+  opacity: 0;
+}
+.scene_b .index2 .tt .text {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 150px;
+  z-index: 1;
+}
+.scene_b .index2 .tt .text .text_1 {
+  position: absolute;
+  width: 178px;
+  height: 188px;
+  top: -10px;
+  left: -5px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene_b .index2 .tt .text .text_2 {
+  position: absolute;
+  width: 125px;
+  height: 116px;
+  top: 12px;
+  left: 141px;
+  opacity: 0;
+}
+.scene_b .index2 .tt .text .text_3 {
+  position: absolute;
+  width: 151px;
+  height: 131px;
+  top: 0px;
+  left: 260px;
+  opacity: 0;
+}
+.scene_b .index2 .tt .text .text_4 {
+  position: absolute;
+  width: 166px;
+  height: 161px;
+  top: -20px;
+  left: 396px;
+  z-index: 1;
+  opacity: 0;
+}
+.scene_b .index2 .shine {
+  position: absolute;
+  top: 280px;
+  z-index: 1;
+  display: none;
+}
+.scene_b .index2 .works_b {
+  position: absolute;
+  top: 490px;
+  display: none;
+}
+.scene_b .index2 .works {
+  position: absolute;
+  top: 625px;
+  display: none;
+}
+.scene_b .index2 .b_cont {
+  position: absolute;
+  width: 100%;
+  height: 685px;
+  top: 770px;
+  z-index: 3;
+}
+.scene_b .index2 .b_cont .bCon_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.scene_b .index2 .b_cont .share_btn {
+  position: absolute;
+  width: 348px;
+  height: 75px;
+  top: 550px;
+}
+.scene_b .index2 .rule_btn {
+  position: absolute;
+  color: #f3c235;
+  font-size: 24px;
+  bottom: 250px;
+  left: 20px;
+  text-decoration: underline;
+  z-index: 3;
+  cursor: pointer;
+}
+/*分享蒙层*/
+.shareMsk {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  display: none;
+}
+.shareMsk .shareImg {
+  position: absolute;
+  right: 60px;
+  top: 40px;
+}
+

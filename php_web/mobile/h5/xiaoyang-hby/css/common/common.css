@@ -1,0 +1,50 @@
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body, ul, li, div, img {
+	margin: 0px;
+	padding: 0px;
+}
+a, img {
+	border: 0;
+}
+a, a:visited {
+	color: #5e5e5e;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+img {
+	zoom: 0.5
+}
+ul {
+	list-style: none;
+}
+li {
+	list-style: none;
+	display: inline-block;
+ *display:inline;
+}
+.maxContent {
+	width: 100%;
+	position: relative;
+}
+.minContent {
+	width: 90%;
+	margin: 0em auto;
+	position: relative;
+}
+#scroll {
+	position: fixed;
+	top: 85%;
+	width: 100%;
+	text-align: center;
+	z-index: 999;
+}
+.bigPic {
+	width: 100%;
+}

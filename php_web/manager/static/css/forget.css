@@ -1,0 +1,96 @@
+.main .forget-main{
+	width:60%;
+	height:auto;
+	background:#FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:0 0 3px #E0DEDE;
+}
+/*.main .forget-main .same{
+	margin-top:20px;
+}*/
+.main .forget-main .ftip{
+	font-size:16px;
+	font-weight:bold;
+	color:#394557;
+	margin-left:20px;
+	padding-top:20px;
+	clear:both;
+}
+.main .forget-main .form-table{
+	margin:0 auto;
+	font-size:15px;
+	margin-top:50px;
+}
+.main .forget-main hr{
+	height:1px;
+	background-color:#D6D1D1;
+	border:none;
+	width:98%;
+
+}
+.main .forget-main .form-table tr{
+	height:50px;
+	width:auto;
+}
+.main .forget-main .form-table .name{
+	font-weight:bold;
+	font-size:14px;
+}
+.main .forget-main .form-table input{
+	margin-left:20px;
+	border:1px solid #BCBCC4;
+	border-radius:3px;
+	height:25px;
+	width:200px;
+	text-align:center;
+}
+.main .forget-main .form-table .valid input{
+	margin-left:20px;
+	border:1px solid #BCBCC4;
+	border-radius:3px;
+	height:25px;
+	width:200px;
+	text-align:center;
+}
+.main .forget-main .form-table .tipvalid img{
+	margin-left:-50px;
+}
+.main .forget-main .form-table .tipvalid img:hover{
+	cursor:pointer;
+}
+.main .forget-main .form-table .tipmesvalid button{
+	border:1px solid #BCBCC4;
+	width:120px;
+	height:30px;
+	border-radius:5px;
+	margin-left:-50px;
+	background:white;
+}
+.main .forget-main .form-table .tipmesvalid button:hover{
+	cursor:pointer;
+	background:#F5F5F5;
+}
+.main .forget-main .form-table .tip{
+	padding-left:10px;
+	color:#86868B;
+	font-size:12px;
+}
+.main .forget-main .form-table .sbt button{
+	border:none;
+	font-size:14px;
+	text-align:center;
+	width:120px;
+	height:30px;
+	background:#5B8EDD;
+	border-radius:3px;
+	color:white;
+	letter-spacing:3px;
+	float:right;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.main .forget-main .form-table .sbt button:hover{
+	cursor:pointer;
+	background:#4D7CC4;
+}

@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.bg_light_top {
+    width: 135%;
+    position: absolute;
+    top: 0;
+    left: -110px;
+    z-index: 100;
+
+    /*animation-duration: 1.5s;*/
+    /*animation-delay: 1s;*/
+}
+
+.bg_light_down {
+    width: 135%;
+    position: absolute;
+    bottom: 0;
+    left: -110px;
+
+    transform:rotate(180deg)
+
+    /*animation-duration: 2s;*/
+    /*animation-delay: 1.5s;*/
+}
+
+.wheat {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+    /*animation:breath 2s 5s infinite alternate;*/
+    /*-webkit-animation:breath 2s 5s infinite alternate;*/
+}
+
+.title {
+    position: absolute;
+    top: 100px;
+    left: 35px;
+
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 2s;*/
+}
+
+.redflag1 {
+    width: 80%;
+    position: absolute;
+    bottom: 410px;
+    left: 40px;
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 5s;*/
+    /*animation-iteration-count: infinite;*/
+}
+
+.redflag2 {
+    width: 80%;
+    position: absolute;
+    bottom: 395px;
+    left: 70px;
+    transform:rotate(10deg)
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 2s;*/
+}
+
+.caidai {
+    position: absolute;
+    bottom: 210px;
+    left: 20px;
+    z-index: 88;
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 3s;*/
+}
+
+.gift1 {
+    width: 25%;
+    position: absolute;
+    bottom: 285px;
+    left: 90px;
+    z-index: 43;
+
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.gift2 {
+    width: 35%;
+    position: absolute;
+    bottom: 295px;
+    left: 265px;
+    z-index: 44;
+
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+}
+
+.gift3 {
+    width: 40%;
+    position: absolute;
+    bottom: 325px;
+    left: 130px;
+    z-index: 42;
+
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+.gift4 {
+    width: 35%;
+    position: absolute;
+    bottom: 300px;
+    left: 340px;
+    z-index: 41;
+
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.xuanchuanyu {
+    position: absolute;
+    bottom: 245px;
+    left: 125px;
+    z-index: 99;
+
+    /*background-color: green;*/
+    width: 400px;
+    height: 100px;
+
+    color: #ffffff;
+    font-family: 微软雅黑;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.huodongshijian {
+    position: absolute;
+    bottom: 65px;
+    left: 20px;
+    z-index: 99;
+    /*background-color: green;*/
+    width: 600px;
+    height: 100px;
+
+    color: saddlebrown;
+    font-family: 微软雅黑;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+}
+
+
+@keyframes breath {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+/*红包蒙层*/
+.msk_redpocket {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-230px,-300px);
+    z-index: 200;
+
+    width: 460px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #D2AC74;
+
+    display: none;
+}

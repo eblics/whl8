@@ -1,0 +1,24 @@
+.main .rightmain .rptcontent{padding:0 25px;}
+.main .rightmain .line{margin:0 25px;}
+#content{border:1px solid #e0e0e0;margin:0 25px;}
+#content .head{height:70px;z-index:0;line-height:67px;background-color:#fff;;border-bottom:1px solid #e0e0e0;padding: 0 0 0 20px;}
+#content .head .ltitle{font-size:20px;color:#666;float:left}
+#content .head .rtitle{float:right;width:315px;}
+#content .head .rtitle>ul>li{float:left}
+#content .head .rtitle>ul>li>a{padding:5px 20px;font-size:16px;color:#5b8fdd;margin-left:5px;text-decoration:none}
+#content .head .rtitle>ul>li>a.active{border-radius:20px;background-color:#5b8fdd;padding:5px 20px;font-size:16px;color:#fff;margin-left:5px}
+#content .head .rtitle img{vertical-align:middle}
+#content .head .rtitle .l{background:#e5e5e5;height:40px;width:1px;display:inline-block;font-size:0;overflow:hidden;float:left;margin:15px}
+#content #container{height:600px;width:100%}
+#container #btnFullScreen{position:absolute;top:45px;left:10px;z-index:10;width:70px;height:24px;line-height:24px;text-align:center;border:1px solid #ccc;background:#fff;}
+#container #btnFullScreen:hover{background:#ddd;cursor:pointer;}
+.l {
+    background: #e5e5e5;
+    height: 25px;
+    width: 1px;
+    display: inline-block;
+    font-size: 0;
+    overflow: hidden;
+    float: left;
+    margin: 20px -3px 15px 15px;
+}

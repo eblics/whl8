@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+header {
+	padding: 20px 0;
+	position: relative;
+}
+
+header span {
+	position: absolute;
+	line-height: 39px;
+	margin-left: 10px;
+}
+
+header input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 0;
+	border: none;
+}

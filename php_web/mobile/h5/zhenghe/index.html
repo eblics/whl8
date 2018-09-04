@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>疯狂拆红包</title>
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>-->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--pace插件皮肤-->
+    <link rel="stylesheet" type="text/css" href="../../static/css/pace.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="style/index.css"/>
+
+    <!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+    <!--<script type="text/javascript"  src="/static/js/jquery-2.1.1.min.js"></script>-->
+    <!--<script type="text/javascript"  src="/static/js/hlsjs.js"></script>-->
+
+    <!--临时-->
+    <script type="text/javascript" src="../../static/js/jquery-2.1.1.min.js"></script>
+    <!--jq2.1.1，含tap事件-->
+    <!--<script src="/static/js/common.js"></script>-->
+    <!--pace插件-->
+    <script src="script/pace-1.0.0.min.js"></script>
+
+    <script src="script/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="scene hidden">
+    <!-- 主页面1 -->
+    <div class="index">
+        <img class="bg" src="./images/1-bg2.jpg">
+        <div class="hd">
+            <img class="hd_bg" src="./images/2-q.png">
+            <img class="hd_title  animated bounceInDown" src="./images/3-wz.png">
+            <img class="hd_rule rule_btn" src="./images/3-g.png">
+        </div>
+        <div class="stage">
+            <div>
+                <img class="stage_light animated pulse" src="images/4-stage_light.png">
+            </div>
+            <div>
+                <img class="stage_decoration animated infinite pulse" src="images/4-stage_decoration.png">
+            </div>
+            <div class="pocket">
+                <div class="stage_pocket animated zoomIn">
+                    <img src="images/redpocket.png">
+                </div>
+                <!--弹出层-->
+                <!--中奖-->
+                <div class="stage_pocket1 animated zoomIn hidden">
+                    <div class="stage_pocket1_text" id="errmsg"><p>9.99</p>元</div>
+                    <!--<img src="images/redpocket1.png">-->
+                </div>
+                <!--未中奖-->
+                <div class="stage_pocket2 animated zoomIn hidden">
+                    <div class="stage_pocket2_text">未中奖</div>
+                    <!--<img src="images/redpocket2.png">-->
+                </div>
+            </div>
+        </div>
+        <div class="activities">
+            <img class="activities1" src="images/friendring.png">
+            <img class="activities2" src="images/shake.png">
+            <img class="activities3" src="images/again.png">
+            <img class="activities4" src="images/rank.png">
+            <img class="activities5" src="images/luckyturntable.png">
+            <img class="activities6" src="images/goldenpocket.png">
+        </div>
+    </div>
+    <!-- 规则蒙层 -->
+    <div class="ruleMsk hidden">
+        <div class="content">
+            <div class="msktext">
+                <div style="overflow:hidden; padding:10px;line-height:25px;font-size:1em;line-height:1.4em;">
+                    1.本活动总中奖数量为1270000个，每个中奖金额随机，奖金总金额111950元，综合中奖率100%；</br>
+                    2.兑奖截止时间：2018年6月30日；</br>
+                    3.兑奖方式：按照扫描产品内卡片上抽奖二维码后的手机提示操作，领取微信红包；</br>
+                </div>
+            </div>
+            <img src="./images/rule_mask.png">
+            <div class="closeBtn"></div>
+        </div>
+    </div>
+    <!-- 二维码蒙层 -->
+    <div class="codeMsk hidden">
+        <div class="content">
+            <img class="code_img" src="images/c_msk.png">
+            <div class="closeBtn"></div>
+        </div>
+    </div>
+    <!-- 开心一刻蒙层 -->
+    <div class="defMsk hidden">
+        <div class="content">
+            <div id="alttext" class="msktext"></div>
+            <!--<img class="code_img" src="images/d_msk2.png">-->
+            <div class="closeBtn" style="z-index:1001;"></div>
+        </div>
+        <div class="content" style="z-index:1000;margin-top:-200px;">
+            <img style="top:-110px;" class="code_img" src="images/d_msk.png"/>
+        </div>
+    </div>
+</div>
+
+<!-- 分享蒙层 -->
+<!--<div class="shareMsk">-->
+<!--<div class="shareImg">-->
+<!--<img src="images/share_msk.png">-->
+<!--</div>-->
+<!--</div>-->
+</body>
+
+</html>

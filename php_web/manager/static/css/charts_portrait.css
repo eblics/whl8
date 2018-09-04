@@ -1,0 +1,57 @@
+.leftbar{height:auto;}
+.main .movetitle {
+    position: relative;
+    font-size: 13px;
+    color: white;
+    width: 60px;
+    height: 20px;
+    background-color: #ED4C52;
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+    top: -5px;
+    left: -5px;
+}
+.content{width:100%;}
+.content .dashi{text-align:center;padding: 50px 0;color:#666666}
+.content .gaoshou{text-align:center;padding-top:30px;color:#666666}
+.content .xinshou{text-align:center;padding-top:30px;color:#666666}
+.content .dashiMain{width:100%;}
+.content .gaoshouMain{width:50%;float:left;margin-top: -180px}
+.content .xinshouMain{width:50%;float: left;margin-top: -180px;}
+.tag_1{position: relative;left: 0px;top: 10px;font-size: 16px;}
+.tag_2{position: relative;left: 0px;top: -255px;font-size: 16px;}
+.tag_3{position: relative;left: -145px;top: -155px;font-size: 16px;}
+.tag_4{position: relative;left: 145px;top: -195px;font-size: 16px;}
+.tag_5{position: relative;left: 0px;top: -60px;font-size: 24px;color: #689dee;font-weight: bold;}
+.tag_6{text-align:center;padding: 50px 0;color:#333333;font-size: 16px;margin-top: -200px;font-weight: bold;}
+.content .dashi .tag_5{color: #689dee;}
+.content .gaoshou .tag_5{color: #e4675e;}
+.content .xinshou .tag_5{color: #f3b14a;}
+
+
+.pieContent #pieHtml .pie_center{position: relative;left: 310px;top: -273px;}
+
+@media screen and (min-device-width: 1367px) { 
+.pieContent #pieHtml .pie_center{position: relative;left: 310px;top: -273px;}
+} 
+/* css 注释说明：设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+@media screen and (max-device-width: 1366px) { 
+.pieContent #pieHtml .pie_center{position: relative;left: 177px;top: -273px;}
+} 
+/* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+@media screen and (max-device-width: 900px) { 
+.pieContent #pieHtml .pie_center{position: relative;left: 177px;top: -273px;}
+} 
+/* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+@media screen and (max-device-width: 500px) { 
+.pieContent #pieHtml .pie_center{position: relative;left: 177px;top: -273px;}
+}
+
+.pieContent #pieHtml .pieMain{width:50%;height:400px;float:right;position: relative;margin-top: -360px;}
+.pieContent #pieHtml .pieMain .pieList{float:right;position: relative;font-size: 25px;right: 40%;}
+
+

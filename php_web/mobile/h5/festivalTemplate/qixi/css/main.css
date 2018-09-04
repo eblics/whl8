@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*background: url(../images/bg.png);*/
+    background-color: #ffa6c2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.top {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*animation-duration: 1.5s;*/
+    /*animation-delay: 1s;*/
+}
+
+.bg_down1 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.5;
+
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+}
+
+.bg_down2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0.5;
+
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+}
+
+.boy {
+    width: 35%;
+    position: absolute;
+    top: 265px;
+    left: 65px;
+
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.girl {
+    width: 35%;
+    position: absolute;
+    top: 255px;
+    right: 65px;
+
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.heart {
+    width: 15%;
+    position: absolute;
+    top: 500px;
+    left: 275px;
+
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.love {
+    width: 50%;
+    position: absolute;
+    top: 660px;
+    z-index: 100;
+    left: 165px;
+
+    animation-duration: 1s;
+    animation-delay: 2s;
+    /*animation-iteration-count: infinite;*/
+}
+
+.caidai {
+    width: 50%;
+    position: absolute;
+    top: 820px;
+    z-index: 100;
+    left: 165px;
+
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+}
+
+.guagua {
+    width: 100%;
+    position: absolute;
+    bottom: 95px;
+    z-index: 100;
+    left: 5px;
+
+    animation-duration: 2s;
+    animation-delay: 4s;
+    /*animation-iteration-count: infinite;*/
+}
+
+.qiye {
+    /*background-color: green;*/
+    width: 400px;
+    height: 100px;
+
+    position: absolute;
+    top: 125px;
+    left: 120px;
+
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 微软雅黑;
+    text-align: center;
+    line-height: 100px;
+}
+
+.hongbao {
+    /*background-color: green;*/
+    width: 400px;
+    height: 100px;
+
+    position: absolute;
+    bottom: 100px;
+    left: 120px;
+    z-index: 999;
+
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 微软雅黑;
+    text-align: center;
+    line-height: 100px;
+
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+.ai {
+    width: 7%;
+    position: absolute;
+    bottom: 255px;
+    left: 215px;
+    z-index: 998;
+
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+.zai {
+    width: 7%;
+    position: absolute;
+    bottom: 250px;
+    left: 265px;
+    z-index: 998;
+
+    animation-duration: 2s;
+    animation-delay: 3.25s;
+    animation-iteration-count: infinite;
+}
+
+.qi {
+    width: 7%;
+    position: absolute;
+    bottom: 255px;
+    left: 315px;
+    z-index: 998;
+
+    animation-duration: 2s;
+    animation-delay: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+.xi {
+    width: 7%;
+    position: absolute;
+    bottom: 250px;
+    left: 370px;
+    z-index: 998;
+
+    animation-duration: 2s;
+    animation-delay: 3.75s;
+    animation-iteration-count: infinite;
+}
+
+.bolang {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+    left: 0px;
+
+    /*animation-duration: 3s;*/
+    /*animation-delay: 3s;*/
+}
+
+@keyframes breath {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+/*红包蒙层*/
+.msk_redpocket {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-230px,-300px);
+    z-index: 200;
+
+    width: 460px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #D2AC74;
+
+    display: none;
+}

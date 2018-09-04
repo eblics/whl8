@@ -1,0 +1,60 @@
+/*trend*/
+.crumbs-nav-item {
+    float: left;
+    margin-right: 8px;
+}
+.crumbs-nav-item .selector-set {
+    margin-right: 0;
+}
+.selector-set .ss-item {
+    position: relative;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #DDD;
+    font-size: 12px;
+    vertical-align: top;
+    margin: 0 5px 5px 0;
+    padding: 0 26px 0 4px;
+    cursor: pointer;
+}
+.selector-set .ss-item em {
+    color: #5a8edd;
+}
+.selector-set .ss-item b {
+    font-weight: 400;
+}
+.selector-set .ss-item span {
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 0;
+    top: 0;
+    color:#ffffff;
+    font-size:12px;
+    background: #5a8edd;
+    text-align: center;
+}
+.selector-set .ss-item:hover {
+    border-color: #5a8edd;
+    text-decoration: none
+}
+
+.selector-set .ss-item:hover i {
+    background-color: #5a8edd;
+    background-position: 7px -158px
+}
+.main .movetitle{
+    position:relative;
+    font-size:13px;
+    color:white;
+    width:60px;
+    height:20px;
+    background-color:#ED4C52;
+    line-height:20px;
+    text-align:center;
+    display:inline-block;
+    top:-5px;
+    left:-5px;
+}

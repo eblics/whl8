@@ -1,0 +1,361 @@
+@CHARSET "UTF-8";
+
+.over-hidden {
+	overflow: hidden;
+}
+
+.dis-flex {
+	display: flex;
+	align-items: center;
+}
+
+.dis-flex .flex-item {
+	flex-grow: 1;
+}
+
+.hr {
+	background-color: #f5f5f5;
+	height: 0.5rem;
+}
+
+.text-red {
+	color: #f05050;
+}
+
+section {
+	background-color: white;
+	padding-bottom: 1rem;
+}
+
+.up {
+	text-align: center;
+}
+
+.up .header {
+	padding-left: 0;
+}
+
+.hls-photo {
+	width: 25%;
+	display: block;
+	border-radius: 50%;
+	border: 0.05rem solid;
+	border-color: #d3d3d3;
+	margin: 1.25rem auto;
+}
+
+.nickname {
+    text-align: center;
+    color: #333;
+    position: relative;
+    top: -0.625rem;
+}
+
+.nickname .name-str {
+	font-size: 0.8rem;
+}
+
+.nickname .type-cards-num {
+	position: relative;
+	top: 0.25rem;
+	color: #999;
+}
+
+.nickname .type-cards-num i {
+	font-style: normal;
+}
+
+.btn-container {
+	background-color: #f5f5f5;
+	border-radius: 1.5rem;
+	margin: 0 1rem;
+	margin-top: 0.625rem;
+
+}
+
+.btn-container button {
+	background-color: #f5f5f5;
+	border-radius: 1.5rem;
+	font-size: 0.9rem;
+    padding: 0.5rem;
+    color: #333;
+    border: none;
+    outline: none;
+    -webkit-touch-callout: none; // iPhone
+	-webkit-user-select: none; // iPhone
+	ontouchstart: retrun false; // Android
+}
+
+.btn-container button.active {
+	background-color: #f05050;
+	color: white;
+}
+
+.card-num-info {
+	margin-top: 1.25rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.card-num-info p:first-child {
+	color: #f05050;
+}
+
+.card-num-info span {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.bundary {
+	height: 0.6rem;
+	background-color: #f5f5f5;
+}
+
+.card-category-container {
+	padding: 1rem 0;
+	padding-left: 1rem;
+}
+
+.card-type {
+	padding: 0 0.5rem;
+	border-left: 0.2rem solid #f05050;
+	font-weight: bold;
+	color: #333;
+	line-height: 0.7rem;
+	padding-top: 0.05rem;
+}
+
+.card-extra {
+	padding: 0.3rem 0.65rem;
+	font-size: 0.6rem;
+	color: #666;
+}
+
+.card-list {
+	overflow: auto;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.card-list .flex-item {
+    max-width: 4.5rem;
+	overflow: auto;
+}
+
+.card-list li {
+	display: inline-block;
+	padding: 0.8rem;
+    color: #333;
+    box-sizing: border-box;
+    width: 10rem;
+    border-radius: 0.3rem;
+    margin: 0.6rem;
+    margin-left: 0.2rem;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.card-list .card-num, .card-list .card-title {
+	text-align: center;
+	text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-list li .btn-transfer {
+	text-align: right;
+}
+
+.card-list li .btn-transfer span {
+	display: inline-block;
+	height: 0.8rem;
+	border-left: 1px solid #ccc;
+	vertical-align: middle;
+	position: relative;
+    left: 0.5rem;
+}
+
+.card-list li span {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #f05050;
+}
+
+.card-list li button {
+	background-color: #f05050;
+	color: white;
+	border-radius: 0.7rem;
+    padding: 0 0.5rem;
+    height: 1.3rem;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    -webkit-touch-callout: none; // iPhone
+	-webkit-user-select: none; // iPhone
+	ontouchstart: retrun false; // Android
+}
+
+.card-list li button.empty-0 {
+	background-color: #999;
+}
+
+.trans-list {
+	padding: 0.5rem 0.75rem;
+}
+
+.trans-list li {
+	padding: 0.5rem 0;
+	border-bottom: 0.05rem solid #eee;
+}
+
+.trans-list li p {
+	display: box;
+	display: -webkit-box;
+	display: flex;
+	display: -webkit-flex;
+	font-size: .9em;
+	align-items: center;
+}
+
+.trans-list li p span {
+	display: block;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	box-flex:1;
+	-webkit-box-flex: 1;
+	text-align: center;
+	width: 33.3%;
+}
+
+.trans-list li p span:first-child {
+	text-align: left;
+	color: #333;
+}
+
+.trans-list li p span.card-type-title {
+	color: #666;
+}
+
+.trans-list li p span:last-child {
+	text-align: right;
+	
+}
+
+.trans-list li small {
+	color: #999;
+	font-size: 0.8em;
+	width: 6rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.trans-list .item-empty {
+	border-bottom: none;
+    color: gray;
+    padding: 20% 0;
+}
+
+
+.hls-layermchild {
+	width: 90%;
+	border-radius: 0.4rem;
+}
+
+.layer {
+
+}
+
+.layer .layer-header {
+	padding: 0.8rem;
+}
+
+.layer .layer-header img {
+	border: 0;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+    width: 14px;
+}
+
+.layer .layer-header h2 {
+	font-size: 1rem;
+	font-weight: bold;
+	padding-bottom: 1rem;
+}
+
+.layer .layer-header h5 {
+	font-size: 0.7rem;
+}
+
+.layer .layer-header p {
+	color: #999;
+	font-size: 0.6rem;
+}
+
+.layer .layer-content {
+	max-height: 10.75rem;
+	overflow: auto;
+	padding: .5rem 1.5rem;
+    border-top: 1px dashed #ccc;
+    margin-bottom: 1rem;
+}
+
+.layer .layer-content h5 {
+	text-align: left;
+	font-size: 0.7rem;
+}
+
+.layer .layer-content .card-image {
+	margin-top: 0.8rem;
+	border: 1px solid #ccc;
+	background-image: url(/static/images/card.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20%;
+    color: #999;
+}
+
+.layer .layer-content .card-image > div {
+	padding: 0.5rem;
+
+}
+
+.layer .layer-content .card-image > div span {
+	font-size: 0.6rem;
+}
+
+.layer .layer-content .card-image p {
+	margin: 0 1rem;
+    border-top: 1px solid #ccc;
+    padding: 0.3rem;
+
+}
+
+.layer .layer-content .card-image .amount {
+	font-size: 2.0rem;
+    text-align: right;
+    position: relative;
+    right: 0.5rem;
+    font-weight: bold;
+	color: #e3ac4d;
+}
+
+.layer .layer-content .card-image .flex-grow-3 {
+	flex-grow: 3;
+	text-align: left;
+}
+
+.layer .layer-content .card-image .flex-grow-3 span:first-child {
+	color: #e3ac4d;
+}
+
+.layer button.hls-btn {
+	border-radius: 0.3rem;
+    width: 88%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 6%;
+    padding: 0.4rem;
+}
+
+.layer button.hls-btn.empty-0 {
+	background-color: #999;
+}

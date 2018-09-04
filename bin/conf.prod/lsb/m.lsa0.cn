@@ -1,0 +1,52 @@
+server { 
+	server_name m.lsa0.cn;
+	root /var/www/lsa0.cn/php_web/mobile;
+
+	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+	}
+
+	location ~ \.php$ {
+		if ($http_origin ~* 'http?://(localhost|m\.lsa0\.cn|cdn\.m\.lsa0\.cn)') {
+			add_header 'Access-Control-Allow-Origin' "$http_origin";
+			add_header 'Access-Control-Allow-Credentials' 'true';
+			add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS';
+			add_header 'Access-Control-Allow-Headers' 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With';
+		}
+		include fastcgi.conf;
+		fastcgi_pass php;
+		fastcgi_param CI_ENV production;
+	}
+
+	location /files/private/cert {
+		deny all;
+		return 403;
+	}
+
+	location /lua {
+		deny all;
+		return 444;
+	}
+}
+
+server {
+    server_name m.lsa0.cn;
+    listen 3009;
+
+    location /socket.io/ {
+        proxy_pass http://nodejs;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+	location /files/private {
+		deny all;
+		return 403;
+	}
+
+	location /lua	{
+		deny all;
+		return 403;
+	}
+}
