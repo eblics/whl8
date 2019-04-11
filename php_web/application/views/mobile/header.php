@@ -6,7 +6,7 @@
 <meta name="format-detection" content="telephone=no" />
 <link rel="stylesheet" type="text/css" href="/static/css/common.css?t=<?=time()?>">
 <link rel="stylesheet" type="text/css" href="<?=config_item('shop_url')?>static/css/reset.css"/>
-<title><?=isset($title) ? $title: '欢乐扫'?></title>
+<title><?=isset($title) ? $title: '红码'?></title>
 <script type="text/javascript" src="<?=config_item('shop_url')?>static/lib/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?=config_item('shop_url')?>static/lib/layer/layer.js"></script>
 <script type="text/javascript" src="<?=config_item('mobile_url')?>static/js/common.js?t=<?=time()?>"></script>

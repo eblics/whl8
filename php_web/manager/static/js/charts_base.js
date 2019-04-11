@@ -295,7 +295,7 @@ var rptbase = {
             html += '<div style="font-size:16px;line-height:2;text-align:left;margin-top:10px;">';
             html += '尊敬的客户您好：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp2017-05-01至今的报表数据暂不准确，数据正在生成中！给您带来不便，我们深感抱歉！';
             html += '</div>';
-            html += '<div style="float:right;font-size:16px;line-height:2;">欢乐扫运营团队<br>2017-05-02</div>';
+            html += '<div style="float:right;font-size:16px;line-height:2;">红码运营团队<br>2017-05-02</div>';
             // html += '<div id="readNotice" class="btn btn-blue">确认</div>';
             callback(html);
         });

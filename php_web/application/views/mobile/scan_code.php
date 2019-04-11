@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="format-detection" content="telephone=no"/>
-    <title>欢乐扫</title>
+    <title>红码</title>
     <link rel="stylesheet" href="<?=config_item('cdn_m_url')?>static/css/common.css?v=<?=cdn_ver?>" />
     <link rel="stylesheet" href="<?=config_item('cdn_m_url')?>static/css/scan_code.css?v=<?=cdn_ver?>" />
 </head>

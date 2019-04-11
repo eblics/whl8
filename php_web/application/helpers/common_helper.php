@@ -192,8 +192,9 @@ if (!function_exists('get_week_end')) {
 // 用户权限判断
 if (! function_exists('has_permission')) {
     function has_permission($key) {
+	    debug('has_permission');
         $cmp = (in_array($key, $_SESSION['permission_modules']) || ($_SESSION['role'] == ROLE_ADMIN_MASTER));
-	debug(var_export($_SESSION,True));
+	debug(var_export($_SESSION,True).' in '.'file:'.__FILE__.' line:'.__LINE__);
 	return $cmp;
     }
 }

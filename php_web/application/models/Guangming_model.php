@@ -18,7 +18,7 @@ class Guangming_model extends MY_Model {
     	try {
     		$scanLog = $this->db->where('code', $updateParams['code'])->get('scan_log')->row();
     		if (! isset($scanLog)) {
-    			throw new Exception("在欢乐扫平台找不到该乐码", 1);
+    			throw new Exception("在红码平台找不到该乐码", 1);
     		}
             if ($scanLog->over === '1') {
                 throw new Exception("此乐码已被扫描", 1);
@@ -71,7 +71,7 @@ class Guangming_model extends MY_Model {
         try {
             $userInfo = $this->db->where('openid', $updateParams['openid'])->get('users')->row();
             if (! isset($userInfo)) {
-                throw new Exception("在欢乐扫平台找不到该用户", 1);
+                throw new Exception("在红码平台找不到该用户", 1);
             }
 
             info('guangming-model-update-backuser - update scan_log old: '. json_encode($userInfo));

@@ -145,7 +145,7 @@
 							<label>
 							<input name="agree" type="checkbox" checked="checked" value="" />
 							<a href="/static/doc/termsofservice.pdf" target="_blank">
-								同意<span style="color:#4a85e0">《欢乐扫平台服务条款》</span>
+								同意<span style="color:#4a85e0">《平台服务条款》</span>
 							</a></label>
 						</div>
 					</li>

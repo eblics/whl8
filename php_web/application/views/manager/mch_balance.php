@@ -35,8 +35,8 @@
         </div>
         <div class="balance">
             <strong>帐户余额：</strong><span class="amount"><?=$balance?></span> <span class="btn btn-blue noselect btn-order">充值</span> 　　　　　　　　
-            <span style="color:#666;">欢乐扫平台代发红包：<b style="color:#000"><?=$hlspay?'已开启':'未开启'?></b></span> 
-            <span style="color:#666;font-size:12px;">（若需开启欢乐扫平台代发红包功能，请联系客服人员）</span>
+            <span style="color:#666;">平台代发红包：<b style="color:#000"><?=$hlspay?'已开启':'未开启'?></b></span> 
+            <span style="color:#666;font-size:12px;">（若需开启平台代发红包功能，请联系客服人员）</span>
         </div>
         <div class="path">
             <span class="title fleft">收支明细</span>

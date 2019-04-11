@@ -46,7 +46,7 @@ class Hls_app extends Mobile_Controller {
     }
 
     /**
-     * 欢乐扫应用API
+     * 红码应用API
      * @param string $apiName 接口名称
      * @return json
      */

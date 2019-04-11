@@ -49,7 +49,7 @@
                 </tfoot>
             </table>
             <a id="btnAdd" class="btn btn-blue noselect" href="/batch/add">申请乐码</a>
-            <a id="btnTool" class="btn btn-blue noselect" href="/static/doc/欢乐扫-乐码处理工具.rar">下载乐码工具</a>
+            <a id="btnTool" class="btn btn-blue noselect" href="/static/doc/码处理工具.rar">下载码工具</a>
         </div>
     </div>
 </div>

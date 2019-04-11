@@ -63,7 +63,7 @@ class Appif extends Mobile_Controller {
 			$user->id = $user_id;
 			$user->mchId = $mch_id;
 			$this->get_rank_by_user_id($user, 'all'); */
-			$sql = "SELECT userId, scanNum, ifnull(nickName, '欢乐扫用户') nickname, headimgurl, rank_id FROM 
+			$sql = "SELECT userId, scanNum, ifnull(nickName, '红码用户') nickname, headimgurl, rank_id FROM 
 					(SELECT * FROM 
 						(SELECT @rownum1 := @rownum1 + 1 AS rank_id, userId, scanNum FROM 
 							(SELECT userId, sum(scanNum) scanNum, @rownum1 := 0
@@ -84,7 +84,7 @@ class Appif extends Mobile_Controller {
 
 			// ----------------------------------------------------
 			// 获取排行数据列表
-			$sql = "SELECT userId, scanNum, ifnull(nickName, '欢乐扫用户') nickname, headimgurl FROM 
+			$sql = "SELECT userId, scanNum, ifnull(nickName, '红码用户') nickname, headimgurl FROM 
 						(SELECT userId, sum(scanNum) scanNum
 							FROM rpt_user_rank 
 							WHERE 1 = 1 AND mchId = %d %s AND theDate >= '$range'

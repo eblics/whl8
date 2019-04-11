@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>企业辅助工具 - 欢乐扫</title>
+    <title>企业辅助工具 - 红码</title>
     <!-- Bootstrap -->
     <!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">

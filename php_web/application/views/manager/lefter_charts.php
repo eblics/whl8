@@ -32,7 +32,6 @@
     	<dt>营销分析</dt>
     	<dd>
             <?php if (! isProd() || $_SESSION['mchId'] == 173): ?>
-            <a class="<?=get_current_router(1)=='charts' && in_array(get_current_router(2),['wusu_report_for_code']) ? 'cur' : ''?>" href="/charts/wusu_report_for_code">二维码瓶盖查询</a>
             <a class="<?=get_current_router(1)=='charts' && in_array(get_current_router(2),['wusu_report_for_score']) ? 'cur' : ''?>" href="/charts/wusu_report_for_score">积分核对</a>
             <?php endif;?>
             <a class="<?=get_current_router(1)=='charts' && in_array(get_current_router(2),['business']) ? 'cur' : ''?>" href="/charts/business">业务分析</a>

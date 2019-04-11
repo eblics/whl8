@@ -62,7 +62,7 @@ var merchant = {
                         return '<span data-id="'+row.mid+'" cur-type="'+data+'" class="btn-payaccounttype" style="text-decoration:underline;cursor:pointer">企业自备</span>';
                     }
                     if (data == 1) {
-                        return '<span data-id="'+row.mid+'" cur-type="'+data+'" class="btn-payaccounttype" style="text-decoration:underline;cursor:pointer"><font color="red">欢乐扫代发</font></span>';
+                        return '<span data-id="'+row.mid+'" cur-type="'+data+'" class="btn-payaccounttype" style="text-decoration:underline;cursor:pointer"><font color="red">红码代发</font></span>';
                     }
                 }
             }, {
@@ -383,7 +383,7 @@ var merchant = {
         $('.btn-payaccounttype').off().on('click', function() {
             var mchId=$(this).attr('data-id');
             var curType=$(this).attr('cur-type');
-            var title=curType==1?'切回企业自备':'开启欢乐扫代付';
+            var title=curType==1?'切回企业自备':'开启红码代付';
             var toType=curType==1?0:1;
             common.confirm('确定要执行“'+title+'”操作吗？',function(r){
                 if(r==1){

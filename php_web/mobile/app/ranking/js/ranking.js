@@ -187,7 +187,7 @@ $(function() {
                     row +=   '<img class="head-img" id="my_head" src="';
                     row +=   (resp.data.myself.headimgurl || 'images/default_head_img.png?v=3') + '" />';
                     row +=   '<div class="text-content">';
-                    row +=     '<p id="my_name" class="title">' + (resp.data.myself.nickname || '欢乐扫用户') + '</p>';
+                    row +=     '<p id="my_name" class="title">' + (resp.data.myself.nickname || '红码用户') + '</p>';
                     row +=     '<p class="content">累计扫码<span id="my_scan_num">';
                     row +=     (resp.data.myself.scanNum || 0) + '</span>次</p>';
                     row +=   '</div>';
@@ -215,7 +215,7 @@ $(function() {
                     item.headimgurl = item.headimgurl || 'images/default_head_img.png';
                     row +=   '<img class="head-img" src=' + item.headimgurl + ' />';
                     row +=   '<div class="text-content">';
-                    row +=     '<p class="title">' + (item.nickname || '欢乐扫用户') + '</p>';
+                    row +=     '<p class="title">' + (item.nickname || '红码用户') + '</p>';
                     row +=     '<p class="content">累计扫码<span>' + item.scanNum + '</span>次</p>';
                     row +=   '</div>';
                     row +=   levelImg;

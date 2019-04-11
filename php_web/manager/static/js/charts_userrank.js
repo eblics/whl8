@@ -105,7 +105,7 @@ var Init = {
 				        if(data.nickname){
 				            return '<div><a class="btn-text noselect blue" href="/reporting/show_user_info/'+data.userId+'" target="_blank">'+ common.cutString(data.nickname,14) +'</a></div>';
 				        }else{
-				        	return '<div><a class="btn-text noselect blue" href="/reporting/show_user_info/'+data.userId+'" target="_blank">欢乐扫用户</a></div>';
+				        	return '<div><a class="btn-text noselect blue" href="/reporting/show_user_info/'+data.userId+'" target="_blank">红码用户</a></div>';
 				        }
 
 				    }

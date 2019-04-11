@@ -37,7 +37,7 @@ class User_deal_model extends CI_Model {
         $data1=[$mchId,$mchId,$mchId,$mchId];
 
         if(isset($search)&&$search!==''&&$search!==NULL){
-            $sql.='and concat(u.id,ifnull(u.nickName,"欢乐扫用户"),u.openid) like ? ';
+            $sql.='and concat(u.id,ifnull(u.nickName,"红码用户"),u.openid) like ? ';
             $data1[]='%'.$search.'%';
         }
         $sql.='order by logTime desc ';

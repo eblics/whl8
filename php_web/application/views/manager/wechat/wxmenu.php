@@ -44,7 +44,7 @@
                         <label>类型：<select id="editType" maxlength=5 class="input" style="width:322px">
                             <option value="view">链接</option>
                             <option value="scancode_push">扫一扫</option>
-                            <!-- <option value="hls_app">欢乐扫应用</option> -->
+                            <!-- <option value="hls_app">应用</option> -->
                             <!--<option value="scancode_waitmsg_waiter_sys">扫一扫（服务员）</option>
                             <option value="scancode_waitmsg_waiter_sq">收券（服务员）</option>
                             <option value="scancode_waitmsg_salesman_sq">收券（业务员）</option>-->

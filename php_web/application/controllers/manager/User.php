@@ -421,6 +421,7 @@ class User extends MerchantController {
                 'expired' => $expired,//add by cw @2017-07-26 modified by George 2017/10/20
                 'mail'=>$user->mail,//add by fengyanjun @2018-01-18
             ]);
+	    debug('manager-user:'.var_export($this->session,True));
             $this->output->set_content_type('application/json')->set_output(ajax_resp(['account_type' => '企业号']));
             /*------------------记录日志start----------*/
             if(isset($company)){

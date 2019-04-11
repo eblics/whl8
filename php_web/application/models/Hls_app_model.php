@@ -363,8 +363,8 @@ class Hls_app_model extends CI_Model {
 		$this->load->helper('common/hls');
 
 		$appid            = 'wxd08b6f01d21d28aa';
-		$attach           = '欢乐扫应用';
-		$body             = '欢乐扫应用购买';
+		$attach           = '红码应用';
+		$body             = '红码应用购买';
 		$mch_id_          = '1305639101';
 		$nonce_str        = createNonceStr();
 		$notify_url       = 'http://dev.www.lsa0.cn/app/wx_pay_notify'; // 可以不填

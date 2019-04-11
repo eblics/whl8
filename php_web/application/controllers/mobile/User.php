@@ -301,7 +301,7 @@ class User extends Mobile_Controller {
         }
         // 提现成功以前不计算报表数据  mod by zht
         //$this->trigger_model->trigger_trans((object)['mchId'=>$currentUser->mchId,'userId'=>$currentUser->id],$amount);
-        $result=['errorCode'=>0,'errorMsg'=>'提取成功','payAccountType'=>$merchant->payAccountType,'commonSubscribe'=>$commonUser->subscribe];
+        $result=['errorCode'=>0,'errorMsg'=>'提取成功','payAccountType'=>$merchant->payAccountType,'commonSubscribe'=>''];
         echo json_encode($result);
     }
 
@@ -522,7 +522,7 @@ class User extends Mobile_Controller {
         }
         $template_id = 'SMS_7895086';
         $code = mt_rand(1000, 9999);
-        $signame = '欢乐扫';
+        $signame = '红码';
         $this->load->library('sms_vcode');
         info("send sms_code - begin");
         info("params: ". json_encode([$mobile, $code, $template_id, $signame]));

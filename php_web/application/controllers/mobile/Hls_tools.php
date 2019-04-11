@@ -1,6 +1,6 @@
 <?php
 /**
- * 欢乐扫工具控制器
+ * 红码工具控制器
  *
  * @author shizq <shizhiqiang@acctrue.com>
  */

@@ -72,7 +72,7 @@ class Cashier extends MerchantController
         echo "
         <html>
         <head>
-        <title>欢乐扫收银台</title>
+        <title>红码收银台</title>
         <meta http-equiv='Content-Type' content='text/html; charset=gb2312'/>
         </head>
         <body onload='document.yeepay.submit();'>
@@ -141,7 +141,7 @@ class Cashier extends MerchantController
 
         $pay = & load_wechat('Pay');
         $out_trade_no= '20'.$this->mchId.str_replace(' ','',str_replace('0.','',microtime())).rand(10000000,99999999).'';
-        $prepay_id = $pay->getPrepayId('', '欢乐扫企业VIP'.WxCompanyVipLevel::$EnumValues[$param['grade']].'购买/续费支付',$out_trade_no,1,'http://'.$_SERVER['HTTP_HOST'].'/notify/index', 'NATIVE',$this->mchId.'|'.$param['level'].'|'.$param['grade']);
+        $prepay_id = $pay->getPrepayId('', '红码企业VIP'.WxCompanyVipLevel::$EnumValues[$param['grade']].'购买/续费支付',$out_trade_no,1,'http://'.$_SERVER['HTTP_HOST'].'/notify/index', 'NATIVE',$this->mchId.'|'.$param['level'].'|'.$param['grade']);
         if ($prepay_id === FALSE) {
             exit(json_encode(['code' => 'ERROR', 'info' => '创建预支付码失败，' . $pay->errMsg]));
         }

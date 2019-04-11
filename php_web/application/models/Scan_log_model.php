@@ -177,7 +177,7 @@ class Scan_log_model extends MY_Model {
         if(!empty($res)){
             foreach ($res as $key => $value) {
                 $openid = $value->openid;
-                $res = $this->wx3rd_lib->template_send($mchId,$openid,$this->wx3rd_lib->template_format_data($mchId,'kf_notice',['【未激活批次乐码被扫提醒】\\n','重要提醒','已完成','欢乐扫系统',$mes]));
+                $res = $this->wx3rd_lib->template_send($mchId,$openid,$this->wx3rd_lib->template_format_data($mchId,'kf_notice',['【未激活批次乐码被扫提醒】\\n','重要提醒','已完成','红码系统',$mes]));
             }
         }
 

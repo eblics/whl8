@@ -41,7 +41,7 @@ var Init = {
                                 if(data.nickName){
                                     return '<div><a class="btn-text noselect blue" href="/reporting/show_user_info/'+data.userId+'" target="_blank">'+ common.cutString(data.nickName,14) +'</a></div>';
                                 }else{
-                                    return '<div>欢乐扫用户</div>';
+                                    return '<div>红码用户</div>';
                                 }
 
                             }

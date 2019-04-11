@@ -69,15 +69,15 @@
 				<div class="noselect btnlist">红包明细</div>
 			</div>
 		</div>
-		<div class="copyright"><a href="/about.html" target="_blank">爱创科技</a> · 提供技术支持</div>
+		<div class="copyright"><a href="#" target="_blank">红码</a> · 提供技术支持</div>
 	</div>
 	<div class="pay_by_hls">
 		<div class="txt">
-			本次提现将由「欢乐扫」平台代为发放<br/><font color="gray">长按识别二维码关注公众号，领取红包</font>
+			本次提现将由「红码」平台代为发放<br/><!--font color="gray">长按识别二维码关注公众号，领取红包</font>
 		</div>
 		<div class="qrcode">
 			<img src="/static/images/qrcode_hls.jpg" />
-		</div>
+		</div-->
 	</div>
 
 <script type="text/javascript">

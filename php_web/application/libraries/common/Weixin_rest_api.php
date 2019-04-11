@@ -284,7 +284,8 @@ class Weixin_rest_api {
             return $data;
         }else {
             $error = curl_errno($ch);
-            log_message('ERROR','红包发放curl_post_ssl失败 '. json_encode($error));
+	    log_message('debug','lsl-curl:'.var_export($cert,TRUE).' in '.'file:'.__FILE__.' line:'.__LINE__);
+            log_message('ERROR','红包发放 curl_post_ssl 失败: '. var_export($error,True));
             curl_close($ch);
             return false;
         }

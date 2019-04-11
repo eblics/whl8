@@ -139,7 +139,7 @@ var Page = {
             $("#submit_btn").css({'background': ''});
             $("#submit_btn").click(function() {
                 if (! $("input[name='agree']").is(':checked')){
-                    common.alert('请仔细阅读并勾选 同意《欢乐扫平台服务条款》');
+                    common.alert('请仔细阅读并勾选 同意《红码平台服务条款》');
                     return false;
                 } else {
                     var account = $("#account").val();

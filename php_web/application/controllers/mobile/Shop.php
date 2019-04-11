@@ -54,7 +54,7 @@ class Shop extends Mobile_Controller {
             $this->load->library('sms_vcode');
             $template_id = 'SMS_7895086';
             $code = mt_rand(100000,999999);
-            $signame = '欢乐扫';
+            $signame = '红码';
             $product='门店';
             $this->sms_vcode->send_sms_vcode($data['ownerPhoneNum'], $code, $template_id, $signame,$product);
         }

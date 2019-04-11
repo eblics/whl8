@@ -58,7 +58,7 @@
                 var err_page = '<section class="hls-page hls-page-error">';
                 err_page +=      '<article>';
                 err_page +=        '<img src="/static/images/bg_error.png" />';
-                err_page +=        '<h3>欢乐扫</h3>';
+                err_page +=        '<h3>红码</h3>';
                 err_page +=        '<p>抱歉：' + resp.errmsg + '。</p>';
                 err_page +=      '</article>';
                 err_page +=    '</section>';

@@ -37,12 +37,6 @@
                 <a href="/product/category">
                 管理中心</a></li>
             <?php  endif; ?>
-            <?php if (has_permission('myapp')): ?>
-            <li class="<?=in_array(get_current_router(1),['app', 'myapp'])? 'cur' : ''?>">
-                <a href="/app">
-                应用中心</a></li>
-            <?php endif;?>
-
             <?php if (has_permission('charts')): ?>
             <li class="<?=in_array(get_current_router(1),['charts','reporting'])? 'cur' : ''?>">
                 <a href="/charts/index">

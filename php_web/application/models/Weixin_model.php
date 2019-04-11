@@ -162,6 +162,7 @@ class Weixin_model extends MY_Model {
                 throw new Exception($resp->errmsg, 1);
             }
         }
+	debug('token:'.var_export($resp,True));
         return $resp;
     }
 

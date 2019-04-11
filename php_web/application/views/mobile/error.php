@@ -15,7 +15,7 @@
 <body onstart="">
     <div id="page-err" class="wraper err-content">
         <div class="err-backimg"></div>
-        <div class="err-false">欢乐扫平台</div>
+        <div class="err-false">红码</div>
         <div class="err-text">抱歉：<?=$errmsg?>。</div>
     </div>
 </body>

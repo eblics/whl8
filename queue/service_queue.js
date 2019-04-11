@@ -17,7 +17,7 @@ function service_queue(){
 
 function common_deal(cnum,cpage,ctype,interval){
     function comm_str(num,page){
-        var str="su www-data -c 'CI_ENV="+config.ci_env+" php5 /var/www/lsa0.cn/php_web/cli/index.php wxapi ";
+        var str="su www-data -c 'CI_ENV="+config.ci_env+" php5 /var/www/whl8.cn/php_web/cli/index.php wxapi ";
         str+=ctype;
         return str+"/"+num+"/"+page+"'";
     }
@@ -57,7 +57,7 @@ function setinterval_deal(dtype,interval){
     var command='';
     switch(dtype){
         case 'group_scanpk':
-        command="su www-data -c 'CI_ENV="+config.ci_env+" php5 /var/www/lsa0.cn/php_web/cli/index.php group scanpk_heart_beat'";
+        command="su www-data -c 'CI_ENV="+config.ci_env+" php5 /var/www/whl8.cn/php_web/cli/index.php group scanpk_heart_beat'";
         break;
     }
     exec(command, function(err,stdout,stderr){

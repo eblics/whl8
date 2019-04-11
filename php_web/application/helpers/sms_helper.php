@@ -18,7 +18,7 @@
 			$req = new AlibabaAliqinFcSmsNumSendRequest;
 			$req->setExtend("123456");
 			$req->setSmsType("normal");
-			$req->setSmsFreeSignName("欢乐扫");
+			$req->setSmsFreeSignName("红码");
 			if($type == 3){
 				$req->setSmsParam("{\"title\": \"$title\",\"content\": \"$content2\",\"detail\": \"$content3\"}");
 			}
@@ -58,7 +58,7 @@
 			$req = new AlibabaAliqinFcSmsNumSendRequest;
 			$req->setExtend("123456");
 			$req->setSmsType("normal");
-			$req->setSmsFreeSignName("欢乐扫");
+			$req->setSmsFreeSignName("红码");
 			$req->setRecNum($mobile->phoneNum);
 			$req->setSmsTemplateCode($template_id);
 			$resp = $c->execute($req);

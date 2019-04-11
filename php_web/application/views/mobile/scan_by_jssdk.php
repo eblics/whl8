@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no, address=no">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <title>欢乐扫</title>
+    <title>红码</title>
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="/static/js/jquery-2.1.1.min.js" ></script>
     <script type="text/javascript" src="/static/lib/layer/layer.js"></script>

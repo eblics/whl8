@@ -142,7 +142,7 @@ where a.mchId=? and cityCode=? and a.theDate>=? and a.theDate<=? ";
 				$arr[$i]=array(
 					'rank_id'=>$i+$start+1,
 					'userId'=>$result[$i]['userId'],
-					'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '欢乐扫用户',
+					'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '红码用户',
 					'scanNum'=>$result[$i]['scanNum']
 				);
 			}
@@ -183,7 +183,7 @@ where a.mchId=? and cityCode=? and a.theDate>=? and a.theDate<=? ";
 				$arr[$i]=array(
 						'rank_id'=>$i+$start+1,
 						'userId'=>$result[$i]['userId'],
-						'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '欢乐扫用户',
+						'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '红码用户',
 						'scanNum'=>$result[$i]['scanNum']
 				);
 			}
@@ -223,7 +223,7 @@ where a.mchId=? and cityCode=? and a.theDate>=? and a.theDate<=? ";
 				$arr[$i]=array(
 						'rank_id'=>$i+$start+1,
 						'userId'=>$result[$i]['userId'],
-						'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '欢乐扫用户',
+						'nickname'=>$result[$i]['nickName'] ? $result[$i]['nickName'] : '红码用户',
 						'scanNum'=>$result[$i]['scanNum']
 				);
 			}
@@ -233,7 +233,7 @@ where a.mchId=? and cityCode=? and a.theDate>=? and a.theDate<=? ";
 	}
 	//userlist 排行
 	public function get_userlist($userid,$mchid,$code,$page,$size){
-		$myself_sql="select userId,scanNum,ifnull(nickName,'欢乐扫用户') nickname,headimgurl,rank_id from (";
+		$myself_sql="select userId,scanNum,ifnull(nickName,'红码用户') nickname,headimgurl,rank_id from (";
 		$myself_sql.="(select * from (select @rownum1:=@rownum1+1 as rank_id,userId,scanNum from (select userId,sum(scanNum) scanNum,@rownum1:=0 from rpt_user_rank where 1=1 ";
 		if(isset($mchid)){
 			$myself_sql.=" and mchId=$mchid";
@@ -244,7 +244,7 @@ where a.mchId=? and cityCode=? and a.theDate>=? and a.theDate<=? ";
 		$myself_sql.=" group by userId order by scanNum desc) a ) b where userId=$userid)";
 		$myself_sql.=") rank inner join users on rank.userId=users.id";
 	    //---------------------------
-	    $rank_sql="select userId,scanNum,ifnull(nickName,'欢乐扫用户') nickname,headimgurl from (";
+	    $rank_sql="select userId,scanNum,ifnull(nickName,'红码用户') nickname,headimgurl from (";
 	    $rank_sql.="select userId,sum(scanNum) scanNum from rpt_user_rank where 1=1 ";
 	    if(isset($mchid)){
 	        $rank_sql.=" and mchId=$mchid";

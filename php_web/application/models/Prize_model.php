@@ -186,7 +186,7 @@ class Prize_model extends CI_Model {
 				];
 				$settleResult = $this->mall_mobile->create_order_for_card($mall->id, $userId, $goodsObject, $addressId);
 
-				$settleInfo['platform'] = '欢乐扫礼品商城';
+				$settleInfo['platform'] = '红码礼品商城';
 				$settleInfo['amount'] = $goodsObject['amount'];
 				$settleInfo['event_time'] = date('Y-m-d H:i:s');
 				$settleInfo['card_title'] = $row->title;

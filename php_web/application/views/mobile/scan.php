@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="<?=config_item('cdn_m_url')?>static/css/errortip.css?v=<?=cdn_ver?>" />
     <link type="text/css" rel="stylesheet" href="<?=config_item('cdn_m_url')?>static/css/scan.css?v=<?=cdn_ver?>" />
     <?php if (! isset($gmLoading)):?>
-        <title>欢乐扫</title>
+        <title>红码</title>
     <?php else:?>
         <title>Loading...</title>
     <?php endif;?>

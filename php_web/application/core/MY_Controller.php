@@ -180,6 +180,7 @@ class Mobile_Controller extends MY_Controller {
 	}
 
 	protected function getCurrentUser($mchId = NULL, $checkForbidden = TRUE, $isGetCommonUser = FALSE) {
+		//debug('hls-getCurrentUser-'.$mchId);
 		if (! isset($mchId)) {
 			if ($this->isAjax()) {
 				$this->ajaxResponseOver('没有提供商户编号');
@@ -187,6 +188,7 @@ class Mobile_Controller extends MY_Controller {
 				$this->showErrPage('没有提供商户编号');
 			}
 		}
+		//error('get_current_user:'.$mchId);
 		$merchant = $this->db->where('id', $mchId)->get('merchants')->row();
 		if (! isset($merchant)) {
 			if ($this->isAjax()) {
@@ -275,7 +277,7 @@ class Mobile_Controller extends MY_Controller {
 	}
 
 	protected function getCurrentMember($merchant, $checkForbidden, $isGetCommonUser) {
-		
+		//debug('getCurrentMember-'.var_export($merchant,True));
 		if ($this->session->has_userdata('current_member_'. $merchant->id)) {
 			if (! $isGetCommonUser && $merchant->id == -1) {
 				if ($this->isAjax()) {

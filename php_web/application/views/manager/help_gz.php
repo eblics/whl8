@@ -32,7 +32,7 @@
                 <div class="paragraph">企业机构包括：企业、分支机构、企业相关品牌、产品与服务、以及招聘、客服等类型的公众帐号。</div>
                 <div class="paragraph"><img src="http://file.service.qq.com/user-files/uploads/201507/2722a59b7ea1dbcd427dbaeffc286137.png"></div>
                 <div class="paragraph"><img src="http://file.service.qq.com/user-files/uploads/201507/2de0a8bd5565ce965d97dfaf1920c7b1.png"></div>
-                <div class="paragraph impor">注：欢乐扫平台需要“服务号”！！！</div><br /><br />
+                <div class="paragraph impor">注：红码平台需要“服务号”！！！</div><br /><br />
                 <div class="paragraph"><img src="http://file.service.qq.com/user-files/uploads/201507/9f0f26bb25a6f370135c738bb829738b.png"></div>
                 <div class="paragraph"><img src="http://file.service.qq.com/user-files/uploads/201507/7a32024c489095e93792291a34559067.png"></div>
                 <div class="paragraph"><img src="http://file.service.qq.com/user-files/uploads/201603/c8d7b04afed959ce38e9a90645f579bd.jpg"></div>

@@ -4,24 +4,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Activity extends Mobile_Controller {
 
     public function match_activity() {
-        $commonUser = $this->getCommonUser();
+        //$commonUser = $this->getCommonUser();
         $currentUser = $this->getCurrentUser($this->getCurrentMchId());
         $lecode = $this->getCurrentLecode();
         $position = $this->input->get('pos');
 
         // users_common_sub add
-        $sql = "select * from users_common_sub where parentId = ? and mchId = ?";
-        $subUser = $this->db->query($sql, [$commonUser->id, $currentUser->mchId])->row();
-        if (! isset($subUser)) {
-            $sql = "insert into users_common_sub (parentId, userId, openid, mchId, status) values (?, ?, ?, ?, 0)";
-            $this->db->query($sql, [$commonUser->id, $currentUser->id, $currentUser->openid, $currentUser->mchId]);
-        }
-
+        //$sql = "select * from users_common_sub where parentId = ? and mchId = ?";
+        //$subUser = $this->db->query($sql, [$commonUser->id, $currentUser->mchId])->row();
+        //if (! isset($subUser)) {
+        //    $sql = "insert into users_common_sub (parentId, userId, openid, mchId, status) values (?, ?, ?, ?, 0)";
+        //    $this->db->query($sql, [$commonUser->id, $currentUser->id, $currentUser->openid, $currentUser->mchId]);
+        //}
         if (! isset($lecode)) {
             error("activity/match_activity: 没有乐码，currentUser: ". json_encode($currentUser));
-            $this->load->library('common/common_login');
+            //$this->load->library('common/common_login');
             $this->load->library('common/ipwall');
-            $this->common_login->save_user_log(1, '无乐码匹配活动', 'null', $currentUser->mchId, $currentUser->id);
+            //$this->common_login->save_user_log(1, '无乐码匹配活动', 'null', $currentUser->mchId, $currentUser->id);
             $this->ipwall->error_process();
             $this->ajaxResponseFail('找不到您扫描的乐码');
             return;
@@ -32,9 +31,9 @@ class Activity extends Mobile_Controller {
 
         if (! isset($scanLog)) {
             error("activity/match_activity: 没有扫码纪录，currentUser: ". json_encode($currentUser));
-            $this->load->library('common/common_login');
+            //$this->load->library('common/common_login');
             $this->load->library('common/ipwall');
-            $this->common_login->save_user_log(1, '无扫码记录匹配活动', $lecode, $currentUser->mchId, $currentUser->id);
+            //$this->common_login->save_user_log(1, '无扫码记录匹配活动', $lecode, $currentUser->mchId, $currentUser->id);
             $this->ipwall->error_process();
             $this->ajaxResponseFail('找不到您的扫码记录');
             return;
@@ -79,8 +78,8 @@ class Activity extends Mobile_Controller {
             $this->ipwall->correct_process();
             $this->ajaxResponseSuccess(['url' => $webappUrl]);
         } catch (Exception $e) {
-            $this->load->library('common/common_login');
-            $this->common_login->save_user_log(1, $e->getMessage(), $scanLog->code, $currentUser->mchId, $currentUser->id);
+            //$this->load->library('common/common_login');
+            //$this->common_login->save_user_log(1, $e->getMessage(), $scanLog->code, $currentUser->mchId, $currentUser->id);
             $this->ajaxResponseFail($e->getMessage());
         }
 
@@ -91,15 +90,15 @@ class Activity extends Mobile_Controller {
     }
 
     public function take_activity() {
-        $commonUser = $this->getCommonUser();
+        //$commonUser = $this->getCommonUser();
         $currentUser = $this->getCurrentUser($this->getCurrentMchId());
         $lecode = $this->getCurrentLecode();
 
-        $this->load->library('common/common_login');
+        //$this->load->library('common/common_login');
         if (! isset($lecode)) {
             error("activity/take_activity: 没有乐码，currentUser: ". json_encode($currentUser));
-            $this->load->library('common/ipwall');
-            $this->common_login->save_user_log(1, '无乐码参与活动', 'null', $currentUser->mchId, $currentUser->id);
+            //$this->load->library('common/ipwall');
+            //$this->common_login->save_user_log(1, '无乐码参与活动', 'null', $currentUser->mchId, $currentUser->id);
             $this->ipwall->error_process();
             $this->ajaxResponseFail('找不到您扫描的乐码');
             return;
@@ -111,7 +110,7 @@ class Activity extends Mobile_Controller {
         if (! isset($scanLog)) {
             error("activity/take_activity: 没有扫码纪录，currentUser: ". json_encode($currentUser));
             $this->load->library('common/ipwall');
-            $this->common_login->save_user_log(1, '无扫码记录参与活动', $lecode, $currentUser->mchId, $currentUser->id);
+            //$this->common_login->save_user_log(1, '无扫码记录参与活动', $lecode, $currentUser->mchId, $currentUser->id);
             $this->ipwall->error_process();
             $this->ajaxResponseFail('找不到您的扫码记录');
             return;
@@ -158,17 +157,17 @@ class Activity extends Mobile_Controller {
             }
             $this->load->model('Merchant_model', 'merchant');
             $merchant = $this->merchant->get($currentUser->mchId);
-            $result->qrcode_url = '/h5/get_qrcode/'. urlencode($merchant->wxQrcodeUrl);
+            $result->qrcode_url = $merchant->wxQrcodeUrl;
             $scanLog->over = 1;
             $this->scan_log_model->update($scanLog);
             $this->trigger_model->trigger_scan_log_update($scanLog);
-            $this->common_login->save_user_log(5, '正常扫码', $scanLog->code, $currentUser->mchId, $currentUser->id);
+            //$this->common_login->save_user_log(5, '正常扫码', $scanLog->code, $currentUser->mchId, $currentUser->id);
             //正确扫码处理结果
             $this->load->library('common/ipwall');
             $this->ipwall->correct_process();
             $this->output->set_content_type('application/json')->set_output(json_encode($result));
         } catch (Exception $e) {
-            $this->common_login->save_user_log(1, $e->getMessage(), $scanLog->code, $currentUser->mchId, $currentUser->id);
+            //$this->common_login->save_user_log(1, $e->getMessage(), $scanLog->code, $currentUser->mchId, $currentUser->id);
             $this->load->model('jokes_model');
             $joke = $this->jokes_model->get_joke();
             $result = [
@@ -189,7 +188,8 @@ class Activity extends Mobile_Controller {
             }
             $this->load->model('Merchant_model', 'merchant');
             $merchant = $this->merchant->get($currentUser->mchId);
-            $result['qrcode_url'] = '/h5/get_qrcode/'. urlencode($merchant->wxQrcodeUrl);
+            //$result['qrcode_url'] = urlencode($merchant->wxQrcodeUrl);
+            $result['qrcode_url'] =$merchant->wxQrcodeUrl;
             $this->output->set_content_type('application/json')->set_output(json_encode($result));
         }
     }

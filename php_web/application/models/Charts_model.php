@@ -159,7 +159,7 @@ class Charts_model extends CI_Model {
          //选择年-查1-12个月的 对应monthly
         if($param['month']==0){
             $sql_cnt="select count(id) cnt from (select id from rpt_user_monthly where mchId=? and theDate>=? and theDate<=? ";
-            $sql="select m.userId,ifnull(nickName,'欢乐扫用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from ((select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'month' level from rpt_user_monthly where mchId=? and theDate>=? and theDate<=? ";
+            $sql="select m.userId,ifnull(nickName,'红码用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from ((select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'month' level from rpt_user_monthly where mchId=? and theDate>=? and theDate<=? ";
 
             $data=[$mchId,$param['year'].'-01',$param['year'].'-12'];
 
@@ -218,7 +218,7 @@ class Charts_model extends CI_Model {
 
                 $sql_cnt="select count(*) cnt from(select id from rpt_user_weekly where mchId=? and theDate>=? and theDate<=? ";
                 //查询每周的数据
-                $sql="select m.userId,ifnull(nickName,'欢乐扫用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'week' level from rpt_user_weekly where mchId=? and theDate>=? and theDate<=? ";
+                $sql="select m.userId,ifnull(nickName,'红码用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'week' level from rpt_user_weekly where mchId=? and theDate>=? and theDate<=? ";
                 $data=[$mchId,reset($weekinfo),end($weekinfo)];
 
                 if(!$param['pro']==0){
@@ -269,7 +269,7 @@ class Charts_model extends CI_Model {
                   //1-31天数据
                   $time=get_time_screening($param);
                   $sql_cnt="select count(*) cnt from(select id from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
-                  $sql="select m.userId,ifnull(nickName,'欢乐扫用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'day' level from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
+                  $sql="select m.userId,ifnull(nickName,'红码用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'day' level from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
                   
                   $data=[$mchId,$time['start'],$time['end']];
 
@@ -324,7 +324,7 @@ class Charts_model extends CI_Model {
             $timearr=explode("_",$param['weektime']);
 
             $sql_cnt="select count(*) cnt from(select id from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
-            $sql="select m.userId,ifnull(nickName,'欢乐扫用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'day' level from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
+            $sql="select m.userId,ifnull(nickName,'红码用户') nickName,m.date,m.scanNum,m.red_amount,m.point_amount,m.trans_amount,m.card_num,m.pointUsed,m.level from (select theDate date,userId,sum(scanCount) scanNum,round(sum(rpAmount)/100,2) red_amount,round(sum(pointAmount),0) point_amount,round(sum(transAmount)/100,2) trans_amount,sum(cardCount) card_num,sum(pointUsed) pointUsed,'day' level from rpt_user_daily where mchId=? and theDate>=? and theDate<=? ";
             $data=[$mchId,$timearr[0],$timearr[1]];
 
             if(!$param['pro']==0){
@@ -393,7 +393,7 @@ class Charts_model extends CI_Model {
             $start=$time[0].' 00:00:00';
             $end=$time[1].' 23:59:59';
         }
-       $sql="select a.id scanId,a.userId,ifnull(d.nickName,'欢乐扫用户') nickName,FROM_UNIXTIME(a.scanTime) scanTime,ifnull(FROM_UNIXTIME(c.getTime),'') getTime,a.batchId,a.activityId,count(b.id) redCount,ifnull(GROUP_CONCAT(round(b.amount/100,2) SEPARATOR ' 、'),0) redList,IFNULL(count(c.id),0) cardCount,ifnull(GROUP_CONCAT(f.title SEPARATOR ' 、'),'') cardTitle,e.address from scan_log a 
+       $sql="select a.id scanId,a.userId,ifnull(d.nickName,'红码用户') nickName,FROM_UNIXTIME(a.scanTime) scanTime,ifnull(FROM_UNIXTIME(c.getTime),'') getTime,a.batchId,a.activityId,count(b.id) redCount,ifnull(GROUP_CONCAT(round(b.amount/100,2) SEPARATOR ' 、'),0) redList,IFNULL(count(c.id),0) cardCount,ifnull(GROUP_CONCAT(f.title SEPARATOR ' 、'),'') cardTitle,e.address from scan_log a 
                 left join user_redpackets b on b.mchId=? and b.scanId=a.id and b.role=0
                 left join user_cards c on c.scanId=a.id and c.scanId>0 and c.sended=1 and c.transId=-1 and c.role=0
                 left join users d on d.id=a.userId
@@ -1422,7 +1422,7 @@ where mchId=? and date>=? and date<=? and areaCode is not null and areaCode!='00
             left join areas e on d.parentCode=e.code
             left join areas f on e.parentCode=f.code
             left join batchs g on g.id=a.batchId and g.rowStatus=0 where a.mchId=? and a.userId=? and a.scanTime>=? and a.scanTime<=? ";
-        $sql="select ifnull(b.nickName,'欢乐扫用户') nickName,FROM_UNIXTIME(a.scanTime, '%Y-%m-%d %H:%i:%s') as date,ifnull(g.batchNo,'<span style=color:#ccc>批次已删除</span>') batchNo,a.code,a.userId,ifnull(d.fullName,'<span style=color:#ccc>终端不允许获取</span>') name from scan_log a
+        $sql="select ifnull(b.nickName,'红码用户') nickName,FROM_UNIXTIME(a.scanTime, '%Y-%m-%d %H:%i:%s') as date,ifnull(g.batchNo,'<span style=color:#ccc>批次已删除</span>') batchNo,a.code,a.userId,ifnull(d.fullName,'<span style=color:#ccc>终端不允许获取</span>') name from scan_log a
             left join users b on b.id=a.userId
             left join geo_gps c on c.id=a.geoId
             left join areas d on d.code=c.areaCode

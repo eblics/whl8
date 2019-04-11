@@ -19,10 +19,10 @@
     },
     "production":{
         "port":3010,
-        "master":{"host":"10.45.238.131","user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true,"connectionLimit":2048},
-        "mysql":{"host":"10.45.238.131","port":3306,"user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true,"connectionLimit":2048},
-        "redis":{"host":"r-m5e1c7e6a2a727d4.redis.rds.aliyuncs.com","port":6379,"password":"Acctrue886"},
-        "trg_servers":[{"host":"10.30.182.113","port":3306,"user":"root","password":"1acctrue1","database":"hls_prod","multipleStatements":true}],
+        "master":{"host":"localhost","user":"root","password":"lsl2001","database":"db","multipleStatements":true,"connectionLimit":2048},
+        "mysql":{"host":"localhost","port":3306,"user":"root","password":"lsl2001","database":"db","multipleStatements":true,"connectionLimit":2048},
+        "redis":{"host":"localhost","port":6379,"password":"lsl2001"},
+        "trg_servers":[{"host":"localhost","port":3306,"user":"root","password":"lsl2001","database":"db","multipleStatements":true}],
         "trg_queue_size":16,
         "ci_env":"production"
     }

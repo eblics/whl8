@@ -57,7 +57,7 @@ var searchs = {
                     "class":"center",
                     "render":function(data,type,row){
                         if(data.name == 'huanlesaopf'){
-                            return '欢乐扫平台';
+                            return '红码平台';
                         }else{
                             return data.name;
                         }

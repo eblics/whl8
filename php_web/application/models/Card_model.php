@@ -134,7 +134,7 @@ class Card_model extends CI_Model {
 	 */
 	public function get_winlist($mchId,$id,&$count=0,$start=null,$length=null){
 		$count=$this->db->query("select count(*) cnt from user_cards a where cardId=? and a.role=0 and transId=-1 order by a.getTime desc",[$id])->row()->cnt;
-		$sql="select ifnull(u.nickName,'欢乐扫用户') nickName,u.realName,u.mobile,u.address,m.* from(
+		$sql="select ifnull(u.nickName,'红码用户') nickName,u.realName,u.mobile,u.address,m.* from(
 select a.userId,a.id as aid,a.processing as aprocessing,a.sended,FROM_UNIXTIME(a.getTime) as date,ifnull(g.address,'终端不允许获取') as area from user_cards a
 left join scan_log s on a.code=s.code
 left join geo_gps g on s.geoId=g.id

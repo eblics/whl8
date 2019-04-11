@@ -38,7 +38,7 @@
                 <?php 
                     } ?>
                 <div class="nickname">
-                    <div class="send_nickname"><?php echo (empty($data->nickName) ? '欢乐扫用户' : $data->nickName);?></div>
+                    <div class="send_nickname"><?php echo (empty($data->nickName) ? '用户' : $data->nickName);?></div>
                 </div>
                 <p class="area_sex">
                 <img src="/static/images/dingwei.png">
@@ -270,7 +270,7 @@
             <div class="infolist">
             <table>
 	            <tr>
-	            	<td class="p_left">来自欢乐扫：</td>
+	            	<td class="p_left">来自红码：</td>
 	            	<td class="p_right">
 	            	<?php 
                         if(!empty($data->fromHLS)){

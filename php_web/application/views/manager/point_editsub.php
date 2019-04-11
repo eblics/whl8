@@ -55,9 +55,9 @@
                             <select id="third_number" name="third_number" class="input" style="width: 100%">
                                 <?php if (isset($data->third_number)):?>
                                     <?php if ($data->third_number == 0):?>
-                                        <option value="0" selected="selected">欢乐扫积分</option>
+                                        <option value="0" selected="selected">积分</option>
                                     <?php else:?>
-                                        <option value="0">欢乐扫积分</option>
+                                        <option value="0">积分</option>
                                     <?php endif;?>
                                     <?php if ($data->third_number == 1):?>
                                         <option value="1" selected="selected">人人店积分</option>
@@ -65,7 +65,7 @@
                                         <option value="1">人人店积分</option>
                                     <?php endif;?>
                                 <?php else:?>
-                                    <option value="0" selected="selected">欢乐扫积分</option>
+                                    <option value="0" selected="selected">红码积分</option>
                                     <option value="1">人人店积分</option>
                                 <?php endif;?>
                             </select>

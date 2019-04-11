@@ -264,7 +264,7 @@ class Reporting extends MerchantController
          $rows = $this->load_hls_sub_activiey_export($id,TRUE);
          foreach ($rows as $row) {
 
-         	$name = empty($row->nickName) ? '欢乐扫用户' : $row->nickName;
+         	$name = empty($row->nickName) ? '红码用户' : $row->nickName;
          	$time = empty($row->scanTime) ? '未知时间' : date('Y-m-d H:i:s',$row->scanTime);
          	$sended = $row->sended == '1' ? '已发放' : '未发放';
          	$mobile = empty($row->mobile) ? '未填写' : $row->mobile;

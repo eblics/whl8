@@ -49,14 +49,14 @@ class Wxpay extends MerchantController {
         $order=$this->wxpay_model->get_mch_order($productId);
         if(! $order) return;
         $input = new WxPayUnifiedOrder();
-        $input->SetBody("欢乐扫平台充值");
-        $input->SetAttach("欢乐扫平台充值");
+        $input->SetBody("红码平台充值");
+        $input->SetAttach("红码平台充值");
         $outTradeNo=WxPayConfig::MCHID.date("YmdHis");
         $input->SetOut_trade_no($outTradeNo);
         $input->SetTotal_fee($order->amount);
         $input->SetTime_start(date("YmdHis"));
         $input->SetTime_expire(date("YmdHis", time() + 600));
-        $input->SetGoods_tag("欢乐扫平台充值");
+        $input->SetGoods_tag("红码平台充值");
         $input->SetNotify_url("http://".$_SERVER['HTTP_HOST']."/wxpay/notify/$productId/$outTradeNo");
         $input->SetTrade_type("NATIVE");
         $input->SetProduct_id($productId);

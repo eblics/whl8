@@ -38,7 +38,7 @@ class Wxapi extends CI_Controller {
         echo date('Y-m-d H:i:s')." deal with user_trans ids:".$ids;
     }
 
-    //处理用户提现(欢乐扫代发数据)
+    //处理用户提现(红码代发数据)
     public function deal_withdraw_hlspay($num=1,$page=1){
         $list=$this->wxapi_model->get_some_withdraw($num,$page,1);
         if(! $list){
@@ -72,7 +72,7 @@ class Wxapi extends CI_Controller {
         echo date('Y-m-d H:i:s').' deal with user_trans processing ids:'.$ids;
     }
 
-    //处理用户提现(处理中状态)(欢乐扫代发数据)
+    //处理用户提现(处理中状态)(红码代发数据)
     public function deal_withdraw_processing_hlspay($num=1,$page=1){
         $list=$this->wxapi_model->get_some_withdraw_processing($num,$page,1);
         if(! $list){

@@ -69,7 +69,7 @@ class Account_model extends CI_Model {
 		if (! isset($smsCode)) {
 			$template_id = 'SMS_7895086';
 			$code = mt_rand(1000, 9999);
-			$signame = '欢乐扫';
+			$signame = '红码';
 			info("send sms_code - begin");
 			$sendOk = $this->sms_vcode->send_sms_vcode($mobile, $code, $template_id, $signame);
 			if ($sendOk) {
@@ -217,7 +217,7 @@ class Account_model extends CI_Model {
 			// 发送短信验证码到$mobile
 			$template_id = 'SMS_7895084';
             $code = mt_rand(100000, 999999);
-            $signame = '欢乐扫';
+            $signame = '红码';
             $res = $this->sms_vcode->send_sms_vcode($mobile, $code, $template_id, $signame);
             if ($res['success']) {
             	throw new Exception("短信验证码发送失败", 1);

@@ -29,6 +29,7 @@ class Code extends Mobile_Controller {
         }
 
         $commonUser = $this->getCommonUser();
+	//error('commonUser:'.var_export($commonUser,True));
         try {
             debug('scan - begin');
             debug('lecode is: '. $code);
@@ -36,10 +37,13 @@ class Code extends Mobile_Controller {
             $this->load->model('Scan_log_model','scan_log');
             $scanLog = $this->scan_log->get_by_code($code);
             if (isset($scanLog)) {
-                $scanResult = $this->reScan($commonUser, $scanLog, $loadTestOpenid);
+                $scanResult = $this->reScan($scanLog, $loadTestOpenid);
             } else {
-                $scanResult = $this->firstScan($commonUser, $code, $loadTestOpenid);
+                $scanResult = $this->firstScan($code, $loadTestOpenid);
             }
+            $this->load->model('Merchant_model', 'merchant');
+            //$merchant = $this->merchant->getMerchantByScanLog($scanLog);
+            //$currentUser = $this->getCurrentScanUser($merchant->id, $loadTestOpenid);
             $merchant = $scanResult[0];
             $currentUser = $scanResult[1];
             $params = ['appId' => $merchant->wxAppId, 'appSecret' => $merchant->wxAppSecret];
@@ -53,27 +57,16 @@ class Code extends Mobile_Controller {
             $viewData = array_merge($data, $signPackage);
             
             $this->session->set_userdata('last_scan_code', $code);
-            /**
-             *  0 欢乐扫商户
-             *  112，119，126，171 四个ID是贝奇的商户
-             */
-            if (in_array($merchant->id, [112, 119, 126, 171, 0]) || $merchant->createTime > strtotime('2017-08-01')) {
-                if (in_array($merchant->id, [323, 0])) {
-                    if ($merchant->id == config_item('gm_mch_id')) {
-                        $viewData['gmLoading'] = BoolEnum::Yes;
-                    }
-                    $this->load->view('scan', $viewData);
-                } else {
-                    // 有广告的扫码加载界面
-                    $this->load->view('scan_code', $viewData);
-                }
-            } else {
-                // 无广告的扫码加载界面
-                if ($merchant->id == config_item('gm_mch_id')) {
-                    $viewData['gmLoading'] = BoolEnum::Yes;
-                }
-                $this->load->view('scan', $viewData);
-            }
+	    if($merchant->id==7){
+		    $webappUrl='https://m.jr.jd.com/zc/drawSystem/hb/index.html?contentParam=100001277&actCode=C13D937C0D&actType=1';
+		    header('location:'.$webappUrl);
+		    return;
+	    }
+	    // 无广告的扫码加载界面
+	    if ($merchant->id == config_item('gm_mch_id')) {
+	      $viewData['gmLoading'] = BoolEnum::Yes;
+	    }
+	    $this->load->view('scan', $viewData);
         } catch (Exception $e) {
             $this->load->library('common/common_login');
             $subUserId = isset($currentUser) ? $currentUser->id : -1;
@@ -100,12 +93,13 @@ class Code extends Mobile_Controller {
         }
     }
 
-    private function firstScan($commonUser, $code, $loadTestOpenid) {
+    private function firstScan($code, $loadTestOpenid) {
         debug('scan_log not exists');
         $code_ret = $this->scan->deLecode($code);
 
         $this->load->model('Merchant_model', 'merchant');
         $merchant = $this->merchant->getMerchantByMchCode($code_ret->mch_code);
+	//error('firstscan:'.var_export($merchant,True));
         $currentUser = $this->getCurrentScanUser($merchant->id, $loadTestOpenid);
 
         $this->scan->checkScanLimit($merchant);
@@ -146,11 +140,12 @@ class Code extends Mobile_Controller {
         return [$merchant, $currentUser];
     }
 
-    private function reScan($commonUser, $scanLog, $loadTestOpenid) {
+    private function reScan($scanLog, $loadTestOpenid) {
         error('scan_log exists: '. json_encode($scanLog));
         $this->load->model('Merchant_model', 'merchant');
         $merchant = $this->merchant->getMerchantByScanLog($scanLog);
         $currentUser = $this->getCurrentScanUser($merchant->id, $loadTestOpenid);
+	error('rescan:'.var_export($currentUser,True));
 
         if ($merchant->id == config_item('gm_mch_id')) {
             if ($currentUser->id !== $scanLog->userId) {

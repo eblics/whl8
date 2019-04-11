@@ -214,7 +214,7 @@ class Reporting_model extends CI_Model {
     function get_user_scan_daylist($mch_id,$from,$to,&$count=0,$start=null,$length=null) {
         $count=$this->db->query('select count(*) cnt from rpt_user_daily rud left join users on rud.userId=users.id
             where users.mchId=? and rud.theDate>=? and rud.theDate<=?',[$mch_id,$from,$to])->row()->cnt;
-        $sql="select userId,ifnull(nickName,'欢乐扫用户') nickName,theDate date,scanCount scan_num,round(rpAmount/100,2) red_amount,round(transAmount/100,2) trans_amount
+        $sql="select userId,ifnull(nickName,'红码用户') nickName,theDate date,scanCount scan_num,round(rpAmount/100,2) red_amount,round(transAmount/100,2) trans_amount
             from rpt_user_daily rud left join users on rud.userId=users.id
             where users.mchId=? and rud.theDate>=? and rud.theDate<=? order by date desc,userId desc";
         $data=[$mch_id,$from,$to];

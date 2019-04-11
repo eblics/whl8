@@ -9,7 +9,7 @@ class Sms_vcode {
 	{
 		$this->ci = & get_instance ();
 	}
-	function send_sms_vcode($mobile, $code, $template_id, $signame,$product='欢乐扫平台') 
+	function send_sms_vcode($mobile, $code, $template_id, $signame,$product='红码平台') 
 	{	
 		return $this->sendSms($mobile, $template_id, $signame, $product, $code);
 	}
@@ -25,7 +25,7 @@ class Sms_vcode {
         return ['statusCode'=>0];
 	}
 
-	public function sendSms($mobile, $templateId, $signame = '欢乐扫', $product = '欢乐扫平台', $code = NULL) {
+	public function sendSms($mobile, $templateId, $signame = '红码', $product = '红码平台', $code = NULL) {
 		if (isset($code)) {
 			$smsCode = $code;
 		} else {

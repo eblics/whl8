@@ -18,26 +18,26 @@ var hlsjs = {
         if (typeof window.isScan !== 'undefined') {
             return 'http://' + window.location.hostname + '/';
         }
-        if (env.length === 1) {
-            return 'http://m.lsa0.cn/';
-        }
-        env = env[1];
-        if (env === 'test') {
-            return 'http://test.m.lsa0.cn/';
-        }
-        if (env === 'dev') {
-            return 'http://dev.m.lsa0.cn/';
-        }
-        return 'http://m.lsa0.cn/';
+        //if (env.length === 1) {
+        //    return 'http://m.whl8.cn/';
+        //}
+        //env = env[1];
+        //if (env === 'test') {
+        //    return 'http://test.m.whl8.cn/';
+        //}
+        //if (env === 'dev') {
+        //    return 'http://dev.m.whl8.cn/';
+        //}
+        return 'http://m.whl8.cn/';
     },
     getRptUrl: function() {
         var hostName = window.location.hostname;
-        if (hostName == 'dev.m.lsa0.cn') {
-            return 'http://dev.rpt.lsa0.cn'
-        } else if (hostName == 'test.m.lsa0.cn') {
-            return 'http://test.rpt.lsa0.cn';
+        if (hostName == 'dev.m.whl8.cn') {
+            return 'http://dev.rpt.whl8.cn'
+        } else if (hostName == 'test.m.whl8.cn') {
+            return 'http://test.rpt.whl8.cn';
         } else
-            return 'http://rpt.lsa0.cn'
+            return 'http://rpt.whl8.cn'
     },
     getCurrentUser: function(callback) {
         $.ajax({

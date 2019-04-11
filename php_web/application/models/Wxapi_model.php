@@ -86,6 +86,7 @@ class Wxapi_model extends CI_Model {
             return;
         }
         $this->db->trans_begin();
+	error('send_redpacket:'.var_export($transLog,True));
         if($transLog->payAccountType==1) {//代发红包判断
             $mchAmount=$this->db->query("select * from mch_balances where mchId=$transLog->mchId for update")->row();
             if(! $mchAmount || $mchAmount->amount<$transLog->amount){
@@ -155,6 +156,7 @@ class Wxapi_model extends CI_Model {
                 //支付证书rootca
                 'caPath'=>$commonMch->caPath,
             ];
+	    error('send_redpacket:'.var_export($commonMch,True));
         }else{
             $sendNowData=(object)[
                 //红包类型
@@ -189,6 +191,7 @@ class Wxapi_model extends CI_Model {
                 'caPath'=>$merchant->caPath,
             ];
         }
+        error('send_redpacket:'.var_export($sendNowData,True));
         $payOk=false;
         $wxStatus = 0;
         $sendNowResult=$this->weixin_rest_api->send_redpack($sendNowData);
@@ -230,7 +233,7 @@ class Wxapi_model extends CI_Model {
             log_message('error','Wxapi_model/send_redpacket 红包直接发放失败2 userId:'.$transLog->userId.' mchId:'.$transLog->mchId.' '.var_export($sendNowResult,TRUE).' in '.'file:'.__FILE__.' line:'.__LINE__);
             //通知企业帐户余额不足模板消息写入数据库
             if($sendNowResult->err_code=='NOTENOUGH'){
-                $formatMsg=$this->wx3rd_lib->template_format_data($merchant->id,'kf_notice',['【消费者提现失败】\\n','重要提醒','已完成','欢乐扫系统','失败原因：微信支付商户平台帐户余额不足 '.date('Y-m-d H:i:s',time())]);
+                $formatMsg=$this->wx3rd_lib->template_format_data($merchant->id,'kf_notice',['【消费者提现失败】\\n','重要提醒','已完成','红码系统','失败原因：微信支付商户平台帐户余额不足 '.date('Y-m-d H:i:s',time())]);
                 $this->wx3rd_lib->template_warning_send($merchant->id,$formatMsg);
             }
         }else if($return_code_key && $sendNowResult->return_code!='SUCCESS'){

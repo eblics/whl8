@@ -79,7 +79,7 @@ where a.id=? order by d.createTime desc";
     }
     //码追踪
     public function get_trace($type,$term){
-        $sql="select ifnull(b.nickName,'欢乐扫用户') nickname,a.mchUserId userId,a.lecode code,FROM_UNIXTIME(a.createTime) theDate,logDesc from users_common_log a
+        $sql="select ifnull(b.nickName,'红码用户') nickname,a.mchUserId userId,a.lecode code,FROM_UNIXTIME(a.createTime) theDate,logDesc from users_common_log a
 left join users b on a.mchUserId=b.id
 where ";
         if($type==1){

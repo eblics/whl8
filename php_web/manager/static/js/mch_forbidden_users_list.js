@@ -40,7 +40,7 @@ var forbiddenUsersPage = {
                                 if(data){
                                     return data;
                                 }else{
-                                    return '欢乐扫用户';
+                                    return '红码用户';
                                 }
 
                             }
